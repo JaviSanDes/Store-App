@@ -1,0 +1,83 @@
+.ContactData {
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    background: #eee;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 10em;
+    max-width: 400px;
+}
+.MessageBox {
+    color: white;
+    width: 200px;  
+    position: relative;
+    top: 0px;
+    background: rgb(211, 70, 70);
+    margin: auto;
+    border-radius: 3px;
+    padding: 10px;
+}
+.selectorBox{
+    display: flex;
+    color: #808080;
+    font-size: 12px;
+    width: 80%;
+    margin: auto;
+    margin-top: -10px;
+}
+.signIn{
+    border-bottom: 2px solid rgb(26, 117, 255);
+    box-shadow: 0px 0px 2px 1px rgb(26, 117, 255);
+}
+.toggle{
+    display: flex;
+    color: #808080;
+    font-size: 12px;
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-top: -40px;
+}
+.toggle div{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+    cursor: pointer;
+    color: transparent;
+}
+.toggle div div{
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    z-index: 5;
+    cursor: pointer;
+    margin-top: 41px;
+}
+.line{
+    border-bottom: 2px solid #808080;
+    position: relative;
+    top: 1px;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+.signInP{
+    color: black;
+    margin-right: 150px;
+    position: relative;
+    left: 50px;
+}
+
+@media (min-width: 600px) {
+    .ContactData {
+        width: 500px;
+    }
+}

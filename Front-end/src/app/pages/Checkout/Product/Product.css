@@ -1,0 +1,111 @@
+.producto_caja {
+  background: white;
+  height: 120px;
+  display: flex;
+  width: 90%;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 10px;
+  
+}
+.h5{
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.producto_caja:hover .producto_info .producto_x{
+  left: 600px;
+  transition: 0.5s;
+}
+.producto_x:hover{
+  box-shadow: 0 0 10px 1px black;
+}
+.producto_x:hover .producto_x2{
+  font-weight: bold;
+  transition: 0.5s;
+}
+.producto_x:active{
+  transform: scale(1.2);
+}
+.producto_imagen{
+  margin: auto;
+  width: 60px;
+}
+.producto_info{
+  width: 80%;
+  text-align: center;
+  overflow: hidden;
+}
+.producto_nombre{
+  overflow: hidden;
+  margin: 0;
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+.producto_presupuesto{
+  display: flex;
+}
+.producto_precio{
+  flex: 1;
+}
+.producto_cantidad{
+  flex: 1;
+}
+.producto_total{
+  flex: 1;
+}
+.producto_caja p{
+  height: 22px;
+  margin:0;
+}
+.producto_caja p:nth-child(2) {
+  margin: 5px 0 5px 0;
+}
+.producto_cantidad_botones{
+  display: flex;
+  justify-content: center;
+}
+.producto_boton{
+  margin: 5px 5px 0 5px;
+  min-width: 38px;
+  background: green;
+  border: none;
+  width: 32px;
+  height: 38px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.producto_x{
+  position: relative;
+  left: 625px;
+  top: -60px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background: red;
+  cursor: pointer;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.producto_x2{
+  position: relative;
+  left: -8px;
+}
+.vezesComprado{
+  border: 2px solid #eee;
+  width: 35px;
+  min-height: 35px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  padding-top: 0;
+}

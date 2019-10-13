@@ -1,0 +1,38 @@
+.buscadorClass{
+  z-index: 5;
+}
+.buscadorClass div {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+.buscadorInput{
+  position: relative;
+  top: 0px;
+  background: #eee;
+  font-size: 20px;
+  width: 350px;
+  height: 20px;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  padding-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center
+}
+@media only screen and (max-width: 900px) {
+  .buscadorInput{
+    width: 250px;
+    left: 30px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .buscadorInput{
+    width: 250px;
+    left: 50%;
+    top: 35px;
+    height: 16px;
+    background: rgb(58, 57, 57);
+  }
+}

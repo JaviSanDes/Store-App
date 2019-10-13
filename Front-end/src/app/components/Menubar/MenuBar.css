@@ -1,0 +1,107 @@
+.rutas{
+  position: fixed;
+  z-index: 905;
+  background: #666666;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  top: 0px;
+  left: 0;
+}
+.rutas a{
+  color: white;
+  top: 10px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+  margin-left: 8px;
+}
+.home{
+  margin-left: 0px;
+  width: 40px;
+  height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.home img {
+  margin-left: 8px;
+  margin-top: 3px;
+}
+.space{
+  float: right;
+  position: relative;
+  top: 0px;
+  z-index: 200;
+  width: 100px;
+  height: 30px;
+}
+.imgBox{
+  position: absolute;
+  top: 7px;
+  right: 60px;
+  z-index: 200;
+  display: flex;
+}
+.imgBox p{
+  position: relative;
+  top: -37px;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  background: none;
+}
+.imgBox button {
+  margin-right: 10px;
+  width: 110px;
+  height: 40px;
+  position: relative;
+  top: -8px;
+  background: rgb(26, 117, 255);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.checkout {
+  position: absolute;
+  right: 5px;
+  top: 40px;
+  display: none;
+}
+.orderToggle {
+  width: 90px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  z-index: 600;
+  display: none;
+}
+.userBox {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  padding: 10px 0 10px 0;
+  background: rgba(172, 170, 170, 0.933);
+  z-index: 900;
+  right: 125px;
+  top: 40px;
+}
+.userBox p {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+.userBox button {
+  width: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .imgBox{
+      right: 30px;
+  }
+  .checkout {
+    display: inline;
+  }
+  .orderToggle {
+    display: inline;
+  }
+}

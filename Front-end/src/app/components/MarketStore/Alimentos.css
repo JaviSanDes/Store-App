@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+.caja{
+  flex: 1;
+  min-height: 100vh;
+}
+.prueba{
+  width: 155px;
+  height: 70px;
+}
+.prueba2{
+  width: 240px;
+  height: 70px;
+}
+.imgBox{
+  position: relative;
+  z-index: 500;
+  top: -30px;
+  left: 0px;
+  right: 20px;
+  text-align: right;
+  background: white;
+  height: 300px;
+}
+.buscador{
+  position: fixed;
+  z-index: 505;
+  top: -49px;
+  right: 280px;
+}
+.imgBox img {
+  height: 300px;
+}
+.alimentos_caja {
+  display: flex;
+  margin-top: 100px;
+}
+.productBox {
+  flex: 1;
+  height: 100%;
+}
+.productos{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+.text {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+@media only screen and (max-width: 1100px) {
+  .imgBox{
+    height: 200px;
+  }
+  .imgBox img{
+    height: 200px;
+  }
+  .text {
+    left: 20px;
+    font-size: 15px;
+  }
+  .text h1 {
+    margin: 0;
+  }
+  
+}
+@media only screen and (max-width: 950px) {
+  .alimentos_caja{
+    flex-direction: row;
+  }
+  .orderBox {
+    position: absolute;
+    right: 0px;
+    z-index: 600;
+    top: 50px;
+  }
+  .trollyButton {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .prueba2{
+    width: 0px;
+    height: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .prueba{
+    width: 0px;
+    height: 0px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .prueba{
+    width: 195px;
+  }
+  .prueba2{
+    width: 340px;
+  }
+  .imgBox{
+    height: 400px;
+  }
+  .imgBox img {
+    height: 400px;
+  }
+  .text {
+    font-size: 25px;
+    top: 30px;
+  }
+}
+

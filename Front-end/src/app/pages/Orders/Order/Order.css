@@ -1,0 +1,46 @@
+.orderBox{
+  margin: 5px;
+  display: flex;
+  max-width: 250px;
+  min-width: 100px;
+  height: 250px;
+  padding: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  padding-top: 10px;
+}
+.orderBox:hover{
+  box-shadow: 5px 8px 10px #ccc;
+  border: 2px solid #eee;
+}
+.alimentosBox{
+  position: fixed;
+  top: -1000px;
+  background: rgba(0,0,0,0.5);
+  min-width: 100px;
+  overflow: hidden;
+}
+.alimentos{
+  max-width: 500px;
+  min-width: 100px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  background: white;
+  margin-top: 80px;
+  border-radius: 8px;
+}
+.alimento{
+  padding: 5px;
+  height: 93%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.dataList{
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  color: #737373;
+}
