@@ -1,10 +1,21 @@
 import React from 'react';
 
+import SideBar from './components/SideBar';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Routes from './routes/Routes';
+import ShoppingCart from './components/shoppingCart';
+
 const App = () => {
-    const pru = 34;
     return (
-        <div className="App-container">
-            <h1>App{pru}</h1>
+        <div className="App-container" data-test="component-app">
+            <Header />
+            <div className="App-body" data-test="App-body">
+                <SideBar />
+                <Routes />
+                <ShoppingCart />
+            </div>
+            <Footer />
         </div>
     );
 };
