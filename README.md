@@ -1,44 +1,15 @@
-# Grocery App
-Small example of a full stack grocery web app where you can create an account make an order, purchase you order and check your orders history.
-This project still in development, so I will continuously add some updates in the user interface.
+### Build a MERN (MongoDB | Express | ReactJS | Nodejs) stack app from scratch
 
-DEMO  
-----  
-[Grocery App live Demo](https://radiant-basin-25119.herokuapp.com/#/).
-![Texto alternativo](/app.png)
-Tools
------  
-Key tools used in this project are:
-Front-End
-- React
-- Redux
-- React Router
-- WebPack
-- Babel
-- Axios
-- Authentication and Authorization
-Back-End
-- NodeJS
-- Express
-- MongoDB
-- JWT Authentication and Authorization
-
-Installation  
-------------  
-Execute the following command on your terminal to install all the needed packages:  
-
-    npm install  
-Start the App:  
-
-    npm run start
-The application will start automatically in your browser on http://localhost:8080/
-
-To Build the project to a production mode execute:  
-
-    npm run build
-
-
-Copyright and license  
----------------------  
-
-The MIT License (MIT). Please see License File for more information.
+| Topics          | Videos                                                               | Date                |
+| -------         |:--------------------------------------------------------------------:| -------------------:|
+| Set up Reactjs and Nodejs structure | [video](https://youtu.be/bc2pOPeQyOs)| November 18th 2019 |
+| Run ReactJS and Nodejs in same terminal - Concurrently | [video](https://youtu.be/1REonFsWBbY)| November 18th, 2019 |
+| Git workflow | [video](https://www.youtube.com/watch?v=uvqlFuJWcXM)| November 18th, 2019 |
+| Connect to MongoDB Atlas Cluster with Mongoose | [video](https://youtu.be/OuCrHynro0w)| November 18th, 2019 |
+| Create & submit a form in Reactjs and resolved cors policy | [video](https://youtu.be/yITlR9vDXXo)| November 18th, 2019 |
+| Save data to MongoDB with Mongoose | [video](https://youtu.be/jwVCgueYcgE)| November 18th, 2019 |
+| Get/fetch data from MongoDB and display them in Reactjsh application | [video](https://youtu.be/Mfp94RjugWQ)| November 18th, 2019 |
+| Apply css styles to a ReactJS application | [video](https://youtu.be/xDsjAk54JSY)| November 18th, 2019 |
+| How to deploy a MERN Stack App to Heroku | [video](https://youtu.be/5PaUiPyBDJY)| November 18th, 2019 |
+| Connect MongoDB Atlas to your Heroku application | [video](https://youtu.be/imR9LlbG3pU)| November 18th, 2019 |
+| Enable automatic deployment to Heroku | [video](https://youtu.be/y_7czmJXK_c)| November 18th, 2019 |
