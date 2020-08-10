@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
+import toggleMenu from '../store/actions/menuToggle';
+
 const Header = () => {
+    const dispatch = useDispatch();
     const history = useHistory();
     const [form, setForm] = useState({ search: '' });
 
-    const toggleMenuHandler = () => alert('toggle menu');
-    const redirectHandler = () => history.push('/');
-
+    const toggleMenuHandler = () => dispatch(toggleMenu());
+    const redirectHandler = () => {
+        history.push('/');
+    };
     const inputHandler = e => {
         const { name, value } = e.target;
         setForm(oldForm => {
@@ -16,6 +21,7 @@ const Header = () => {
                 [name]: value,
             };
         });
+        history.push({ pathname: `/search/${value}` });
     };
 
     return (
