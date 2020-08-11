@@ -5,7 +5,7 @@
     position: relative;
     bottom: 0;
 }
-.Footer-box {
+.Footer-box{
     margin-top: 20px;
     width: 100%;
     height: 450px;
@@ -14,10 +14,10 @@
     color: rgb(163, 159, 159);
     z-index: 100;
 }
-h3 {
+h3{
     color: white;
 }
-.Footer-information {
+.Footer-information{
     display: flex;
     height: 100%;
     width: 100%;
@@ -27,23 +27,23 @@ h3 {
     font-size: 15px;
 }
 .Footer-aboutCompany {
-    margin: 50px;
+    margin: 50px;  
 }
 .Footer-aboutCompany p {
     font-size: 15px;
 }
 .Footer-Contact {
-    width: 600px;
-    margin-right: 50px;
+   width: 600px;
+   margin-right: 50px;
 }
 .Footer-Connected {
     width: 50%;
     margin-right: 50px;
 }
-.Footer-Connected h3 {
+.Footer-Connected h3{
     text-align: center;
 }
-.Footer-Connected div {
+.Footer-Connected div{
     display: flex;
     height: 50px;
     margin: auto;
@@ -61,7 +61,7 @@ h3 {
     color: rgb(45, 126, 231);
     cursor: pointer;
 }
-.Footer-copyrhigt {
+.Footer-copyrhigt{
     width: 100%;
     height: 50px;
     background: rgb(39, 39, 39);
@@ -78,13 +78,13 @@ h3 {
     .Footer-copyrhigt {
         font-size: 14px;
     }
-    .Footer-Contact p {
+    .Footer-Contact p{
         font-size: 16px;
     }
-    .Footer-aboutCompany p {
+    .Footer-aboutCompany p{
         font-size: 14px;
     }
-    .Footer-Connecteddiv p {
+    .Footer-Connecteddiv p{
         font-size: 14px;
     }
     .Footer-Connected div img {
@@ -100,7 +100,7 @@ h3 {
     .Footer-copyrhigt {
         font-size: 12px;
     }
-    .Footer-Contact p {
+    .Footer-Contact p{
         font-size: 14px;
     }
     .Footer-Connected img {
@@ -110,22 +110,21 @@ h3 {
     .Footer-information h3 {
         font-size: 15px;
     }
-    .Footer-Connecteddiv p {
+    .Footer-Connecteddiv p{
         font-size: 12px;
     }
-    .Footer-box {
+    .Footer-box{
         margin-top: 0px;
     }
-    .Footer-Connected,
-    .Contact {
+    .Footer-Connected, .Contact {
         width: 60%;
         margin-right: 20px;
-    }
+     }
 }
 @media only screen and (max-width: 1100px) {
-    .Footer-copyrhigt {
+    .Footer-copyrhigt{
         font-size: 12px;
-        flex-direction: column;
+        flex-direction: column; 
         height: 65px;
     }
     .Footer-Connected {
@@ -135,10 +134,10 @@ h3 {
         display: flex;
         width: 300px;
     }
-    .Footer-Connected h3 {
+    .Footer-Connected h3{
         position: absolute;
         top: -40px;
-    }
+    } 
     .Footer-Connected div {
         flex-direction: row;
         margin-left: 10px;
@@ -148,6 +147,6 @@ h3 {
     }
     .Footer-Connected img:hover {
         transform: scale(1.3);
-        cursor: pointer;
+        cursor: pointer
     }
 }
