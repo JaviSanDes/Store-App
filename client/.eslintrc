@@ -11,6 +11,10 @@
     },
     "root": true,
     "rules": {
+        "no-unused-expressions": "off",
+        "no-restricted-syntax": "off",
+        "no-param-reassign": "off",
+        "no-underscore-dangle": "off",
         "no-use-before-define": "off",
         "react/prefer-stateless-function": "warn",
         "react/self-closing-comp": [

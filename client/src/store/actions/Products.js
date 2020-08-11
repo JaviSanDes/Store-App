@@ -16,6 +16,25 @@ export const setProducts = data => ({
     products: data,
 });
 
+export const addProduct = id => ({
+    type: actionType.ADD_PRODUCT,
+    productId: id,
+});
+
+export const removeProduct = id => ({
+    type: actionType.REMOVE_PRODUCT,
+    productId: id,
+});
+
+export const eliminateProduct = id => ({
+    type: actionType.ELIMINATE_PRODUCT,
+    productId: id,
+});
+
+export const resetNotifications = () => ({
+    type: actionType.RESET_NOTIFICATIONS,
+});
+
 export function getProducts(group) {
     return async dispatch => {
         dispatch(loadingError(false));
