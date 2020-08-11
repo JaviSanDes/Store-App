@@ -5,7 +5,12 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon index.js"
+        "build": "cd client && npm run build",
+        "install-client": "cd client && npm install",
+        "heroku-postbuild": "npm run install-client && npm run build",
+        "start": "node index.js",
+        "client": "cd client && npm start",
+        "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon index.js\" \"npm run client\""
     },
     "engines": {
         "node": "10.16.0",
@@ -22,7 +27,6 @@
         "express": "^4.17.1",
         "helmet": "^3.23.3",
         "mongo": "^0.1.0",
-        "mongoose": "^5.9.20",
-        "nodemon": "^2.0.4"
+        "mongoose": "^5.9.20"
     }
 }

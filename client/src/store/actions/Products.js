@@ -39,9 +39,7 @@ export function getProducts(group) {
     return async dispatch => {
         dispatch(loadingError(false));
         dispatch(loadingInProgress(true));
-        const result = await axios.get(
-            `https://e-commerce-mernapp.herokuapp.com/api/products/${group}`
-        );
+        const result = await axios.get(`localhost:3000/api/products/${group}`);
         dispatch(setProducts({ ...result.data }));
     };
 }
