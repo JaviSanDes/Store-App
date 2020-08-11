@@ -1,17 +1,35 @@
 ﻿import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'reactstrap';
+import { useSelector, useDispatch } from 'react-redux';
+
+import toggleMenu from '../store/actions/menuToggle';
 
 const SideBar = () => {
+    const MenuVisible = useSelector(state => state.menuToggle.MenuVisible);
+
+    const dispatch = useDispatch();
+
+    let menuStyle = {};
+    if (MenuVisible) {
+        menuStyle = {
+            left: '0px',
+        };
+    }
+    const toggleMenuHandler = () => dispatch(toggleMenu());
+
     return (
         <div
             className="SideBar-container"
+            style={menuStyle}
             data-test="component-sideBar"
             data-testid="component-sideBar-id"
             id="menuId"
+            isVisible={MenuVisible}
         >
             <button
                 className="sideBar-button"
+                onClick={toggleMenuHandler}
                 type="button"
                 data-test="sideBar-button"
             >
