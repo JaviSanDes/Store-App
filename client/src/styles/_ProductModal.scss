@@ -1,0 +1,98 @@
+
+.modal-body {
+    display: flex;
+    height: 380px;
+}
+.modal-body-image, .modal-body-info {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    top: -20px;
+}
+.modal-body-image {
+    border-right: 1px solid rgb(221, 220, 220);
+}
+.modal-body-image-1 {
+    width: 320px;
+    margin: auto;
+    margin-top: -50px;
+    overflow: hidden;
+    transition: all 2s;
+}
+.modal-body-image-slider {
+    display: flex;
+}
+.modal-body-img-1 {
+    width: 100%;
+}
+.modal-body-image-2 {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.modal-body-image-2 div {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.modal-body-img-2 {
+    width: 95%;
+    margin: auto;
+    margin-top: -30px;
+    position: absolute;
+    transform: translate(1px, 50%);
+}
+.modal-body-info {
+    margin-left: 20px;
+}
+.modal-body-info-name {
+    font-size: 20px;
+}
+.modal-body-info-text {
+    height: 130px;
+    margin-bottom: 80px;
+}
+.modal-tag {
+    padding: 8px 15px;
+    background: rgb(231, 231, 231);
+    display: inline;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.modal-body-info-nameOffer {
+    display: flex;
+}
+.modal-offer {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    background: rgb(248, 65, 65);
+    border-radius: 2em;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(245, 245, 245);
+    padding: 2px 5px 0px 8px;
+    right: 0;
+  }
+
+@media only screen and (max-width: 990px) {
+    .modal-body {
+        display: inline;
+        height: 85vh;
+        overflow: scroll;
+    }
+    .modal-body-image {
+        height: 400px;
+    }
+    .modal-body-info {
+        height: 300px;
+        margin: 0;
+    }
+  }

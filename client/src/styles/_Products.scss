@@ -1,0 +1,37 @@
+.Products-container {
+    width: 100%;
+    padding-left: 10px;
+    width: 1000px;
+    width: 100%;
+    margin-top: 80px;
+}
+.spinner {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 100px;
+}
+.Products-order {
+    display: flex;
+    width: 250px;
+    float: right;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.Products-order-selector {
+    margin-left: 10px;
+    width: 175px;
+    height: 30px;
+    padding-bottom: 4px;
+}
+.Products-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1300px) {
+    .Products-container {
+        padding-left: 0;
+    }
+}
