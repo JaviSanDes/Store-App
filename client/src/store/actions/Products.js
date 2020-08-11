@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as actionType from './actionTypes';
+import * as actionType from '../actionTypes';
 
 export const loadingError = bool => ({
     type: actionType.LOADING_ERROR,

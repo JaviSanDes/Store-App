@@ -6,7 +6,7 @@ import {
     REMOVE_PRODUCT,
     ELIMINATE_PRODUCT,
     RESET_NOTIFICATIONS,
-} from '../actions/actionTypes';
+} from '../actionTypes';
 
 const initialState = {
     isLoading: false,

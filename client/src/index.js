@@ -10,14 +10,13 @@ import './styles/index.scss';
 
 function render(Component) {
     ReactDOM.render(
-      <Provider store={initStore}>
-        <HashRouter>
-          <Component />
-        </HashRouter>
-      </Provider>,
-      document.getElementById("root")
+        <Provider store={initStore}>
+            <HashRouter>
+                <Component />
+            </HashRouter>
+        </Provider>,
+        document.getElementById('root')
     );
-  }
-  
-  render(App);
-  
+}
+
+render(App);

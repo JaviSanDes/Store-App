@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
-
 // reducer
 import menuToggleReducer from './reducers/menuToggle';
 import productsReducer from './reducers/Products';

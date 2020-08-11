@@ -4,7 +4,7 @@ import SideBar from './components/SideBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Routes from './routes/Routes';
-import ShoppingCart from './components/shoppingCart';
+import ShoppingCart from './components/shoppingCart/shoppingCart';
 
 const App = () => {
     return (
