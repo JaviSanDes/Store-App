@@ -1,0 +1,1298 @@
+[{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b08"
+  },
+  "measure": "600 gr.",
+  "group": "frozen",
+  "image": "chicken_rice.jpg",
+  "name": "Chicken Rice",
+  "description": "Chicken Rice a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 3.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af9"
+  },
+  "measure": "pack 12 und.",
+  "group": "drinks",
+  "image": "heineken.png",
+  "name": "Heineken",
+  "description": "heineken products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 3.25,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0d"
+  },
+  "measure": "1 kg.",
+  "group": "frozen",
+  "image": "green_beans.jpg",
+  "name": "Green Beans",
+  "description": "Green Beans a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 1.85,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b19"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "snickers_bites_pouch.jpg",
+  "name": "Snickers Bites Pouch",
+  "description": "Twix Bites Pouch Bag are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b05"
+  },
+  "measure": "400gr",
+  "group": "meat",
+  "image": "pork_fillets.png",
+  "name": "Pork Fillets",
+  "description": "Pork fillets are one of the best part of the pork. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 10.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b09"
+  },
+  "measure": "1 kg.",
+  "group": "frozen",
+  "image": "rice_three_delicacies.jpg",
+  "name": "Rice Three Delicacies",
+  "description": "Rice Three Delicacies a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0e"
+  },
+  "measure": "2 Kg.",
+  "group": "frozen",
+  "image": "brocoli.jpg",
+  "name": "French Fries",
+  "description": "French Fries a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 3.45,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b12"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "maynards_assetts_jelly_babies.jpg",
+  "name": "Maynards Bassetts Jelly Babies",
+  "description": "Maynards Bassetts Jelly are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2a"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "cafe_beans.png",
+  "name": "Cafe Beans",
+  "description": "Cafe Beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.2,
+  "offer": 50,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b07"
+  },
+  "measure": "600gr",
+  "group": "meat",
+  "image": "cut_beef.png",
+  "name": "Cut Beef",
+  "description": "cut beff are one of the best part of the cow. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 12.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84afa"
+  },
+  "measure": "2l",
+  "group": "drinks",
+  "image": "limonada.png",
+  "name": "Limonada",
+  "description": "Limonada products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 2.34,
+  "offer": 50,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0b"
+  },
+  "measure": "300 gr.",
+  "group": "frozen",
+  "image": "red_fruits.jpg",
+  "name": "Red Fruits",
+  "description": "Red Fruits a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 6.35,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b17"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "M&Ms_XL_pouch.jpg",
+  "name": "M&Ms XL Pouch",
+  "description": "M&Ms XL Pouch are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 7.25,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1d"
+  },
+  "measure": "5 Und.",
+  "group": "fruits",
+  "image": "banana.jpg",
+  "name": "Bananas",
+  "description": "Bananas a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b21"
+  },
+  "measure": "1kg",
+  "group": "fruits",
+  "image": "tangerine.jpg",
+  "name": "Tangerine",
+  "description": "Tangerine a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.1,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b15"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "haribo_starmix.jpg",
+  "name": "Haribo Starmix",
+  "description": "Haribo Starmix are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 0.9,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b24"
+  },
+  "measure": "1 Und",
+  "group": "fruits",
+  "image": "pineapple.jpg",
+  "name": "Pineapple",
+  "description": "Pineapple a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.45,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2f"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "heinz_creationz_mexican_beanz.jpg",
+  "name": "Heinz Creationz Mexican Beanz",
+  "description": "Heinz Creationz Mexican Beanz perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.5,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af6"
+  },
+  "measure": "pack 18 und.",
+  "group": "drinks",
+  "image": "cocacola0.png",
+  "name": "Cocacola 0",
+  "description": "Cocacola products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 2.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af5"
+  },
+  "measure": "2l",
+  "group": "drinks",
+  "image": "schweps.png",
+  "name": "Schweps Tonic",
+  "description": "Schweps Tonic products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af7"
+  },
+  "measure": "2L",
+  "group": "drinks",
+  "image": "DrPepper.png",
+  "name": "Dr Pepper",
+  "description": "Dr Pepper products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 1.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af8"
+  },
+  "measure": "2L",
+  "group": "drinks",
+  "image": "fanta fruits.png",
+  "name": "fanta fruits",
+  "description": "fanta fruits products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 1.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0f"
+  },
+  "measure": "750 gr.",
+  "group": "frozen",
+  "image": "potato_wedges.jpg",
+  "name": "Potato Wedges",
+  "description": "French Fries a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 5.9,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b32"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "integral_macaroni.jpg",
+  "name": "Integral Macaroni",
+  "description": "Integral Macaroni perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84afe"
+  },
+  "measure": "700gr",
+  "group": "meat",
+  "image": "chicken_wings.png",
+  "name": "Chicken Wings",
+  "description": "Chicken Wings are one of the best part of the chicken. It is very tasty and easy to cook. This product is made with the highest-quality ingredients.",
+  "price": 6.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b03"
+  },
+  "measure": "500gr",
+  "group": "meat",
+  "image": "chicken_breast.png",
+  "name": "Chicken Breast",
+  "description": "Chicken Breast are one of the best part of the Chicken. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 9.25,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1c"
+  },
+  "measure": "4 Und.",
+  "group": "fruits",
+  "image": "avocado.jpg",
+  "name": "Avocado",
+  "description": "Avocado a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.4,
+  "offer": 50,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b02"
+  },
+  "measure": "600gr",
+  "group": "meat",
+  "image": "turkey_breast.png",
+  "name": "Turkey Breast",
+  "description": "Turkey Breast are one of the best part of the Turkey. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84aff"
+  },
+  "measure": "500gr",
+  "group": "meat",
+  "image": "burger_meat.png",
+  "name": "Burger Meta",
+  "description": "Burger Meta are one of the best ways to eat meat. This product is made with the highest-quality ingredients. It is very tasty and easy to cook.",
+  "price": 3.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b22"
+  },
+  "measure": "5 Und.",
+  "group": "fruits",
+  "image": "apple.png",
+  "name": "Apple",
+  "description": "Apple a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.2,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2e"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "heinz_beanz_fiery_chilli.jpg",
+  "name": "Heinz Beanz Fiery Chilli",
+  "description": "Heinz Beanz Fiery Chilli perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b31"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "lasana.jpg",
+  "name": "Lasana",
+  "description": "Garofalo perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b06"
+  },
+  "measure": "600gr",
+  "group": "meat",
+  "image": "steak.png",
+  "name": "Steak",
+  "description": "Steak are one of the best part of the turkey. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 8.8,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b10"
+  },
+  "measure": "450 gr.",
+  "group": "frozen",
+  "image": "chopped_pepper.jpg",
+  "name": "Chopped Pepper",
+  "description": "Chopped Pepper a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 6.6,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b13"
+  },
+  "measure": "1 Und 135 gr.",
+  "group": "sweets",
+  "image": "werther's_original.jpg",
+  "name": "Werther's Original",
+  "description": "Maynards Bassetts Jelly are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1e"
+  },
+  "measure": "450gr",
+  "group": "fruits",
+  "image": "strawberries.jpg",
+  "name": "Strawberries",
+  "description": "Strawberries a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 8.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b23"
+  },
+  "measure": "5 Und.",
+  "group": "fruits",
+  "image": "orange.jpg",
+  "name": "Orange",
+  "description": "Orange a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.4,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0c"
+  },
+  "measure": "360 gr.",
+  "group": "frozen",
+  "image": "prawns.jpg",
+  "name": "Prawns",
+  "description": "Prawns a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 8.1,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b01"
+  },
+  "measure": "2 Und 360gr",
+  "group": "meat",
+  "image": "mince.png",
+  "name": "Hamburger",
+  "description": "mince are one of the best part of the cow. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 3.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b30"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "garofalo.jpg",
+  "name": "Garofalo",
+  "description": "Garofalo perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b33"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "gluten_free_macaroni.jpg",
+  "name": "Gluten Free Macaroni",
+  "description": "Gluten Free Macaroni perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1b"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "mars_M&M_cookies.jpg",
+  "name": "Mars M&M Cookies",
+  "description": "Twix Bites Pouch Bag are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b20"
+  },
+  "measure": "5 Und.",
+  "group": "fruits",
+  "image": "lemon.jpg",
+  "name": "Lemon",
+  "description": "Lemon a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b26"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "green_beans.png",
+  "name": "Green Beans",
+  "description": "Green beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.3,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2d"
+  },
+  "measure": "100 gr",
+  "group": "legumes",
+  "image": "chickpeas.png",
+  "name": "Chickpeas",
+  "description": "Chickpeasa perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84afc"
+  },
+  "measure": "1 Und.",
+  "group": "drinks",
+  "image": "redbull.png",
+  "name": "Red Bull",
+  "description": "Red Bull products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 0.8,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b28"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "heinz_beans.jpg",
+  "name": "Heinz Beans",
+  "description": "Heinz Beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84afd"
+  },
+  "measure": "pack 6 Und.",
+  "group": "drinks",
+  "image": "sprite.png",
+  "name": "Sprite",
+  "description": "Sprite products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b00"
+  },
+  "measure": "500gr",
+  "group": "meat",
+  "image": "beef_entrecote.png",
+  "name": "Beef Entrecote",
+  "description": "Beef Entrecote are one of the best part of the cow. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 12.1,
+  "offer": 50,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b0a"
+  },
+  "measure": "450 gr.",
+  "group": "frozen",
+  "image": "chopped_onion.jpg",
+  "name": "Chopped Onion",
+  "description": "Chopped Onion a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 2.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b29"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "black_beans.png",
+  "name": "Black Beans",
+  "description": "Black Beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.25,
+  "offer": 15,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84af4"
+  },
+  "measure": "pack 24 und.",
+  "group": "drinks",
+  "image": "7up.png",
+  "name": "7up",
+  "description": "7UP products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 2.4,
+  "offer": 15,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1a"
+  },
+  "measure": "1 Und 6x25g.",
+  "group": "sweets",
+  "image": "oreo_minis.jpg",
+  "name": "Oreo Minis",
+  "description": "Twix Bites Pouch Bag are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b1f"
+  },
+  "measure": "5 Und.",
+  "group": "fruits",
+  "image": "kiwi.jpg",
+  "name": "Kiwi",
+  "description": "Kiwi a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84afb"
+  },
+  "measure": "2l",
+  "group": "drinks",
+  "image": "pepsi.png",
+  "name": "Pepsi Cola",
+  "description": "Pepsi Cola products are made with the highest-quality ingredients. Perfect for every ocasion. Whatever the flavor, every can is crisp, clean, and refreshing.",
+  "price": 2.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b25"
+  },
+  "measure": "1 Und",
+  "group": "fruits",
+  "image": "watermelon.jpg",
+  "name": "Watermelon",
+  "description": "Pineapple a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.45,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2b"
+  },
+  "measure": "100 gr",
+  "image": "lentis.png",
+  "name": "Lentis",
+  "description": "Lentis a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.55,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b2c"
+  },
+  "measure": "100 gr",
+  "group": "legumes",
+  "image": "white_beans.png",
+  "name": "White Beans",
+  "description": "White Beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.35,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b04"
+  },
+  "measure": "1.5 Kg",
+  "group": "meat",
+  "image": "chicken.png",
+  "name": "Chicken",
+  "description": "Chicken are one of the best part of the Chicken. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 15.34,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b11"
+  },
+  "measure": "500 gr.",
+  "group": "frozen",
+  "image": "risotto.jpg",
+  "name": "Risotto",
+  "description": "Risotto is a very energy food. This product is a highest-quality ingredient. It is very tasty and easy to cook.",
+  "price": 9.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b14"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "fruittella_duo_stix.jpg",
+  "name": "Fruittella Duo Stix",
+  "description": "Maynards Bassetts Jelly are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b16"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "kinder_choco-Bons.jpg",
+  "name": "kinder Choco-Bons",
+  "description": "kinder Choco-Bons are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b18"
+  },
+  "measure": "1 Und.",
+  "group": "sweets",
+  "image": "twix_bites_pouch_bag.jpg",
+  "name": "Twix Bites Pouch Bag",
+  "description": "Twix Bites Pouch Bag are perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.3,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b27"
+  },
+  "measure": "1 Und.",
+  "group": "legumes",
+  "image": "red_beans.png",
+  "name": "Red Beans",
+  "description": "Red Beans a perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b45"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "bolognesa.jpg",
+  "name": "Bolognesa Sauce",
+  "description": "Bolognesa Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b49"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "italian_sauce.jpg",
+  "name": "Italian Sauce",
+  "description": "Italian Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.25,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b56"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "peppers.png",
+  "name": "Peppers",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 7.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4f"
+  },
+  "measure": "500 gr.",
+  "group": "vegetables",
+  "image": "carrots.png",
+  "name": "Carrots",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b53"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "lettuce.png",
+  "name": "Lettuce",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.25,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b38"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "tagliatelle.jpg",
+  "name": "Tagliatelle",
+  "description": "Integral Spaghetti perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.8,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b47"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "cranberry_sauce.jpg",
+  "name": "Cranberry Sauce",
+  "description": "Cranberry Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.65,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b39"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "macarroni.jpg",
+  "name": "Macarroni",
+  "description": "Macarroni perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.6,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3a"
+  },
+  "measure": "100 gr.",
+  "group": "fish",
+  "image": "tuna.png",
+  "name": "Tuna",
+  "description": "Tuna perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3d"
+  },
+  "measure": "500 gr.",
+  "group": "fish",
+  "image": "squid.png",
+  "name": "Squid",
+  "description": "Squid perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 9.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b57"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "tomatoes.png",
+  "name": "Tomatoes",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b36"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "integral_spaghetti.jpg",
+  "name": "Integral Spaghetti",
+  "description": "Integral Spaghetti perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.5,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3b"
+  },
+  "measure": "1 Und.",
+  "group": "fish",
+  "image": "basa.png",
+  "name": "Basa",
+  "description": "Basa perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 8.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4a"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "tikka_masala_sauce.jpg",
+  "name": "Tikka Masala Sauce",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.45,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4d"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "tabasco.jpg",
+  "name": "Tabasco",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 6.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3c"
+  },
+  "measure": "500 gr.",
+  "group": "fish",
+  "image": "breaded_fish.png",
+  "name": "Breaded Fish",
+  "description": "Basa perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 12.7,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b48"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "gravy_chicken_sauce.jpg",
+  "name": "Gravy Chicken Sauce",
+  "description": "Cranberry Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3e"
+  },
+  "measure": "1 Und.",
+  "group": "fish",
+  "image": "cod.png",
+  "name": "Cod",
+  "description": "Cod perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b40"
+  },
+  "measure": "100 gr.",
+  "group": "fish",
+  "image": "prawns.png",
+  "name": "Prawns",
+  "description": "Prawns perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 4.1,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b3f"
+  },
+  "measure": "100 gr.",
+  "group": "fish",
+  "image": "hake.png",
+  "name": "Hake",
+  "description": "Cod perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.25,
+  "offer": 15,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4c"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "gravy_sauce.jpg",
+  "name": "Gravy Sauce",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.8,
+  "offer": 15,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b50"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "onions.png",
+  "name": "Onions",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b37"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "spaghetti.jpg",
+  "name": "Spaghetti",
+  "description": "Integral Spaghetti perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b35"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "rabioli.jpg",
+  "name": "Rabioli",
+  "description": "Rabioli perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.8,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4e"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "brocoli.png",
+  "name": "Brocoli",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 1.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b44"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "ketchup.jpg",
+  "name": "Ketchup",
+  "description": "Ketchup perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.4,
+  "offer": 0,
+  "assessment": 3,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b52"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "cucumber.png",
+  "name": "Cucumber",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.6,
+  "offer": 15,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b42"
+  },
+  "measure": "1 Und 250 gr.",
+  "group": "fish",
+  "image": "sardine.png",
+  "name": "Sardine",
+  "description": "Salmon perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.5,
+  "offer": 15,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b43"
+  },
+  "measure": "1 Und 250 gr.",
+  "group": "fish",
+  "image": "trout.png",
+  "name": "Trout",
+  "description": "Trout perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 15.5,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b34"
+  },
+  "measure": "500 gr.",
+  "group": "pasta",
+  "image": "tricolor_macaroni.jpg",
+  "name": "Tricolor Macaroni",
+  "description": "Tricolor Macaroni perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.6,
+  "offer": 0,
+  "assessment": 2,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b55"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "potatoes.png",
+  "name": "Potatoes",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.8,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b46"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "salsa_brava.jpg",
+  "name": "Salsa Brava",
+  "description": "Bolognesa Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 2.1,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b4b"
+  },
+  "measure": "1 Und.",
+  "group": "sauces",
+  "image": "tomate_chili.jpg",
+  "name": "Tomate Chili",
+  "description": "Tikka Masala Sauce perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 5.8,
+  "offer": 15,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b54"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "asparagus.png",
+  "name": "Asparagus",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 6.3,
+  "offer": 0,
+  "assessment": 1,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b41"
+  },
+  "measure": "100 gr.",
+  "group": "fish",
+  "image": "salmon.png",
+  "name": "Salmon",
+  "description": "Salmon perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.8,
+  "offer": 15,
+  "assessment": 4,
+  "quantity": 0
+},{
+  "_id": {
+    "$oid": "5ef336854e7c12288ce84b51"
+  },
+  "measure": "1 Und.",
+  "group": "vegetables",
+  "image": "mushroom.png",
+  "name": "Mushroom",
+  "description": "perfect for parties and candy buffets! Choose from a wide selection of lollies including swirl lollipops, chocolate lollipops, heart lollipops, Chupa Chups and more.",
+  "price": 3.25,
+  "offer": 0,
+  "assessment": 4,
+  "quantity": 0
+}]
