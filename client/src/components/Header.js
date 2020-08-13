@@ -35,7 +35,11 @@ const Header = () => {
                 <div className="Header-butto-linen" />
                 <div className="Header-butto-linen" />
             </button>
-            <div className="header-home" onClick={redirectHandler}>
+            <div
+                className="header-home"
+                onClick={redirectHandler}
+                role="button"
+            >
                 <h1 className="header-home-link">E</h1>
                 <h1 className="header-home-link-2">commerce</h1>
             </div>

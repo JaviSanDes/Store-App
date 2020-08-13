@@ -20,17 +20,10 @@ const initialState = {
 const setProducts = (state, action) => {
     const products = state.products.map(product => ({ ...product })); // CLONE ARRAY OF OBJECTS
     const newProducts = action.products;
-    for (const property in newProducts) {
-        if ({}.hasOwnProperty.call(newProducts, property)) {
-            if (
-                !products.some(
-                    product => product._id === newProducts[property]._id
-                )
-            ) {
-                products.push({ ...newProducts[property] });
-            }
-        }
-    }
+    Object.values(newProducts).forEach(newProduct => {
+        if (!products.some(product => product._id === newProduct))
+            products.push({ ...newProduct });
+    });
     return {
         ...state,
         isLoading: false,
