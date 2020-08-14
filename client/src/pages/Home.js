@@ -64,7 +64,6 @@ const Home = props => {
         <div className="Home-container">
             <SideBar />
             <div className="Home-body">
-                <h1>HOME</h1>
                 {group !== 'offer' ? null : (
                     <img
                         src={process.env.PUBLIC_URL + `images/alimentos2.png`}
