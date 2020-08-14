@@ -21,7 +21,7 @@ const setProducts = (state, action) => {
     const products = state.products.map(product => ({ ...product })); // CLONE ARRAY OF OBJECTS
     const newProducts = action.products;
     Object.values(newProducts).forEach(newProduct => {
-        if (!products.some(product => product._id === newProduct))
+        if (!products.some(product => product._id === newProduct._id))
             products.push({ ...newProduct });
     });
     return {

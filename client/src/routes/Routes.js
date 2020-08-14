@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import Home from '../pages/Home';
-import Products from '../pages/Products';
+import Checkout from '../pages/Checkout';
 
 const Routes = () => {
     return (
@@ -10,41 +10,44 @@ const Routes = () => {
             <div>
                 <Switch>
                     <Route path="/legume">
-                        <Products group="legumes" />
+                        <Home group="legumes" />
                     </Route>
                     <Route path="/meat">
-                        <Products group="meat" />
+                        <Home group="meat" />
                     </Route>
                     <Route path="/vegetables">
-                        <Products group="vegetables" />
+                        <Home group="vegetables" />
                     </Route>
                     <Route path="/fruits">
-                        <Products group="fruits" />
+                        <Home group="fruits" />
                     </Route>
                     <Route path="/fish">
-                        <Products group="fish" />
+                        <Home group="fish" />
                     </Route>
                     <Route path="/drinks">
-                        <Products group="drinks" />
+                        <Home group="drinks" />
                     </Route>
                     <Route path="/frozen">
-                        <Products group="frozen" />
+                        <Home group="frozen" />
                     </Route>
                     <Route path="/pasta">
-                        <Products group="pasta" />
+                        <Home group="pasta" />
                     </Route>
                     <Route path="/sweets">
-                        <Products group="sweets" />
+                        <Home group="sweets" />
                     </Route>
                     <Route path="/sauces">
-                        <Products group="sauces" />
+                        <Home group="sauces" />
                     </Route>
                     <Route path="/search/:id">
-                        <Products group="search" />
+                        <Home group="search" />
+                    </Route>
+                    <Route path="/checkout">
+                        <Checkout />
                     </Route>
 
                     <Route exact path="/">
-                        <Home />
+                        <Home group="offer" />
                     </Route>
                 </Switch>
             </div>

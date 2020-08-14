@@ -1,3 +1,4 @@
+/*
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Spinner } from 'reactstrap';
@@ -67,3 +68,4 @@ Products.propTypes = {
 };
 
 export default Products;
+*/
