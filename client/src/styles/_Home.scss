@@ -1,7 +1,12 @@
 .Home-container {
-    width: 100%;
-    padding-left: 10px;
-    min-height: 95vh;
+    display: flex;
+    width: 85vw;
+    max-width: 1400px;
+    padding: 5px;
+    margin: auto;
+    min-height: 75vh;
+}
+.Home-body {
 }
 .home-img {
     width: 100%;

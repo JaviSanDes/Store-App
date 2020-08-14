@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 
 import { getProducts } from '../store/actions/Products';
 import Product from '../components/Product';
+import SideBar from '../components/SideBar';
+import ShoppingCart from '../components/shoppingCart/shoppingCart';
 
 const Home = props => {
     const { group } = props;
@@ -60,13 +62,17 @@ const Home = props => {
     );
     return (
         <div className="Home-container">
-            <h1>HOME</h1>
-            <img
-                src={process.env.PUBLIC_URL + `images/alimentos2.png`}
-                className="home-img"
-                alt="img"
-            />
-            <div className="home-products">{render}</div>
+            <SideBar />
+            <div className="Home-body">
+                <h1>HOME</h1>
+                <img
+                    src={process.env.PUBLIC_URL + `images/alimentos2.png`}
+                    className="home-img"
+                    alt="img"
+                />
+                <div className="home-products">{render}</div>
+            </div>
+            <ShoppingCart />
         </div>
     );
 };
