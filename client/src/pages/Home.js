@@ -65,11 +65,13 @@ const Home = props => {
             <SideBar />
             <div className="Home-body">
                 <h1>HOME</h1>
-                <img
-                    src={process.env.PUBLIC_URL + `images/alimentos2.png`}
-                    className="home-img"
-                    alt="img"
-                />
+                {group !== 'offer' ? null : (
+                    <img
+                        src={process.env.PUBLIC_URL + `images/alimentos2.png`}
+                        className="home-img"
+                        alt="img"
+                    />
+                )}
                 <div className="home-products">{render}</div>
             </div>
             <ShoppingCart />
