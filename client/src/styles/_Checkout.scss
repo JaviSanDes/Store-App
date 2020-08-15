@@ -1,4 +1,24 @@
 .checkout-container {
-    border: 2px solid red;
-    height: 100vh;
+    height: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 150px;
+    min-height: 60vh;
+    background: white;
+    border: 1.5px solid rgb(245, 245, 245);
+    border-radius: 10px;
+    margin-bottom: 10vh;
+}
+.checkout-states-circles {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    border: 1px solid red;
+}
+.checkout-circle {
+    width: 40px;
+    height: 40px;
+    background: rgb(224, 224, 224);
+    border-radius: 50%;
+    margin: auto;
 }
