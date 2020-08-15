@@ -16,7 +16,9 @@ const CheckoutPhases = () => {
                         role="button"
                     >
                         {phase !== 1 ? null : (
-                            <div className="checkout-phases-greenCircle"></div>
+                            <div className="checkout-phases-greenCircle">
+                                <p>1</p>
+                            </div>
                         )}
                         {phase <= 1 ? null : (
                             <img
@@ -35,8 +37,11 @@ const CheckoutPhases = () => {
                         onClick={() => clickHander(2)}
                         role="button"
                     >
+                        {phase > 1 ? null : <p>2</p>}
                         {phase !== 2 ? null : (
-                            <div className="checkout-phases-greenCircle"></div>
+                            <div className="checkout-phases-greenCircle">
+                                <p>2</p>
+                            </div>
                         )}
                         {phase <= 2 ? null : (
                             <img
@@ -55,8 +60,11 @@ const CheckoutPhases = () => {
                         onClick={() => clickHander(3)}
                         role="button"
                     >
+                        {phase > 2 ? null : <p>3</p>}
                         {phase !== 3 ? null : (
-                            <div className="checkout-phases-greenCircle"></div>
+                            <div className="checkout-phases-greenCircle">
+                                <p>3</p>
+                            </div>
                         )}
                         {phase <= 3 ? null : (
                             <img
@@ -75,8 +83,11 @@ const CheckoutPhases = () => {
                         onClick={() => clickHander(4)}
                         role="button"
                     >
+                        {phase > 3 ? null : <p>4</p>}
                         {phase !== 4 ? null : (
-                            <div className="checkout-phases-greenCircle"></div>
+                            <div className="checkout-phases-greenCircle">
+                                <p>4</p>
+                            </div>
                         )}
                         {phase <= 4 ? null : (
                             <img

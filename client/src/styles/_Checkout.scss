@@ -48,10 +48,12 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
 }
 .checkout-phases-greenCircle {
     width: 40px;
     height: 40px;
-    background: blue;
+    background: rgb(26, 159, 248);
     border-radius: 50%;
 }
