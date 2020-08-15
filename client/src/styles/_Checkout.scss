@@ -34,12 +34,24 @@
 }
 
 .checkout-circle {
-    width: 45px;
+    width: 40px;
+    height: 40px;
     background: rgb(224, 224, 224);
     border-radius: 50%;
     margin: auto;
     cursor: pointer;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+}
+.checkout-circle img {
+}
+.checkout-circle p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.checkout-phases-greenCircle {
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border-radius: 50%;
 }
