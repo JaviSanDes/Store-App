@@ -9,12 +9,30 @@
     border-radius: 10px;
     margin-bottom: 10vh;
 }
-.checkout-states-circles {
-    display: flex;
-    margin: auto;
+
+//PHASES-------------------------------------------
+.checkout-phases-container {
     width: 60%;
-    border: 1px solid red;
+    margin: auto;
 }
+.checkout-phases-line {
+    width: 100%;
+    height: 2px;
+    background: rgb(201, 201, 201);
+    position: relative;
+    top: 22px;
+}
+.checkout-phases-circles {
+    display: flex;
+    width: 100%;
+}
+
+.checkout-phase {
+    margin: auto;
+    z-index: 2;
+    background: white;
+}
+
 .checkout-circle {
     width: 40px;
     height: 40px;
