@@ -20,32 +20,28 @@ const Product2 = props => {
                 />
             </div>
             <div className="order-product-description">
-                <p>
+                <p className="order-product-description-name">
                     <b>{name}</b>
                 </p>
-                <p>
+                <p className="order-product-description-price">
                     {measure}, {price}€/und.
                 </p>
-                <div className="order-product-description-buttons">
-                    <button
-                        type="button"
-                        onClick={() => dispatch(addProduct(id))}
-                    >
-                        +
-                    </button>
-                    <div>{quantity}</div>
-                    <button
-                        type="button"
-                        onClick={() => dispatch(removeProduct(id))}
-                    >
-                        -
-                    </button>
-                </div>
             </div>
-
-            <h1 className="order-product-price-total">
+            <div className="order-product-description-buttons">
+                <button type="button" onClick={() => dispatch(addProduct(id))}>
+                    +
+                </button>
+                <div>{quantity}</div>
+                <button
+                    type="button"
+                    onClick={() => dispatch(removeProduct(id))}
+                >
+                    -
+                </button>
+            </div>
+            <div className="order-product-price-total">
                 {(price * quantity).toFixed(2)} €
-            </h1>
+            </div>
             <button
                 className="order-product-eliminate"
                 type="button"

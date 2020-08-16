@@ -2,10 +2,13 @@
     display: flex;
 }
 .order-products {
-    width: 55%;
+    width: 50%;
+    height: 45vh;
+    overflow-y: scroll;
 }
 .order-info {
-    width: 45%;
+    width: 50%;
+    margin-left: 20px;
 }
 .order-info h3 {
     color: black;
@@ -14,18 +17,17 @@
 //PRODUCT-----------------------------
 .order-product {
     width: 100%;
-    height: 120px;
+    height: 80px;
     border-bottom: 1px solid rgb(204, 204, 204);
     position: relative;
-    padding: 5px;
+    padding: 0px;
     display: flex;
 }
 .order-image {
-    width: 65px;
-    height: 60%;
-    position: absolute;
+    width: 50px;
+    height: 50px;
+    position: relative;
     top: 50%;
-    left: 15px;
     transform: translateY(-50%);
     border: 1px solid rgb(230, 230, 230);
     border-radius: 5px;
@@ -37,61 +39,84 @@
     transform: translateY(-50%);
 }
 .order-product-description {
-    width: 200px;
-    margin-left: 90px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 120px;
+    position: relative;
+    margin-left: 20px;
 }
+
 .order-product-description p {
     margin: 0;
     padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.order-product-description-name {
+    font-size: 14px;
+}
+.order-product-description-price {
+    font-size: 10px;
 }
 .order-product-description-buttons {
     position: relative;
-    top: 10px;
     display: flex;
 }
 .order-product-description-buttons button {
     border: none;
-    width: 50px;
-    border-radius: 2em;
+    width: 25px;
+    border-radius: 3px;
     background: #019e7f;
     color: white;
     font-weight: bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    text-align: center;
+    line-height: 0px;
 }
 .order-product-description-buttons div {
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 20px;
     text-align: center;
     font-weight: bold;
-}
-.order-product-price {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 210px;
-    font-size: 15px;
-    width: 65px;
-    text-align: center;
+    font-size: 14px;
+    height: 55px;
+    line-height: 55px;
 }
+
 .order-product-price-total {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 305px;
-    width: 70px;
-    text-align: center;
-    font-size: 18px;
     color: #019e7f;
+    margin-left: 40px;
+    width: 65px;
+    height: 55px;
+    line-height: 55px;
+    font-weight: bold;
+    text-align: right;
+}
+.order-product-price-total p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #019e7f;
+    font-weight: bold;
 }
 .order-product-eliminate {
     position: absolute;
-    right: 5px;
+    right: 10px;
     height: 20px;
     width: 20px;
     border: none;
     font-size: 10px;
     font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
 }
