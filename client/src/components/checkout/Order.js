@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Product2 from '../shoppingCart/Product2';
+import Product from './Product';
 
 const Order = () => {
     const productsOrdered = useSelector(state => state.products.products);
@@ -11,7 +11,7 @@ const Order = () => {
         productsOrdered.map(product => {
             if (product._id === id && product.quantity > 0) {
                 products.push(
-                    <Product2
+                    <Product
                         key={product._id}
                         id={product._id}
                         name={product.name}
