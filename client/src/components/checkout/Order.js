@@ -5,6 +5,7 @@ import Product from './Product';
 const Order = () => {
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
+    const totalPrice = useSelector(state => state.products.totalPrice);
 
     const products = [];
     order.map(id => {
@@ -30,7 +31,10 @@ const Order = () => {
     });
     return (
         <div className="order-container">
-            <div className="order-products">{products}</div>
+            <div className="order-products">
+                <div className="order-products-list">{products}</div>
+                <h3 className="order-totalPrice">Total Price: {totalPrice}</h3>
+            </div>
             <div className="order-info">
                 <h4>Your Bags are Ready to Check Out!</h4>
                 <p>

@@ -24,8 +24,8 @@ const CheckoutPhases = () => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="40px"
-                                height="40px"
+                                width="35px"
+                                height="35px"
                             />
                         )}
                     </div>
@@ -47,8 +47,8 @@ const CheckoutPhases = () => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="40px"
-                                height="40px"
+                                width="35px"
+                                height="35px"
                             />
                         )}
                     </div>
@@ -70,8 +70,8 @@ const CheckoutPhases = () => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="40px"
-                                height="40px"
+                                width="35px"
+                                height="35px"
                             />
                         )}
                     </div>
@@ -93,8 +93,8 @@ const CheckoutPhases = () => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="40px"
-                                height="40px"
+                                width="35px"
+                                height="35px"
                             />
                         )}
                     </div>

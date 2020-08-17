@@ -7,6 +7,9 @@ const Checkout = () => {
         <div className="checkout-container">
             <ShoppingCart />
             <Order />
+            <button className="checkout-nextButton" type="button">
+                Next
+            </button>
         </div>
     );
 };

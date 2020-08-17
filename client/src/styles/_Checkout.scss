@@ -9,6 +9,13 @@
     border-radius: 10px;
     margin-bottom: 10vh;
     padding: 40px;
+    border-bottom: 80px solid rgb(241, 241, 241);
+    position: relative;
+}
+.checkout-nextButton {
+    position: absolute;
+    bottom: -50px;
+    right: 20px;
 }
 
 //PHASES-------------------------------------------
@@ -35,8 +42,8 @@
 }
 
 .checkout-circle {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: rgb(224, 224, 224);
     border-radius: 50%;
     margin: auto;
@@ -53,8 +60,8 @@
     font-weight: bold;
 }
 .checkout-phases-greenCircle {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: rgb(26, 159, 248);
     border-radius: 50%;
 }
