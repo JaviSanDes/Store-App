@@ -35,10 +35,16 @@ body {
     flex: 1;
 }
 
+@media only screen and (max-width: 1200px) {
+    .App-body {
+        width: 90vw;
+        margin: auto;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .App-body {
-        width: 98vw;
-        margin: 0;
+        width: 100vw;
+        margin: auto;
     }
 }
 

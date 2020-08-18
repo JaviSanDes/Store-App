@@ -32,7 +32,7 @@
 }
 .order-info {
     width: 50%;
-    margin-left: 20px;
+    padding-left: 40px;
 }
 .order-info h3 {
     color: black;
@@ -194,4 +194,16 @@ border-bottom: 2px solid rgb(197, 197, 197);
     top: 50%;
     transform: translateY(-50%);
     margin-left: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .order-container {
+        flex-direction: column-reverse;
+    }
+    .order-products {
+        width: 100%;
+    }
+    .order-info {
+        width: 100%;
+    }
 }
