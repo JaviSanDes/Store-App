@@ -8,17 +8,27 @@
     position: relative;
 }
 .order-products-list {
-    height: 40vh;
+    height: 45vh;
     overflow-y: scroll;
 }
 .order-totalPrice {
+    display: flex;
     color: black;
-    position: relative;
-    bottom: 0px;
-    left: 0px;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
     margin-top: 20px;
-    width: 300px;
-    border: 1px solid red;
+    width: 250px;
+}
+.order-totalPrice-text {
+    width: 100px;
+    text-align: right;
+    font-size: 25px;
+}
+.order-totalPrice-num {
+    position: absolute;
+    right: 0;
+    font-size: 25px;
 }
 .order-info {
     width: 50%;
@@ -27,6 +37,37 @@
 .order-info h3 {
     color: black;
 }
+.order-subTotal {
+    position: absolute;
+    display: flex;
+    right: 60px;
+    bottom: 120px;
+    width: 250px;
+}
+.order-subTotal-num {
+    position: absolute;
+    right: 0;
+}
+.order-subTotal-text {
+    width: 100px;
+    text-align: right;
+}
+.order-VAT {
+    display: flex;
+    position: absolute;
+    right: 60px;
+    bottom: 80px;
+    width: 250px;
+}
+.order-VAT-num {
+    position: absolute;
+    right: 0;
+}
+.order-VAT-text {
+    width: 100px;
+    text-align: right;
+}
+
 
 //PRODUCT-----------------------------
 .order-product {

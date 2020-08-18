@@ -33,7 +33,6 @@ const Order = () => {
         <div className="order-container">
             <div className="order-products">
                 <div className="order-products-list">{products}</div>
-                <h3 className="order-totalPrice">Total Price: {totalPrice}</h3>
             </div>
             <div className="order-info">
                 <h4>Your Bags are Ready to Check Out!</h4>
@@ -46,6 +45,21 @@ const Order = () => {
                     Below is a sample page for your cart, Created using pages
                     design UI Elementes
                 </p>
+                <div className="order-subTotal">
+                    <p className="order-subTotal-text">Sub-Total</p>
+                    <p className="order-subTotal-num">23€</p>
+                </div>
+                <div className="order-VAT">
+                    <p className="order-VAT-text">VAT</p>
+                    <p className="order-VAT-num">23€</p>
+                </div>
+
+                <div className="order-totalPrice">
+                    <h3 className="order-totalPrice-text">Total</h3>
+                    <h3 className="order-totalPrice-num">
+                        {totalPrice.toFixed(2)}€
+                    </h3>
+                </div>
             </div>
         </div>
     );
