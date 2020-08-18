@@ -47,17 +47,21 @@ const Order = () => {
                 </p>
                 <div className="order-subTotal">
                     <p className="order-subTotal-text">Sub-Total</p>
-                    <p className="order-subTotal-num">23€</p>
+                    <p className="order-subTotal-num">
+                        {totalPrice.toFixed(2)}€
+                    </p>
                 </div>
                 <div className="order-VAT">
                     <p className="order-VAT-text">VAT</p>
-                    <p className="order-VAT-num">23€</p>
+                    <p className="order-VAT-num">
+                        {((totalPrice * 21) / 100).toFixed(2)}€
+                    </p>
                 </div>
 
                 <div className="order-totalPrice">
                     <h3 className="order-totalPrice-text">Total</h3>
                     <h3 className="order-totalPrice-num">
-                        {totalPrice.toFixed(2)}€
+                        {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
                     </h3>
                 </div>
             </div>
