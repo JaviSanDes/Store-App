@@ -32,6 +32,15 @@ const Order = () => {
     return (
         <div className="order-container">
             <div className="order-products">
+                <div className="order-products-header">
+                    <p className="order-products-header-description">
+                        Description
+                    </p>
+                    <p className="order-products-header-qty">Qty</p>
+                    <p className="order-products-header-total">Total</p>
+                    <p className="order-products-header-X">#</p>
+                </div>
+
                 <div className="order-products-list">{products}</div>
             </div>
             <div className="order-info">
