@@ -61,19 +61,21 @@ const Home = props => {
         </div>
     );
     return (
-        <div className="Home-container">
-            <SideBar />
-            <div className="Home-body">
-                {group !== 'offer' ? null : (
-                    <img
-                        src={process.env.PUBLIC_URL + `images/alimentos2.png`}
-                        className="home-img"
-                        alt="img"
-                    />
-                )}
-                <div className="home-products">{render}</div>
+        <div>
+            {group !== 'offer' ? null : (
+                <img
+                    src={process.env.PUBLIC_URL + `images/alimentos2.png`}
+                    className="home-img"
+                    alt="img"
+                />
+            )}
+            <div className="Home-container">
+                <SideBar />
+                <div className="Home-body">
+                    <div className="home-products">{render}</div>
+                </div>
+                <ShoppingCart />
             </div>
-            <ShoppingCart />
         </div>
     );
 };
