@@ -1,37 +1,28 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Shipping = () => {
     return (
         <div className="shipping-container">
             <Form>
                 <FormGroup>
+                    <FormGroup>
+                        <Label for="examplePassword">Full Name</Label>
+                        <Input
+                            type="text"
+                            name="password"
+                            id="examplePassword"
+                            placeholder="Enter full name"
+                        />
+                    </FormGroup>
                     <Label for="exampleSelect">Contry</Label>
                     <Input type="select" name="select" id="exampleSelect">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>Spain</option>
+                        <option>United Kingdom</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Italy</option>
                     </Input>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="examplePassword">Full Name</Label>
-                    <Input
-                        type="text"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="Enter full name"
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="examplePassword">ZIP Code</Label>
-                    <Input
-                        type="text"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="Enter full name"
-                    />
                 </FormGroup>
                 <FormGroup>
                     <Label for="examplePassword">Address</Label>
@@ -42,6 +33,17 @@ const Shipping = () => {
                         placeholder="Current address..."
                     />
                 </FormGroup>
+
+                <FormGroup>
+                    <Label for="examplePassword">ZIP Code</Label>
+                    <Input
+                        type="text"
+                        name="password"
+                        id="examplePassword"
+                        placeholder="Enter full name"
+                    />
+                </FormGroup>
+
                 <FormGroup>
                     <Label for="examplePassword">Phone Number</Label>
                     <Input
@@ -51,7 +53,6 @@ const Shipping = () => {
                         placeholder="Current address..."
                     />
                 </FormGroup>
-                <Button>Submit</Button>
             </Form>
         </div>
     );
