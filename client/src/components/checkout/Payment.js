@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from 'reactstrap';
 
 const Payment = () => {
     return (
@@ -12,15 +13,30 @@ const Payment = () => {
                 <div>Digital Wallet</div>
             </div>
             <p>Card number</p>
-            <input></input>
+            <Input
+                type="text"
+                name="password"
+                id="examplePassword"
+                placeholder="Enter full name"
+            />
             <div className="payment-card-details">
                 <div>
                     <p>Expiration</p>
-                    <input></input>
+                    <Input
+                        type="text"
+                        name="password"
+                        id="examplePassword"
+                        placeholder="Enter full name"
+                    />
                 </div>
                 <div>
                     <p>CVC Code</p>
-                    <input></input>
+                    <Input
+                        type="text"
+                        name="password"
+                        id="examplePassword"
+                        placeholder="Enter full name"
+                    />
                 </div>
             </div>
         </div>
