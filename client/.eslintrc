@@ -2,12 +2,17 @@
     "parser": "babel-eslint",
     "plugins": ["react", "jest", "prettier"],
     "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+    "env": {
+        "es6": true,
+        "jest": true,
+        "browser": true,
+        "node": true
+    },
     "globals": {
         "React": true,
         "document": true,
         "window": true,
-        "localStorage": true,
-        "fetch": true
+        "__window": true
     },
     "root": true,
     "rules": {
@@ -69,11 +74,5 @@
         "import/no-extraneous-dependencies": 0,
         "import/extensions": 0,
         "babel/object-curly-spacing": 0
-    },
-    "env": {
-        "es6": true,
-        "jest": true,
-        "browser": true,
-        "node": true
     }
 }
