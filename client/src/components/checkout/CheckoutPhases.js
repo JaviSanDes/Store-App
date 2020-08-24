@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import propTypes from 'prop-types';
 
-const CheckoutPhases = () => {
-    const [phase, setPhase] = useState(1);
-    const clickHander = num => {
-        setPhase(num);
-    };
+const CheckoutPhases = props => {
+    const { phase } = props;
     return (
         <div className="checkout-phases-container">
             <div className="checkout-phases-line"></div>
             <div className="checkout-phases-circles">
                 <div className="checkout-phase">
-                    <div
-                        className="checkout-circle"
-                        onClick={() => clickHander(1)}
-                        role="button"
-                    >
+                    <div className="checkout-circle">
                         {phase !== 1 ? null : (
                             <div className="checkout-phases-greenCircle">
                                 <p>1</p>
@@ -32,11 +26,7 @@ const CheckoutPhases = () => {
                     <p>Your Cart</p>
                 </div>
                 <div className="checkout-phase">
-                    <div
-                        className="checkout-circle"
-                        onClick={() => clickHander(2)}
-                        role="button"
-                    >
+                    <div className="checkout-circle">
                         {phase > 1 ? null : <p>2</p>}
                         {phase !== 2 ? null : (
                             <div className="checkout-phases-greenCircle">
@@ -55,11 +45,7 @@ const CheckoutPhases = () => {
                     <p>Shipping</p>
                 </div>
                 <div className="checkout-phase">
-                    <div
-                        className="checkout-circle"
-                        onClick={() => clickHander(3)}
-                        role="button"
-                    >
+                    <div className="checkout-circle">
                         {phase > 2 ? null : <p>3</p>}
                         {phase !== 3 ? null : (
                             <div className="checkout-phases-greenCircle">
@@ -78,11 +64,7 @@ const CheckoutPhases = () => {
                     <p>Payment</p>
                 </div>
                 <div className="checkout-phase">
-                    <div
-                        className="checkout-circle"
-                        onClick={() => clickHander(4)}
-                        role="button"
-                    >
+                    <div className="checkout-circle">
                         {phase > 3 ? null : <p>4</p>}
                         {phase !== 4 ? null : (
                             <div className="checkout-phases-greenCircle">
@@ -105,4 +87,7 @@ const CheckoutPhases = () => {
     );
 };
 
+CheckoutPhases.propTypes = {
+    phase: propTypes.number.isRequired,
+};
 export default CheckoutPhases;
