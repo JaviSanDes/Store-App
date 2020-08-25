@@ -1,10 +1,14 @@
 .payment-container {
     margin: auto;
-    width: 650px;
+    max-width: 600px;
     margin-top: 40px;
+}
+.payment-price {
+    margin-bottom: 20px;
 }
 .payment-method {
     display: flex;
+    margin-bottom: 20px;
 }
 .payment-method div {
     width: 100%;
@@ -18,4 +22,12 @@
 }
 .payment-card-details {
     display: flex;
+    margin-bottom: 20px;
+}
+.payment-card-details div {
+    width: 100%;
+    margin-left: 5px;
+}
+.payment-card-number {
+    margin-bottom: 20px;
 }

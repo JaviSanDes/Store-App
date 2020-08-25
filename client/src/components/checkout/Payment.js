@@ -4,7 +4,7 @@ import { Input } from 'reactstrap';
 const Payment = () => {
     return (
         <div className="payment-container">
-            <h4>Price: 345€</h4>
+            <h4 className="payment-price">Price: 345€</h4>
             <p>Payment Method</p>
             <div className="payment-method">
                 <div>Card</div>
@@ -18,7 +18,7 @@ const Payment = () => {
                         type="text"
                         name="password"
                         id="examplePassword"
-                        placeholder="Enter full name"
+                        placeholder="First name"
                     />
                 </div>
                 <div>
@@ -27,18 +27,20 @@ const Payment = () => {
                         type="text"
                         name="password"
                         id="examplePassword"
-                        placeholder="Enter full name"
+                        placeholder="Last name"
                     />
                 </div>
             </div>
+            <div className="payment-card-number">
+                <p>Card number</p>
+                <Input
+                    type="text"
+                    name="password"
+                    id="examplePassword"
+                    placeholder="Enter full name"
+                />
+            </div>
 
-            <p>Card number</p>
-            <Input
-                type="text"
-                name="password"
-                id="examplePassword"
-                placeholder="Enter full name"
-            />
             <div className="payment-card-details">
                 <div>
                     <p>Expiration</p>
