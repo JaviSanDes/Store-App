@@ -5,9 +5,14 @@ const Payment = () => {
     return (
         <div className="payment-container">
             <h4 className="payment-price">Price: 345€</h4>
-            <p>Payment Method</p>
+            <p className="payment-method-title">Payment Method</p>
             <div className="payment-method">
-                <div>Card</div>
+                <div>
+                    <img
+                        alt="img"
+                        src={process.env.PUBLIC_URL + 'images/creditCard.png'}
+                    />
+                </div>
                 <div className="payment-method-2">Paypal</div>
                 <div>Digital Wallet</div>
             </div>
