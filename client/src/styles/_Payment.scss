@@ -8,6 +8,9 @@
     border: none;
     height: 45px;
 }
+.payment-container input:focus {
+    background: rgb(240, 240, 240);
+}
 .payment-price {
     margin-bottom: 20px;
 }
