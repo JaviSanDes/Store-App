@@ -19,7 +19,12 @@ const Payment = () => {
                         src={process.env.PUBLIC_URL + 'images/paypal.png'}
                     />
                 </div>
-                <div>Digital Wallet</div>
+                <div>
+                    <img
+                        alt="img"
+                        src={process.env.PUBLIC_URL + 'images/e-wallet.png'}
+                    />
+                </div>
             </div>
             <div className="payment-card-details">
                 <div>
