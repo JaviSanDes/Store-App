@@ -3,6 +3,11 @@
     max-width: 600px;
     margin-top: 40px;
 }
+.payment-container input {
+    background: rgb(240, 240, 240);
+    border: none;
+    height: 45px;
+}
 .payment-price {
     margin-bottom: 20px;
 }
@@ -26,7 +31,9 @@
 }
 .payment-card-details div {
     width: 100%;
-    margin-left: 5px;
+}
+.payment-card-details div:first-of-type {
+    margin-right: 30px;
 }
 .payment-card-details p {
     font-weight: bold;
