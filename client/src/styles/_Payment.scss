@@ -8,6 +8,9 @@
     border: none;
     height: 45px;
 }
+.payment-container label {
+    font-weight: bold;
+}
 .payment-container input:focus {
     background: rgb(240, 240, 240);
 }
@@ -46,14 +49,9 @@
 .payment-card-details div:first-of-type {
     margin-right: 30px;
 }
-.payment-card-details p {
-    font-weight: bold;
-}
+
 .payment-card-number {
     margin-bottom: 20px;
-}
-.payment-card-number p {
-    font-weight: bold;
 }
 .payment-method-title {
     font-weight: bold;
