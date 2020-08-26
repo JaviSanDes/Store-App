@@ -1,8 +1,8 @@
 .checkout-container {
-    height: 800px;
+    height: 750px;
     max-width: 1000px;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 8%;
     min-height: 60vh;
     background: white;
     border: 1.5px solid rgb(245, 245, 245);
@@ -20,7 +20,8 @@
 
 //PHASES-------------------------------------------
 .checkout-phases-container {
-    width: 60%;
+    width: 50%;
+    height: 60px;
     margin: auto;
 }
 .checkout-phases-line {
@@ -42,8 +43,8 @@
 }
 
 .checkout-circle {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background: rgb(224, 224, 224);
     border-radius: 50%;
     margin: auto;
@@ -60,8 +61,8 @@
     font-weight: bold;
 }
 .checkout-phases-greenCircle {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background: rgb(26, 159, 248);
     border-radius: 50%;
 }

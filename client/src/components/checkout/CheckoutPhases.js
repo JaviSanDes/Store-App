@@ -18,8 +18,8 @@ const CheckoutPhases = props => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="35px"
-                                height="35px"
+                                width="30px"
+                                height="30px"
                             />
                         )}
                     </div>
@@ -37,8 +37,8 @@ const CheckoutPhases = props => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="35px"
-                                height="35px"
+                                width="30px"
+                                height="30px"
                             />
                         )}
                     </div>
@@ -56,8 +56,8 @@ const CheckoutPhases = props => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="35px"
-                                height="35px"
+                                width="30px"
+                                height="30px"
                             />
                         )}
                     </div>
@@ -75,8 +75,8 @@ const CheckoutPhases = props => {
                             <img
                                 src={process.env.PUBLIC_URL + 'images/tick.png'}
                                 alt=""
-                                width="35px"
-                                height="35px"
+                                width="30px"
+                                height="30px"
                             />
                         )}
                     </div>
