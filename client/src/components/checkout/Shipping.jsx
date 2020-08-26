@@ -16,7 +16,7 @@ const Shipping = () => {
                         />
                     </FormGroup>
                     <Label for="exampleSelect">Contry</Label>
-                    <Input type="select" name="select" id="exampleSelect">
+                    <Input type="select" name="select">
                         <option>Spain</option>
                         <option>United Kingdom</option>
                         <option>France</option>
