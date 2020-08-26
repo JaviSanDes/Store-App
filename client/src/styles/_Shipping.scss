@@ -9,7 +9,16 @@
     border: none;
     height: 45px;
 }
+
 .shipping-container input:focus {
+    background: rgb(240, 240, 240);
+}
+.shipping-container select {
+    background: rgb(240, 240, 240);
+    border: none;
+    height: 45px;
+}
+.shipping-container select:focus {
     background: rgb(240, 240, 240);
 }
 .shipping-container label {
