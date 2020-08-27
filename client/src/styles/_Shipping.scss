@@ -9,9 +9,12 @@
     border: none;
     height: 45px;
 }
-
 .shipping-container input:focus {
     background: rgb(240, 240, 240);
+    outline: 0 none;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+        0 0 8px rgb(197, 197, 197);
+    outline: 0 none;
 }
 .shipping-container select {
     background: rgb(240, 240, 240);
@@ -20,6 +23,10 @@
 }
 .shipping-container select:focus {
     background: rgb(240, 240, 240);
+    outline: 0 none;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+        0 0 8px rgb(197, 197, 197);
+    outline: 0 none;
 }
 .shipping-container label {
     font-weight: bold;

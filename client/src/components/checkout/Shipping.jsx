@@ -12,6 +12,8 @@ const Shipping = () => {
                         name="password"
                         id="examplePassword"
                         placeholder="Enter full name"
+                        minlength="8"
+                        required
                     />
                 </FormGroup>
                 <Label for="exampleSelect">Contry</Label>
@@ -30,6 +32,8 @@ const Shipping = () => {
                     name="password"
                     id="examplePassword"
                     placeholder="Current address..."
+                    minlength="8"
+                    required
                 />
             </FormGroup>
 
@@ -40,18 +44,21 @@ const Shipping = () => {
                     name="password"
                     id="examplePassword"
                     placeholder="Enter full name"
+                    minLength="5"
+                    maxLength="5"
                 />
             </FormGroup>
 
             <FormGroup>
                 <Label for="examplePassword">Phone Number</Label>
                 <Input
-                    type="text"
+                    type="number"
                     name="password"
                     id="examplePassword"
                     placeholder="Current address..."
                 />
             </FormGroup>
+            <input type="submit" value="Submit"></input>
         </Form>
     );
 };
