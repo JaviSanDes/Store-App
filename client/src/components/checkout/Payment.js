@@ -3,7 +3,7 @@ import { Input, Label } from 'reactstrap';
 
 const Payment = () => {
     return (
-        <div className="payment-container">
+        <form className="payment-container">
             <h4 className="payment-price">Price: 345€</h4>
             <p className="payment-method-title">Payment Method</p>
             <div className="payment-method">
@@ -28,55 +28,67 @@ const Payment = () => {
             </div>
             <div className="payment-card-details">
                 <div>
-                    <Label for="examplePassword">Personal Details</Label>
+                    <Label for="name">Personal Details</Label>
                     <Input
                         type="text"
-                        name="password"
-                        id="examplePassword"
+                        name="name"
+                        id="name"
                         placeholder="First name"
+                        minLength="3"
+                        required
                     />
                 </div>
                 <div>
-                    <Label for="examplePassword">·</Label>
+                    <Label for="lastName">·</Label>
                     <Input
                         type="text"
-                        name="password"
+                        name="lastName"
                         id="examplePassword"
                         placeholder="Last name"
+                        minLength="3"
+                        required
                     />
                 </div>
             </div>
             <div className="payment-card-number">
-                <Label for="examplePassword">Card number</Label>
+                <Label for="cardNumber">Card number</Label>
                 <Input
                     type="text"
-                    name="password"
-                    id="examplePassword"
-                    placeholder="Enter full name"
+                    name="cardNumber"
+                    id="cardNumber"
+                    placeholder="Enter card number"
+                    minLength="12"
+                    maxLength="12"
+                    required
                 />
             </div>
 
             <div className="payment-card-details">
                 <div>
-                    <Label for="examplePassword">Expiration</Label>
+                    <Label for="expiration">Expiration</Label>
                     <Input
-                        type="text"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="Enter full name"
+                        type="date"
+                        name="expiration"
+                        id="expiration"
+                        placeholder="Date of expiration"
+                        required
                     />
                 </div>
                 <div>
-                    <Label for="examplePassword">CVC Code</Label>
+                    <Label for="cvc">CVC Code</Label>
                     <Input
-                        type="text"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="Enter full name"
+                        type="number"
+                        name="cvc"
+                        id="cvc"
+                        placeholder="Enter CVC Code"
+                        maxLength="3"
+                        minLength="3"
+                        required
                     />
                 </div>
             </div>
-        </div>
+            <input type="submit" value="Submit"></input>
+        </form>
     );
 };
 
