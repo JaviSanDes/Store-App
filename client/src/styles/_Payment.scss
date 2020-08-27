@@ -60,3 +60,8 @@
 .payment-method-title {
     font-weight: bold;
 }
+.payment-submitButton {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

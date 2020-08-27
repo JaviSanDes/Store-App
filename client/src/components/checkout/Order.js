@@ -44,16 +44,6 @@ const Order = () => {
                 <div className="order-products-list">{products}</div>
             </div>
             <div className="order-info">
-                <h4>Your Bags are Ready to Check Out!</h4>
-                <p>
-                    Discover goods you will love from brands that inspire. The
-                    easiest way to open your own online store. Discover amazing
-                    stuff or open your own store for free!
-                </p>
-                <p>
-                    Below is a sample page for your cart, Created using pages
-                    design UI Elementes
-                </p>
                 <div className="order-subTotal">
                     <p className="order-subTotal-text">Sub-Total</p>
                     <p className="order-subTotal-num">

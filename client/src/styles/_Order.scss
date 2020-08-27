@@ -1,13 +1,19 @@
 .order-container {
     display: flex;
     margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 80%;
+    overflow-y: scroll;
 }
 .order-products {
     width: 50%;
     position: relative;
+    height: 100%;
 }
 .order-products-list {
-    height: 45vh;
+    min-height: 100%;
+    max-height: 100%;
     overflow-y: scroll;
 }
 .order-totalPrice {
@@ -15,7 +21,7 @@
     color: black;
     position: absolute;
     bottom: 40px;
-    right: 60px;
+    right: -250px;
     margin-top: 20px;
     width: 250px;
 }
@@ -31,7 +37,6 @@
 }
 .order-info {
     width: 50%;
-    padding-left: 40px;
 }
 .order-info h3 {
     color: black;
@@ -39,8 +44,8 @@
 .order-subTotal {
     position: absolute;
     display: flex;
-    right: 60px;
-    bottom: 120px;
+    right: -250px;
+    bottom: 95px;
     width: 250px;
 }
 .order-subTotal-num {
@@ -54,8 +59,8 @@
 .order-VAT {
     display: flex;
     position: absolute;
-    right: 60px;
-    bottom: 80px;
+    right: -250px;
+    bottom: 65px;
     width: 250px;
 }
 .order-VAT-num {
@@ -194,14 +199,12 @@
     margin-left: 30px;
 }
 
-@media only screen and (max-width: 1000px) {
-    .order-container {
-        flex-direction: column-reverse;
-    }
-    .order-products {
-        width: 100%;
-    }
-    .order-info {
-        width: 100%;
-    }
+.order-container {
+    flex-direction: column-reverse;
+}
+.order-products {
+    width: 100%;
+}
+.order-info {
+    width: 100%;
 }

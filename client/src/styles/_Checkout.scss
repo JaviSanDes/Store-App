@@ -1,21 +1,20 @@
 .checkout-container {
-    height: 750px;
-    max-width: 1000px;
+    height: 700px;
+    max-width: 750px;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 5%;
     min-height: 60vh;
     background: white;
     border: 1.5px solid rgb(245, 245, 245);
     border-radius: 10px;
     margin-bottom: 10vh;
     padding: 40px;
-    border-bottom: 80px solid rgb(241, 241, 241);
     position: relative;
 }
 .checkout-nextButton {
     position: absolute;
-    bottom: -50px;
-    right: 20px;
+    bottom: 20px;
+    right: 110px;
 }
 
 //PHASES-------------------------------------------

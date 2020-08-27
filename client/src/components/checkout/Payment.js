@@ -87,7 +87,11 @@ const Payment = () => {
                     />
                 </div>
             </div>
-            <input type="submit" value="Submit"></input>
+            <input
+                className="payment-submitButton"
+                type="submit"
+                value="Submit"
+            ></input>
         </form>
     );
 };
