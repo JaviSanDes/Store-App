@@ -4,7 +4,7 @@
     margin-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 80%;
+    height: 75%;
     overflow-y: scroll;
     max-width: 600px;
 }
@@ -81,13 +81,20 @@
 }
 .order-products-header-description {
     width: 240px;
+    font-weight: bold;
 }
 .order-products-header-qty {
     width: 120px;
+    font-weight: bold;
 }
+.order-products-header-total {
+    font-weight: bold;
+}
+
 .order-products-header-X {
     position: absolute;
     right: 20px;
+    font-weight: bold;
 }
 .order-product {
     width: 100%;
