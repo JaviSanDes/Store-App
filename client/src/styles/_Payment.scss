@@ -67,3 +67,11 @@
     left: 50%;
     transform: translateX(-50%);
 }
+@media only screen and (max-width: 400px) {
+    .payment-container {
+        position: relative;
+        transform: scale(0.8);
+        width: 120%;
+        left: -10%;
+    }
+}
