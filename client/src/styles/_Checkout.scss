@@ -1,9 +1,8 @@
 .checkout-container {
     height: 700px;
-    max-width: 750px;
+    width: 750px;
     margin: auto;
-    margin-top: 5%;
-    min-height: 60vh;
+    //min-height: 60vh;
     background: white;
     border: 1.5px solid rgb(245, 245, 245);
     border-radius: 10px;
@@ -12,6 +11,7 @@
     padding-left: 120px;
     padding-right: 120px;
     position: relative;
+    margin-top: 80px;
 }
 .checkout-nextButton {
     position: absolute;
@@ -26,7 +26,7 @@
 
 //PHASES-------------------------------------------
 .checkout-phases-container {
-    width: 60%;
+    width: 100%;
     height: 60px;
     margin: auto;
 }
@@ -85,4 +85,101 @@
         width: 100%;
         max-width: 100%;
     }
+}
+
+//PRICE-------------------------------------
+.order-info {
+    width: 100%;
+}
+
+.order-info h3 {
+    color: black;
+}
+.order-subTotal {
+    position: absolute;
+    display: flex;
+    right: -250px;
+    bottom: 95px;
+    width: 250px;
+}
+.order-subTotal-num {
+    position: absolute;
+    right: 0;
+}
+.order-subTotal-text {
+    width: 100px;
+    text-align: right;
+}
+.order-VAT {
+    display: flex;
+    position: absolute;
+    right: -250px;
+    bottom: 65px;
+    width: 250px;
+}
+.order-VAT-num {
+    position: absolute;
+    right: 0;
+}
+.order-VAT-text {
+    width: 100px;
+    text-align: right;
+}
+.order-totalPrice {
+    display: flex;
+    color: black;
+    position: absolute;
+    bottom: 40px;
+    right: -250px;
+    margin-top: 20px;
+    width: 250px;
+}
+.order-totalPrice-text {
+    width: 100px;
+    text-align: right;
+    font-size: 25px;
+}
+.order-totalPrice-num {
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+}
+@media only screen and (max-width: 1300px) {
+    .order-totalPrice {
+        display: flex;
+        color: black;
+        position: relative;
+        right: -250px;
+        width: 250px;
+        top: 0;
+    }
+    .order-totalPrice-num {
+        right: 0;
+        font-size: 25px;
+    }
+    .order-subTotal {
+        position: relative;
+        display: flex;
+        right: -250px;
+        width: 250px;
+        top: 0;
+    }
+    .order-subTotal-num {
+        right: 0;
+    }
+    .order-VAT {
+        display: flex;
+        position: relative;
+        right: -250px;
+        width: 250px;
+        top: 0;
+    }
+    .order-VAT-num {
+    }
+}
+
+@media only screen and (max-width: 750px) {
+}
+.checkout-container {
+    padding: 10px;
 }
