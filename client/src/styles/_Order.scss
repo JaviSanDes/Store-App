@@ -145,7 +145,11 @@
     transform: translateY(-50%);
     margin-left: 30px;
 }
-
+@media only screen and (max-width: 800px) {
+    .order-products-list {
+        overflow: hidden;
+    }
+}
 @media only screen and (max-width: 600px) {
     .order-container {
         position: relative;
@@ -154,14 +158,21 @@
         left: -5%;
         margin-top: 0;
     }
-    .order-products-list {
-        overflow: hidden;
-    }
+
     .order-products-header-X {
         display: none;
     }
     .order-product-eliminate {
         right: 0px;
         top: 15px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .order-container {
+        position: relative;
+        transform: scale(0.8);
+        width: 120%;
+        left: -10%;
+        margin-top: 0;
     }
 }
