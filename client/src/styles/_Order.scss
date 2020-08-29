@@ -152,8 +152,16 @@
         transform: scale(0.9);
         width: 110%;
         left: -5%;
+        margin-top: 0;
     }
     .order-products-list {
         overflow: hidden;
+    }
+    .order-products-header-X {
+        display: none;
+    }
+    .order-product-eliminate {
+        right: 0px;
+        top: 15px;
     }
 }
