@@ -1,9 +1,7 @@
 .order-container {
-    //display: flex;
     margin: auto;
     margin-top: 30px;
-    height: 74%;
-    overflow-y: scroll;
+    height: 70%;
     max-width: 600px;
     border-bottom: 2px solid rgb(197, 197, 197);
 }
@@ -13,8 +11,7 @@
     height: 100%;
 }
 .order-products-list {
-    min-height: 100%;
-    max-height: 100%;
+    height: 90%;
     overflow-y: scroll;
 }
 
@@ -147,4 +144,16 @@
     top: 50%;
     transform: translateY(-50%);
     margin-left: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .order-container {
+        position: relative;
+        transform: scale(0.9);
+        width: 110%;
+        left: -5%;
+    }
+    .order-products-list {
+        overflow: hidden;
+    }
 }
