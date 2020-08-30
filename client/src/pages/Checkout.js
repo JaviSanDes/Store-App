@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import CheckoutPhases from '../components/checkout/CheckoutPhases';
 import Order from '../components/checkout/Order';
 import Shipping from '../components/checkout/Shipping';
 import Payment from '../components/checkout/Payment';
 import Summary from '../components/checkout/Summary';
-// import { useSelector } from 'react-redux';
 
 const Checkout = () => {
     const [phase, setPhase] = useState(1);
-    // const totalPrice = useSelector(state => state.products.totalPrice);
+    const totalPrice = useSelector(state => state.products.totalPrice);
 
     const phaseHandler = () => {
         // eslint-disable-next-line no-shadow
@@ -35,6 +35,18 @@ const Checkout = () => {
         <div className="checkout-container">
             <CheckoutPhases phase={phase} />
             {Phase}
+            <div className="checkout-price">
+                <div>
+                    <p>Sub-Total</p>
+                    <p>VAT</p>
+                    <p>Total Price</p>
+                </div>
+                <div>
+                    <p>{totalPrice.toFixed(2)}€</p>
+                    <p> {((totalPrice * 21) / 100).toFixed(2)}€</p>
+                    <p>{((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€</p>
+                </div>
+            </div>
 
             <button
                 className="checkout-nextButton"

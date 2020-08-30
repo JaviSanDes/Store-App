@@ -22,6 +22,53 @@
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
 }
+.checkout-price {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    width: 300px;
+}
+.checkout-price div {
+    width: 50%;
+    text-align: right;
+}
+
+@media (orientation: portrait) {
+    .checkout-container {
+        width: 95%;
+        max-width: 95%;
+        height: 100%;
+        min-height: 90vh;
+    }
+    .checkout-nextButton {
+        bottom: 30px;
+        right: 50px;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+            0 0 8px rgb(197, 197, 197);
+        z-index: 120;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .checkout-phases-container {
+        position: relative;
+        transform: scale(0.9);
+        width: 110%;
+        left: -5%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+}
+.checkout-container {
+    padding: 10px;
+}
 
 //PHASES-------------------------------------------
 .checkout-phases-container {
@@ -57,8 +104,6 @@
     cursor: pointer;
     text-align: center;
 }
-.checkout-circle img {
-}
 .checkout-circle p {
     position: relative;
     top: 50%;
@@ -71,131 +116,4 @@
     height: 30px;
     background: rgb(26, 159, 248);
     border-radius: 50%;
-}
-
-@media only screen and (max-width: 800px) {
-    .checkout-container {
-        width: 95%;
-        max-width: 95%;
-        height: 100%;
-    }
-    .checkout-nextButton {
-        position: fixed;
-        bottom: 30px;
-        right: 40px;
-        border: none;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px 20px 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
-            0 0 8px rgb(197, 197, 197);
-        z-index: 120;
-    }
-}
-
-//PRICE-------------------------------------
-.order-info {
-    width: 100%;
-}
-
-.order-info h3 {
-    color: black;
-}
-.order-subTotal {
-    position: absolute;
-    display: flex;
-    right: -250px;
-    bottom: 95px;
-    width: 250px;
-}
-.order-subTotal-num {
-    position: absolute;
-    right: 0;
-}
-.order-subTotal-text {
-    width: 100px;
-    text-align: right;
-}
-.order-VAT {
-    display: flex;
-    position: absolute;
-    right: -250px;
-    bottom: 65px;
-    width: 250px;
-}
-.order-VAT-num {
-    position: absolute;
-    right: 0;
-}
-.order-VAT-text {
-    width: 100px;
-    text-align: right;
-}
-.order-totalPrice {
-    display: flex;
-    color: black;
-    position: absolute;
-    bottom: 40px;
-    right: -250px;
-    margin-top: 20px;
-    width: 250px;
-}
-.order-totalPrice-text {
-    width: 100px;
-    text-align: right;
-    font-size: 25px;
-}
-.order-totalPrice-num {
-    position: absolute;
-    right: 0;
-    font-size: 25px;
-}
-@media only screen and (max-width: 1300px) {
-    .order-totalPrice {
-        display: flex;
-        color: black;
-        position: relative;
-        right: -250px;
-        width: 250px;
-        top: 0;
-    }
-    .order-totalPrice-num {
-        right: 0;
-        font-size: 25px;
-    }
-    .order-subTotal {
-        position: relative;
-        display: flex;
-        right: -250px;
-        width: 250px;
-        top: 0;
-    }
-    .order-subTotal-num {
-        right: 0;
-    }
-    .order-VAT {
-        display: flex;
-        position: relative;
-        right: -250px;
-        width: 250px;
-        top: 0;
-    }
-    .order-VAT-num {
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .checkout-phases-container {
-        position: relative;
-        transform: scale(0.9);
-        width: 110%;
-        left: -5%;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-}
-.checkout-container {
-    padding: 10px;
 }
