@@ -73,12 +73,26 @@
             overflow: hidden;
         }
         .checkout2 {
-            min-height: 180px;
-            max-height: 180px;
+            min-height: 120px;
+            max-height: 120px;
             width: 120%;
             position: relative;
             left: -10%;
             transform: scale(0.8);
+            display: flex;
+            width: 120%;
+        }
+        .checkout-price {
+            width: 100%;
+        }
+        .checkout-next {
+            width: 150px;
+            position: relative;
+        }
+        .checkout-next button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }

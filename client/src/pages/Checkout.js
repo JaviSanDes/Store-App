@@ -52,7 +52,7 @@ const Checkout = () => {
                         </h4>
                     </div>
                 </div>
-                <div>
+                <div className="checkout-next">
                     <button
                         className="checkout-nextButton"
                         type="button"
