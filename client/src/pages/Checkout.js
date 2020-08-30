@@ -50,14 +50,16 @@ const Checkout = () => {
                         <h4>
                             {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
                         </h4>
-                        <button
-                            className="checkout-nextButton"
-                            type="button"
-                            onClick={phaseHandler}
-                        >
-                            Next
-                        </button>
                     </div>
+                </div>
+                <div>
+                    <button
+                        className="checkout-nextButton"
+                        type="button"
+                        onClick={phaseHandler}
+                    >
+                        Next
+                    </button>
                 </div>
             </div>
         </div>

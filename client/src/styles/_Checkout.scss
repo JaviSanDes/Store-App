@@ -14,18 +14,6 @@
     display: flex;
     flex-direction: column;
 }
-.checkout-pahses {
-    max-height: 95px;
-    min-height: 95px;
-}
-.checkout-content {
-    flex-grow: 1;
-    overflow-y: scroll;
-}
-.checkout2 {
-    min-height: 220px;
-    max-height: 220px;
-}
 
 @media (orientation: portrait) {
     .checkout-container {
@@ -36,9 +24,18 @@
         padding-left: 50px;
         padding-right: 50px;
     }
-    .checkout-nextButton {
-        bottom: 30px;
-        right: 50px;
+    .checkout-pahses {
+        max-height: 95px;
+        min-height: 95px;
+    }
+    .checkout-content {
+        flex-grow: 1;
+        overflow-y: scroll;
+        border-bottom: 1.5px solid rgb(209, 209, 209);
+    }
+    .checkout2 {
+        min-height: 220px;
+        max-height: 220px;
     }
     .checkout-price {
         display: flex;
@@ -64,6 +61,25 @@
         box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
             0 0 8px rgb(197, 197, 197);
         z-index: 120;
+    }
+    @media only screen and (max-width: 600px) {
+        .checkout-container {
+            max-height: 85vh;
+            min-height: 85vh;
+            padding: 0px 10px 0px 10px;
+        }
+        .checkout-content {
+            padding: 0;
+            overflow: hidden;
+        }
+        .checkout2 {
+            min-height: 180px;
+            max-height: 180px;
+            width: 120%;
+            position: relative;
+            left: -10%;
+            transform: scale(0.8);
+        }
     }
 }
 
