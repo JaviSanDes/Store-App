@@ -17,6 +17,7 @@
 @import 'Payment';
 
 body {
+    min-width: 100vw;
     width: 100vw;
     overflow-x: hidden;
     background: rgb(250, 250, 250);
@@ -46,6 +47,14 @@ body {
     .App-body {
         width: 100vw;
         margin: auto;
+    }
+}
+@media only screen and (max-width: 350px) {
+    body {
+        min-width: 100vw;
+        overflow-x: hidden;
+        background: rgb(250, 250, 250);
+        border: 2px solid orange;
     }
 }
 
