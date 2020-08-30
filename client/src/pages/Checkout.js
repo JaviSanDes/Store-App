@@ -33,28 +33,33 @@ const Checkout = () => {
     }
     return (
         <div className="checkout-container">
-            <CheckoutPhases phase={phase} />
-            {Phase}
-            <div className="checkout-price">
-                <div>
-                    <p>Sub-Total</p>
-                    <p>VAT</p>
-                    <p>Total Price</p>
-                </div>
-                <div>
-                    <p>{totalPrice.toFixed(2)}€</p>
-                    <p> {((totalPrice * 21) / 100).toFixed(2)}€</p>
-                    <p>{((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€</p>
+            <div className="checkout-pahses">
+                <CheckoutPhases phase={phase} />
+            </div>
+            <div className="checkout-content">{Phase}</div>
+            <div className="checkout2">
+                <div className="checkout-price">
+                    <div className="checkout-price-name">
+                        <p>Sub-Total</p>
+                        <p>VAT</p>
+                        <h4>Total Price</h4>
+                    </div>
+                    <div>
+                        <p>{totalPrice.toFixed(2)}€</p>
+                        <p> {((totalPrice * 21) / 100).toFixed(2)}€</p>
+                        <h4>
+                            {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
+                        </h4>
+                        <button
+                            className="checkout-nextButton"
+                            type="button"
+                            onClick={phaseHandler}
+                        >
+                            Next
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            <button
-                className="checkout-nextButton"
-                type="button"
-                onClick={phaseHandler}
-            >
-                Next
-            </button>
         </div>
     );
 };
@@ -62,25 +67,16 @@ const Checkout = () => {
 export default Checkout;
 
 /*
-<div className="order-info">
-<div className="order-subTotal">
-    <p className="order-subTotal-text">Sub-Total</p>
-    <p className="order-subTotal-num">
-        {totalPrice.toFixed(2)}€
-    </p>
-</div>
-<div className="order-VAT">
-    <p className="order-VAT-text">VAT</p>
-    <p className="order-VAT-num">
-        {((totalPrice * 21) / 100).toFixed(2)}€
-    </p>
-</div>
+<div className="checkout-container">
+<CheckoutPhases phase={phase} />
+{Phase}
 
-<div className="order-totalPrice">
-    <h3 className="order-totalPrice-text">Total</h3>
-    <h3 className="order-totalPrice-num">
-        {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
-    </h3>
-</div>
+<button
+    className="checkout-nextButton"
+    type="button"
+    onClick={phaseHandler}
+>
+    Next
+</button>
 </div>
 */

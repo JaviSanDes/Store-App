@@ -9,41 +9,53 @@
     padding: 40px;
     padding-left: 120px;
     padding-right: 120px;
-    position: relative;
     margin-top: 80px;
-}
-.checkout-nextButton {
-    position: absolute;
-    bottom: 30px;
-    right: 75px;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px 10px 20px;
-    border-radius: 5px;
-}
-.checkout-price {
+    padding: 10px;
     display: flex;
-    position: absolute;
-    right: 50px;
-    bottom: 100px;
-    width: 300px;
+    flex-direction: column;
 }
-.checkout-price div {
-    width: 50%;
-    text-align: right;
+.checkout-pahses {
+    max-height: 95px;
+    min-height: 95px;
+}
+.checkout-content {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+.checkout2 {
+    min-height: 220px;
+    max-height: 220px;
 }
 
 @media (orientation: portrait) {
     .checkout-container {
         width: 95%;
         max-width: 95%;
-        height: 100%;
+        height: 90vh;
         min-height: 90vh;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .checkout-nextButton {
         bottom: 30px;
         right: 50px;
+    }
+    .checkout-price {
+        display: flex;
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        padding-right: 10px;
+    }
+    .checkout-price-name {
+        min-width: 80%;
+    }
+    .checkout-price div {
+        width: 50%;
+        text-align: right;
+    }
+    .checkout-nextButton {
+        margin-top: 20px;
         border: none;
         font-size: 18px;
         font-weight: bold;
@@ -53,21 +65,6 @@
             0 0 8px rgb(197, 197, 197);
         z-index: 120;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    .checkout-phases-container {
-        position: relative;
-        transform: scale(0.9);
-        width: 110%;
-        left: -5%;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-}
-.checkout-container {
-    padding: 10px;
 }
 
 //PHASES-------------------------------------------
@@ -116,4 +113,12 @@
     height: 30px;
     background: rgb(26, 159, 248);
     border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+    .checkout-phases-container {
+        position: relative;
+        transform: scale(0.9);
+        width: 110%;
+        left: -5%;
+    }
 }
