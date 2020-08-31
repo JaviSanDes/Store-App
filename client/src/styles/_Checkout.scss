@@ -153,6 +153,12 @@
             right: 0;
         }
     }
+    @media only screen and (max-width: 600px) {
+        .checkout2 {
+            min-height: 80px;
+            max-height: 80px;
+        }
+    }
 }
 
 //PHASES-------------------------------------------
