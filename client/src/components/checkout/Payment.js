@@ -4,7 +4,6 @@ import { Input, Label } from 'reactstrap';
 const Payment = () => {
     return (
         <form className="payment-container">
-            <h4 className="payment-price">Price: 345€</h4>
             <p className="payment-method-title">Payment Method</p>
             <div className="payment-method">
                 <div>
