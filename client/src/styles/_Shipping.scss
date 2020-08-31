@@ -31,3 +31,21 @@
 .shipping-container label {
     font-weight: bold;
 }
+
+@media (orientation: portrait) {
+    .shipping-container {
+        border-radius: 5px;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 0px;
+    }
+    @media only screen and (max-width: 600px) {
+        .shipping-container {
+            transform: scale(0.8);
+            width: 120%;
+            position: relative;
+            left: -10%;
+            top: -10%;
+        }
+    }
+}

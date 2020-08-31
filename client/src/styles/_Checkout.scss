@@ -79,6 +79,8 @@
         min-height: 95px;
     }
     .checkout-content {
+        position: relative;
+        top: -20px;
         flex-grow: 1;
         overflow-y: scroll;
         border-bottom: 1.5px solid rgb(209, 209, 209);
@@ -129,8 +131,8 @@
             overflow: hidden;
         }
         .checkout2 {
-            min-height: 120px;
-            max-height: 120px;
+            min-height: 100px;
+            max-height: 100px;
             width: 120%;
             position: relative;
             left: -10%;
