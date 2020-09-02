@@ -153,10 +153,21 @@
             right: 0;
         }
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 400px) {
+        .checkout-container {
+            margin-top: 70px;
+        }
         .checkout2 {
             min-height: 80px;
             max-height: 80px;
+        }
+        .checkout2 p {
+            margin: 0;
+            padding: 0;
+        }
+        .checkout-price {
+            display: flex;
+            bottom: 10px;
         }
     }
 }
