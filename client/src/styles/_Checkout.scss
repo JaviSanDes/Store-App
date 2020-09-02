@@ -86,8 +86,8 @@
         border-bottom: 1.5px solid rgb(209, 209, 209);
     }
     .checkout2 {
-        min-height: 220px;
-        max-height: 220px;
+        min-height: 210px;
+        max-height: 210px;
     }
     .checkout-price {
         display: flex;
@@ -131,8 +131,8 @@
             overflow: hidden;
         }
         .checkout2 {
-            min-height: 100px;
-            max-height: 100px;
+            min-height: 70px;
+            max-height: 70px;
             width: 120%;
             position: relative;
             left: -10%;
@@ -151,6 +151,15 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            bottom: 15px;
+        }
+        .checkout2 p {
+            margin: 0;
+            padding: 0;
+        }
+        .checkout-price {
+            display: flex;
+            bottom: 10px;
         }
     }
     @media only screen and (max-width: 400px) {
@@ -160,14 +169,6 @@
         .checkout2 {
             min-height: 80px;
             max-height: 80px;
-        }
-        .checkout2 p {
-            margin: 0;
-            padding: 0;
-        }
-        .checkout-price {
-            display: flex;
-            bottom: 10px;
         }
     }
 }
@@ -225,5 +226,6 @@
         transform: scale(0.9);
         width: 110%;
         left: -5%;
+        top: 15px;
     }
 }
