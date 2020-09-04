@@ -63,7 +63,12 @@ const Header = () => {
                     alt="img"
                     className="header-user-image"
                 />
-                <div className="header-user-box"></div>
+                <div className="header-user-box">
+                    <h5>Welcome, User!</h5>
+                    <button type="button">Settings</button>
+                    <button type="button">My Purchases</button>
+                    <button type="button">Log Out</button>
+                </div>
             </div>
         </div>
     );
