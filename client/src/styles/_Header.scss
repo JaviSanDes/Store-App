@@ -72,6 +72,10 @@ input:focus {
     position: relative;
     right: 60px;
 }
+.header-user-image {
+    width: 60px;
+    height: 60px;
+}
 @media only screen and (max-width: 1300px) {
     .Header-button {
         display: inline;

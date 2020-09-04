@@ -57,7 +57,13 @@ const Header = () => {
                     onChange={e => inputHandler(e)}
                 />
             </div>
-            <div className="header-login">login</div>
+            <div className="header-login">
+                <img
+                    src={process.env.PUBLIC_URL + 'images/user.png'}
+                    alt="img"
+                    className="header-user-image"
+                />
+            </div>
         </div>
     );
 };
