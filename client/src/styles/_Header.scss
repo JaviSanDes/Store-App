@@ -18,11 +18,11 @@
 }
 .Header-butto-linen {
     width: 30px;
-  height: 4px;
-  background-color: black;
-  margin: 5px 0;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
 }
-.header-home{
+.header-home {
     display: flex;
     height: 30px;
     position: relative;
@@ -38,10 +38,10 @@
 }
 .header-home-link-2 {
     font-size: 20px;
-    color: #019E7F;
+    color: #019e7f;
     margin: 0;
 }
-.header-search{
+.header-search {
     margin: auto;
     width: 450px;
     display: flex;
@@ -62,13 +62,19 @@
     left: 30px;
     top: 14px;
 }
-input:focus{
+input:focus {
     outline: none;
+}
+.header-login {
+    color: red;
+    width: 60px;
+    background: rgb(238, 238, 238);
+    position: relative;
+    right: 60px;
 }
 @media only screen and (max-width: 1300px) {
     .Header-button {
         display: inline;
         margin-right: 20px;
-
     }
 }

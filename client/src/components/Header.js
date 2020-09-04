@@ -57,6 +57,7 @@ const Header = () => {
                     onChange={e => inputHandler(e)}
                 />
             </div>
+            <div className="header-login">login</div>
         </div>
     );
 };
