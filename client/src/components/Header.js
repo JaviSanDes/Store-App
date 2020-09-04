@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
-import {
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-} from 'reactstrap';
 
 import toggleMenu from '../store/actions/menuToggle';
 
 const Header = () => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
     const dispatch = useDispatch();
     const history = useHistory();
     const [form, setForm] = useState({ search: '' });
@@ -20,7 +13,6 @@ const Header = () => {
     const redirectHandler = () => {
         history.push('/');
     };
-    const toggle = () => setDropdownOpen(prevState => !prevState);
     const inputHandler = e => {
         const { name, value } = e.target;
         setForm(oldForm => {
@@ -71,18 +63,7 @@ const Header = () => {
                     alt="img"
                     className="header-user-image"
                 />
-                <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                    <DropdownToggle caret>Dropdown</DropdownToggle>
-                    <DropdownMenu>
-                        <DropdownItem header>Header</DropdownItem>
-                        <DropdownItem>Some Action</DropdownItem>
-                        <DropdownItem disabled>Action (disabled)</DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>Foo Action</DropdownItem>
-                        <DropdownItem>Bar Action</DropdownItem>
-                        <DropdownItem>Quo Action</DropdownItem>
-                    </DropdownMenu>
-                </Dropdown>
+                <div className="header-user-box"></div>
             </div>
         </div>
     );

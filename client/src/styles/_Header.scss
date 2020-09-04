@@ -67,15 +67,25 @@ input:focus {
 }
 .header-login {
     color: red;
-    width: 60px;
+    width: 80px;
     background: rgb(238, 238, 238);
     position: relative;
     right: 60px;
     cursor: pointer;
+    display: flex;
 }
 .header-user-image {
-    width: 60px;
     height: 60px;
+}
+.header-user-box {
+    position: absolute;
+    width: 280px;
+    height: 320px;
+    border-radius: 10px;
+    top: 80px;
+    right: 0px;
+    background: white;
+    border: 1px solid black;
 }
 @media only screen and (max-width: 1300px) {
     .Header-button {
