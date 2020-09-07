@@ -72,7 +72,10 @@ const Header = () => {
                 />
                 {isVisivle && (
                     <div className="header-user-box">
-                        <h5>Welcome, User!</h5>
+                        <div>
+                            <h5>Welcome, User!</h5>
+                        </div>
+
                         <button type="button">Settings</button>
                         <button type="button">My Purchases</button>
                         <button type="button">Log Out</button>
