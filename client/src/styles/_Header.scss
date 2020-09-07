@@ -79,13 +79,22 @@ input:focus {
 }
 .header-user-box {
     position: absolute;
-    width: 280px;
-    height: 320px;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 340px;
     border-radius: 10px;
     top: 80px;
     right: 0px;
     background: white;
-    border: 1px solid black;
+    border: 1.5px solid rgb(245, 245, 245);
+    padding: 10px;
+}
+.header-user-box button {
+    margin: 10px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 1300px) {
     .Header-button {
