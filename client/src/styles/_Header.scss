@@ -66,7 +66,7 @@ input:focus {
     outline: none;
 }
 .header-login {
-    color: red;
+    color: black;
     width: 80px;
     background: rgb(238, 238, 238);
     position: relative;
@@ -92,14 +92,21 @@ input:focus {
 }
 .header-user-box div {
     height: 80px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(223, 223, 223);
     margin-bottom: 10px;
+    text-align: center;
 }
 .header-user-box button {
     margin: 10px;
-    height: 45px;
+    height: 40px;
     border: none;
     border-radius: 5px;
+}
+.header-logOut-button {
+    background: #019e7f;
+    position: relative;
+    top: 20px;
+    color: white;
 }
 @media only screen and (max-width: 1300px) {
     .Header-button {

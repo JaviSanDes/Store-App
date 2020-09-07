@@ -73,12 +73,15 @@ const Header = () => {
                 {isVisivle && (
                     <div className="header-user-box">
                         <div>
-                            <h5>Welcome, User!</h5>
+                            <p>Welcome, User!</p>
+                            <p>Enjoy your shopping</p>
                         </div>
 
                         <button type="button">Settings</button>
                         <button type="button">My Purchases</button>
-                        <button type="button">Log Out</button>
+                        <button type="button" className="header-logOut-button">
+                            Log Out
+                        </button>
                     </div>
                 )}
             </div>
