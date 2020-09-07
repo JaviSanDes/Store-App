@@ -8,6 +8,7 @@ const Header = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const [form, setForm] = useState({ search: '' });
+    const [isVisivle, setIsVisible] = useState(false);
 
     const toggleMenuHandler = () => dispatch(toggleMenu());
     const redirectHandler = () => {
@@ -22,6 +23,10 @@ const Header = () => {
             };
         });
         history.push({ pathname: `/search/${value}` });
+    };
+
+    const clickHandler = () => {
+        setIsVisible(val => !val);
     };
 
     return (
@@ -62,13 +67,17 @@ const Header = () => {
                     src={process.env.PUBLIC_URL + 'images/user.png'}
                     alt="img"
                     className="header-user-image"
+                    onClick={clickHandler}
+                    role="button"
                 />
-                <div className="header-user-box">
-                    <h5>Welcome, User!</h5>
-                    <button type="button">Settings</button>
-                    <button type="button">My Purchases</button>
-                    <button type="button">Log Out</button>
-                </div>
+                {isVisivle && (
+                    <div className="header-user-box">
+                        <h5>Welcome, User!</h5>
+                        <button type="button">Settings</button>
+                        <button type="button">My Purchases</button>
+                        <button type="button">Log Out</button>
+                    </div>
+                )}
             </div>
         </div>
     );
