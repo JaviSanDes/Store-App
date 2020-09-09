@@ -72,6 +72,7 @@ const Header = () => {
                 />
                 {isVisivle && (
                     <div className="header-user-box">
+                        <div className="header-triangle"></div>
                         <div>
                             <p>Welcome, User!</p>
                             <p>Enjoy your shopping</p>
