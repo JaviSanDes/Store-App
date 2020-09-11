@@ -4,6 +4,7 @@ import { Form, FormGroup, Label, Input } from 'reactstrap';
 const Settings = () => {
     return (
         <div className="settings-container">
+            <h4>Peronal Information</h4>
             <Form className="shipping-container">
                 <FormGroup>
                     <FormGroup>
@@ -37,7 +38,9 @@ const Settings = () => {
                         required
                     />
                 </FormGroup>
-                <button type="button">Change Info</button>
+                <button type="button" className="settings-changeInfo-button">
+                    Change Info
+                </button>
                 <FormGroup>
                     <Label for="examplePassword">Password</Label>
                     <Input

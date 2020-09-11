@@ -1,6 +1,6 @@
 .settings-container {
     width: 600px;
-    height: 600px;
+    height: 650px;
     margin: auto;
     margin-top: 120px;
     padding: 40px;
@@ -10,4 +10,14 @@
     -webkit-box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
     -moz-box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
     box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
+}
+.settings-changeInfo-button {
+    margin-bottom: 40px;
+}
+button {
+    border: none;
+    background: #019e7f;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
 }
