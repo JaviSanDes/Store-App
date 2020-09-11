@@ -7,12 +7,12 @@ const Settings = () => {
             <Form className="shipping-container">
                 <FormGroup>
                     <FormGroup>
-                        <Label for="examplePassword">Full Name</Label>
+                        <Label for="examplePassword">Name</Label>
                         <Input
                             type="text"
                             name="password"
                             id="examplePassword"
-                            placeholder="Enter full name"
+                            placeholder="Jack Simon"
                             minlength="8"
                             required
                         />
@@ -27,39 +27,29 @@ const Settings = () => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="examplePassword">Address</Label>
+                    <Label for="examplePassword">Email</Label>
                     <Input
                         type="text"
                         name="password"
                         id="examplePassword"
-                        placeholder="Current address..."
+                        placeholder="yourmail@mail.com"
                         minlength="8"
                         required
                     />
                 </FormGroup>
-
+                <button type="button">Change Info</button>
                 <FormGroup>
-                    <Label for="examplePassword">ZIP Code</Label>
+                    <Label for="examplePassword">Password</Label>
                     <Input
-                        type="text"
+                        type="password"
                         name="password"
                         id="examplePassword"
-                        placeholder="Enter full name"
-                        minLength="5"
-                        maxLength="5"
+                        placeholder="********"
+                        minlength="8"
+                        required
                     />
                 </FormGroup>
-
-                <FormGroup>
-                    <Label for="examplePassword">Phone Number</Label>
-                    <Input
-                        type="number"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="Current address..."
-                    />
-                </FormGroup>
-                <input type="submit" value="Submit"></input>
+                <button type="button">Change Password</button>
             </Form>
         </div>
     );
