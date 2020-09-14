@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import Checkout from '../pages/Checkout';
 import Settings from '../pages/Settings';
+import Orders from '../pages/Orders';
 
 const Routes = () => {
     return (
@@ -48,6 +49,9 @@ const Routes = () => {
                     </Route>
                     <Route path="/settings">
                         <Settings />
+                    </Route>
+                    <Route path="/orders">
+                        <Orders />
                     </Route>
 
                     <Route exact path="/">
