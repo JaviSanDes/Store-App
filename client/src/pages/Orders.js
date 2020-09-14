@@ -3,7 +3,8 @@ import React from 'react';
 const Orders = () => {
     return (
         <div className="orders-container">
-            <h1>Orders</h1>
+            <div>orders</div>
+            <div>details</div>
         </div>
     );
 };
