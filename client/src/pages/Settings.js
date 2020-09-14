@@ -38,6 +38,17 @@ const Settings = () => {
                         required
                     />
                 </FormGroup>
+                <FormGroup>
+                    <Label for="examplePassword">Phone</Label>
+                    <Input
+                        type="number"
+                        name="password"
+                        id="examplePassword"
+                        placeholder=""
+                        minlength="8"
+                        required
+                    />
+                </FormGroup>
                 <button type="button" className="settings-changeInfo-button">
                     Change Info
                 </button>
