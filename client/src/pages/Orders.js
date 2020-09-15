@@ -8,7 +8,9 @@ const Orders = () => {
                 <div className="orders-orderBox">
                     <div className="orders-orderBox-header">
                         <p>Order 1</p>
-                        <p>Order Delivered</p>
+                        <p className="orders-orderBox-header-status">
+                            Order Delivered
+                        </p>
                     </div>
                     <div className="orders-orderInfo">
                         <div>
@@ -16,7 +18,7 @@ const Orders = () => {
                             <p>Delivery Time:</p>
                             <p>Total Price:</p>
                         </div>
-                        <div>
+                        <div className="orders-orderInfo-values">
                             <p>7th April 2019</p>
                             <p>13th April</p>
                             <p>$249.7</p>
