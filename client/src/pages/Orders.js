@@ -16,12 +16,16 @@ const Orders = () => {
                         <div>
                             <p>Order Date:</p>
                             <p>Delivery Time:</p>
-                            <p>Total Price:</p>
+                            <p className="orders-orderInfo-prcie">
+                                Total Price:
+                            </p>
                         </div>
                         <div className="orders-orderInfo-values">
                             <p>7th April 2019</p>
                             <p>13th April</p>
-                            <p>$249.7</p>
+                            <p className="orders-orderInfo-values-price">
+                                $249.7
+                            </p>
                         </div>
                     </div>
                 </div>
