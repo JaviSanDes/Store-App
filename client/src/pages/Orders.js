@@ -8,9 +8,9 @@ const Orders = () => {
                 <div className="orders-orderBox">
                     <div className="orders-orderBox-header">
                         <p>Order 1</p>
-                        <p className="orders-orderBox-header-status">
-                            Order Delivered
-                        </p>
+                        <div className="orders-orderBox-header-status">
+                            <p>Order Delivered</p>
+                        </div>
                     </div>
                     <div className="orders-orderInfo">
                         <div>
