@@ -28,6 +28,9 @@ const Orders = () => {
                             </p>
                         </div>
                     </div>
+                    <button className="orders-orderBox-button" type="button">
+                        View order
+                    </button>
                 </div>
                 <div className="orders-orderBox"></div>
                 <div className="orders-orderBox"></div>
