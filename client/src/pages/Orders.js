@@ -38,6 +38,7 @@ const Orders = () => {
             </div>
             <div className="orders-orderDetails">
                 <h4>Order Details</h4>
+                <div className="orders-orderList"></div>
             </div>
         </div>
     );
