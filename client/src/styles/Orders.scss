@@ -10,6 +10,27 @@
     overflow-y: scroll;
     margin-right: 20px;
 }
+.orders-steps {
+    display: flex;
+    border: 1px solid red;
+}
+.orders-circle {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #019e7f;
+}
+.orders-progress {
+    height: 4px;
+    color: #019e7f;
+    margin: auto;
+    width: 65%;
+    position: relative;
+    top: -23px;
+    z-index: -1;
+    background-color: rgb(219, 219, 219);
+}
 .orders-orderDetails {
     width: 100%;
     border: 1px solid rgb(214, 214, 214);
@@ -20,9 +41,9 @@
     height: 185px;
     background: rgb(238, 238, 238);
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 20px;
-    border-top: 45px solid rgb(185, 185, 185);
+    border-top: 45px solid rgb(206, 206, 206);
 }
 .orders-orderBox-header {
     display: flex;
