@@ -17,11 +17,23 @@ const Orders = () => {
             <div className="orders-orderDetails">
                 <h4>Order Details</h4>
                 <div className="orders-steps">
-                    <div className="orders-circle"></div>
-                    <div className="orders-circle"></div>
-                    <div className="orders-circle"></div>
+                    <div className="orders-circle orders-ticked">
+                        <img
+                            src={process.env.PUBLIC_URL + 'images/tick2.png'}
+                            className="orders-tick"
+                            alt="img"
+                        />
+                    </div>
+                    <div className="orders-circle orders-ticked">
+                        <img
+                            src={process.env.PUBLIC_URL + 'images/tick2.png'}
+                            className="orders-tick"
+                            alt="img"
+                        />
+                    </div>
+                    <div className="orders-circle">3</div>
                 </div>
-                <Progress value={2 * 5} className="orders-progress" />
+                <Progress value={50} className="orders-progress" />
             </div>
         </div>
     );
