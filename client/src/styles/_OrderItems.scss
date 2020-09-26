@@ -19,11 +19,14 @@
     border-bottom: 2px solid rgb(197, 197, 197);
 }
 .orderItems-products-header-description {
-    width: 45%;
+    width: 300px;
     font-weight: bold;
 }
 .orderItems-products-header-qty {
-    width: 40%;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-weight: bold;
 }
 .orderItems-products-header-total {
