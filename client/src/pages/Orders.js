@@ -1,7 +1,7 @@
 import React from 'react';
 import { Progress } from 'reactstrap';
 import Box from '../components/orders/box';
-import Order from '../components/orders/OrderItems';
+import OrderItems from '../components/orders/OrderItems';
 
 const Orders = () => {
     return (
@@ -37,7 +37,7 @@ const Orders = () => {
                 </div>
                 <Progress value={50} className="orders-progress" />
                 <div className="orders-orderProducts">
-                    <Order />
+                    <OrderItems />
                 </div>
             </div>
         </div>
