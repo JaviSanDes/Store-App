@@ -2,13 +2,13 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Product from './Product';
 
-const Order = () => {
-    const productsOrdered = useSelector(state => state.products.products);
-    const order = useSelector(state => state.products.order);
+const OrderItems = () => {
+    const productsOrderItemsed = useSelector(state => state.products.products);
+    const orderItems = useSelector(state => state.products.orderItems);
 
     const products = [];
-    order.map(id => {
-        productsOrdered.map(product => {
+    orderItems.map(id => {
+        productsOrderItemsed.map(product => {
             if (product._id === id && product.quantity > 0) {
                 products.push(
                     <Product
@@ -29,21 +29,21 @@ const Order = () => {
         return null;
     });
     return (
-        <div className="order-container">
-            <div className="order-products">
-                <div className="order-products-header">
-                    <p className="order-products-header-description">
+        <div className="orderItems-container">
+            <div className="orderItems-products">
+                <div className="orderItems-products-header">
+                    <p className="orderItems-products-header-description">
                         Description
                     </p>
-                    <p className="order-products-header-qty">Qty</p>
-                    <p className="order-products-header-total">Total</p>
-                    <p className="order-products-header-X">#</p>
+                    <p className="orderItems-products-header-qty">Qty</p>
+                    <p className="orderItems-products-header-total">Total</p>
+                    <p className="orderItems-products-header-X">#</p>
                 </div>
 
-                <div className="order-products-list">{products}</div>
+                <div className="orderItems-products-list">{products}</div>
             </div>
         </div>
     );
 };
 
-export default Order;
+export default OrderItems;
