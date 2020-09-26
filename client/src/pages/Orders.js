@@ -36,6 +36,12 @@ const Orders = () => {
                     <div className="orders-circle">3</div>
                 </div>
                 <Progress value={50} className="orders-progress" />
+                <div className="orders-steps">
+                    <p>Order Recived</p>
+                    <p>Order On The Way</p>
+                    <p>Order Delivered</p>
+                </div>
+
                 <div className="orders-orderProducts">
                     <OrderItems />
                 </div>
