@@ -25,8 +25,7 @@
 .orderItems-products-header-qty {
     width: 100px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 49.5%;
     font-weight: bold;
 }
 .orderItems-products-header-total {
@@ -80,42 +79,18 @@
 .orderItems-product-description-price {
     font-size: 10px;
 }
-.orderItems-product-description-buttons {
-    position: relative;
-    display: flex;
-}
-.orderItems-product-description-buttons button {
-    border: none;
-    width: 25px;
-    border-radius: 3px;
-    background: #019e7f;
-    color: white;
-    font-weight: bold;
-    position: relative;
+.order-product-description-buttons {
+    position: absolute;
+    left: 50%;
+
     top: 50%;
     transform: translateY(-50%);
-    height: 25px;
-    text-align: center;
-    line-height: 0px;
-}
-.orderItems-product-description-buttons button p {
-    position: relative;
-    height: 50px;
-    line-height: 19px;
-    color: white;
-}
-.orderItems-product-description-buttons div {
-    border: none;
-    width: 20px;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
     height: 55px;
     line-height: 55px;
+    font-weight: bold;
+    text-align: right;
 }
+
 .orderItems-product-price-total {
     position: absolute;
     top: 50%;
