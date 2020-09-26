@@ -4,7 +4,7 @@ import Product from './Product';
 
 const OrderItems = () => {
     const productsOrderItemsed = useSelector(state => state.products.products);
-    const orderItems = useSelector(state => state.products.orderItems);
+    const orderItems = useSelector(state => state.products.order);
 
     const products = [];
     orderItems.map(id => {
@@ -36,8 +36,7 @@ const OrderItems = () => {
                         Description
                     </p>
                     <p className="orderItems-products-header-qty">Qty</p>
-                    <p className="orderItems-products-header-total">Total</p>
-                    <p className="orderItems-products-header-X">#</p>
+                    <p className="orderItems-products-header-total">Price</p>
                 </div>
 
                 <div className="orderItems-products-list">{products}</div>

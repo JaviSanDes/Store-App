@@ -19,15 +19,17 @@
     border-bottom: 2px solid rgb(197, 197, 197);
 }
 .orderItems-products-header-description {
-    width: 240px;
+    width: 45%;
     font-weight: bold;
 }
 .orderItems-products-header-qty {
-    width: 120px;
+    width: 40%;
     font-weight: bold;
 }
 .orderItems-products-header-total {
     font-weight: bold;
+    position: absolute;
+    right: 15px;
 }
 .orderItems-products-header-X {
     position: absolute;
@@ -58,7 +60,7 @@
     transform: translateY(-50%);
 }
 .orderItems-product-description {
-    width: 150px;
+    width: 38%;
     position: relative;
     margin-left: 20px;
 }
@@ -112,8 +114,9 @@
     line-height: 55px;
 }
 .orderItems-product-price-total {
-    position: relative;
+    position: absolute;
     top: 50%;
+    right: 10px;
     transform: translateY(-50%);
     color: #019e7f;
     margin-left: 50px;
