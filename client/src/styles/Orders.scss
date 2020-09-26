@@ -40,7 +40,7 @@
     margin-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
-    height: 55%;
+    height: 60%;
 }
 .orders-progress {
     height: 4px;
@@ -110,4 +110,38 @@
 
 .orders-delivery-info {
     display: flex;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(214, 214, 214);
+}
+.orders-delivery-info-1 {
+    width: 75%;
+    padding-left: 20px;
+    display: flex;
+}
+.orders-delivery-info-1 div {
+    width: 350px;
+}
+.orders-delivery-info-1 div:first-child {
+    font-weight: bold;
+}
+.orders-delivery-info-2 {
+    position: absolute;
+    right: 0px;
+    width: 25%;
+    display: flex;
+    padding-left: 20px;
+    border-left: 1px solid rgb(214, 214, 214);
+}
+.orders-delivery-info-2 div {
+    width: 50%;
+}
+.orders-delivery-info-2 div:first-child {
+    font-weight: bold;
+}
+.orders-delivery-info-2 div:nth-child(2) {
+    position: relative;
+    right: 0;
 }
