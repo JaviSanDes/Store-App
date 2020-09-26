@@ -1,7 +1,7 @@
 import React from 'react';
 import { Progress } from 'reactstrap';
 import Box from '../components/order/box';
-import Order from '../components/checkout/Order';
+import Order from '../components/order/Order';
 
 const Orders = () => {
     return (
