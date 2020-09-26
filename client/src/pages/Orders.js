@@ -17,7 +17,14 @@ const Orders = () => {
             </div>
             <div className="orders-orderDetails">
                 <h4>Order Details</h4>
-                <div className="orders-orderDitail"></div>
+                <div className="orders-orderDitail">
+                    <p>Delivery Address</p>
+                    <p>1865 Chenoweth Drive, Nashville, Tennessee</p>
+                    <div>
+                        <p>Order Date: 7th April 2019</p>
+                        <p>Delivery Time: 13th April</p>
+                    </div>
+                </div>
                 <div className="orders-steps">
                     <div className="orders-circle orders-ticked">
                         <img
