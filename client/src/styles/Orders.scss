@@ -5,7 +5,8 @@
 }
 .orders-ordersList {
     border: 1px solid rgb(214, 214, 214);
-    width: 450px;
+    width: 350px;
+    min-width: 350px;
     padding: 20px;
     overflow-y: scroll;
     margin-right: 20px;
@@ -144,4 +145,13 @@
 .orders-delivery-info-2 div:nth-child(2) {
     position: relative;
     right: 0;
+}
+
+@media only screen and (max-width: 1250px) {
+    .orders-ordersList {
+        width: 250px;
+        min-width: 250px;
+        font-size: 10px;
+        padding: 5px;
+    }
 }
