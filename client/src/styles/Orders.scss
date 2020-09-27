@@ -123,7 +123,7 @@
     display: flex;
 }
 .orders-delivery-info-1 div {
-    width: 350px;
+    width: 50%;
 }
 .orders-delivery-info-1 div:first-child {
     font-weight: bold;
@@ -153,5 +153,27 @@
         min-width: 250px;
         font-size: 10px;
         padding: 5px;
+    }
+    .orders-orderBox {
+        width: 100%;
+        height: 130px;
+        background: rgb(238, 238, 238);
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 5px;
+        border-top: 30px solid rgb(206, 206, 206);
+    }
+    .orders-orderBox-header {
+        height: 30px;
+        top: -25px;
+    }
+    .orders-orderInfo {
+        display: flex;
+        position: relative;
+        top: -30px;
+        font-size: 14px;
+    }
+    .orders-orderBox-button {
+        font-size: 10px;
     }
 }
