@@ -233,9 +233,6 @@
         width: 95%;
         left: 49.5%;
     }
-    .orders-delivery-info {
-        font-size: 10px;
-    }
     .orders-circle {
         width: 25px;
         height: 25px;
@@ -251,6 +248,45 @@
     .orders-progress {
         height: 2px;
         top: -13px;
+    }
+    .orders-delivery-info {
+        display: initial;
+        border: none;
+    }
+    .orders-delivery-info-1 {
+        width: 100%;
+        padding-left: 20px;
+        display: flex;
+        border: 1px solid rgb(228, 228, 228);
+    }
+    .orders-delivery-info-1 div {
+        width: 70%;
+    }
+    .orders-delivery-info-1 div:first-child {
+        font-weight: bold;
+        width: 30%;
+    }
+    .orders-delivery-info-1 div p {
+        margin: 0;
+    }
+    .orders-delivery-info-2 {
+        position: initial;
+        width: 100%;
+        border: 1px solid rgb(228, 228, 228);
+    }
+    .orders-delivery-info-2 div p {
+        margin: 0;
+    }
+    .orders-delivery-info-2 div {
+        width: 70%;
+    }
+    .orders-delivery-info-2 div:first-child {
+        font-weight: bold;
+        width: 30%;
+    }
+    .orders-delivery-info-2 div:nth-child(2) {
+        position: relative;
+        right: 0;
     }
 }
 
