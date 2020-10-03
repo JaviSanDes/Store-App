@@ -30,17 +30,15 @@ const OrderItems = () => {
     });
     return (
         <div className="orderItems-container">
-            <div className="orderItems-products">
-                <div className="orderItems-products-header">
-                    <p className="orderItems-products-header-description">
-                        Description
-                    </p>
-                    <p className="orderItems-products-header-qty">Qty</p>
-                    <p className="orderItems-products-header-total">Price</p>
-                </div>
-
-                <div className="orderItems-products-list">{products}</div>
+            <div className="orderItems-products-header">
+                <p className="orderItems-products-header-description">
+                    Description
+                </p>
+                <p className="orderItems-products-header-qty">Qty</p>
+                <p className="orderItems-products-header-total">Price</p>
             </div>
+
+            <div className="orderItems-products-list">{products}</div>
         </div>
     );
 };

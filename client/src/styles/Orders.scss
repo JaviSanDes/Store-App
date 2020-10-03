@@ -38,12 +38,6 @@
 .orders-ticked {
     background: #019e7f;
 }
-.orders-orderProducts {
-    margin-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 60%;
-}
 .orders-progress {
     height: 4px;
     color: #019e7f;
@@ -210,17 +204,20 @@
     }
 }
 @media only screen and (max-width: 850px) {
+    .orders-orderDetails-up {
+        height: 40%;
+    }
+    .orders-orderDetails-down {
+        height: 60%;
+    }
     .orders-orderDetails {
         position: absolute;
         background-color: white;
         width: 90%;
-        height: 90vh;
+        height: 85vh;
         left: 50%;
-        top: 80px;
+        top: 10vh;
         transform: translateX(-50%);
-    }
-    .orders-orderProducts {
-        margin-top: 30px;
     }
     .orders-ordersList {
         width: 90%;
@@ -235,9 +232,6 @@
     .orders-orderDetails {
         width: 95%;
         left: 49.5%;
-    }
-    .orders-orderProducts {
-        padding: 0;
     }
     .orders-delivery-info {
         font-size: 10px;
@@ -262,4 +256,14 @@
 
 //Phone
 @media only screen and (max-width: 500px) {
+    .orders-orderDetails {
+        padding: 0;
+        height: 87vh;
+    }
+    .orders-steps {
+        font-size: 11px;
+    }
+    .orderItems-products {
+        height: 100%;
+    }
 }
