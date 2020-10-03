@@ -20,10 +20,13 @@ const Orders = () => {
             </div>
             {isVisible && (
                 <div className="orders-orderDetails">
-                    <h4>Order Details</h4>
-                    <button onClick={boxToggle} type="button">
-                        X
-                    </button>
+                    <div className="orders-orderDetails-title">
+                        <h4>Order Details</h4>
+                        <button onClick={boxToggle} type="button">
+                            X
+                        </button>
+                    </div>
+
                     <div className="orders-delivery-info">
                         <div className="orders-delivery-info-1">
                             <div>

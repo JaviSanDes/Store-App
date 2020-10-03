@@ -147,6 +147,15 @@
     position: relative;
     right: 0;
 }
+.orders-orderDetails-title {
+    display: flex;
+}
+.orders-orderDetails-title button {
+    position: absolute;
+    right: 20px;
+    width: 35px;
+    display: none;
+}
 
 @media only screen and (max-width: 1250px) {
     .orders-ordersList {
@@ -205,13 +214,52 @@
         position: absolute;
         background-color: white;
         width: 90%;
-        height: 80vh;
+        height: 90vh;
         left: 50%;
+        top: 80px;
         transform: translateX(-50%);
+    }
+    .orders-orderProducts {
+        margin-top: 30px;
     }
     .orders-ordersList {
         width: 90%;
         margin: auto;
         height: 80vh;
     }
+    .orders-orderDetails-title button {
+        display: inline;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .orders-orderDetails {
+        width: 95%;
+        left: 49.5%;
+    }
+    .orders-orderProducts {
+        padding: 0;
+    }
+    .orders-delivery-info {
+        font-size: 10px;
+    }
+    .orders-circle {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .orders-tick {
+        width: 12px;
+        height: 12px;
+    }
+    .orders-steps {
+        font-size: 12px;
+    }
+    .orders-progress {
+        height: 2px;
+        top: -13px;
+    }
+}
+
+//Phone
+@media only screen and (max-width: 500px) {
 }
