@@ -229,14 +229,20 @@
     }
 }
 @media only screen and (max-width: 600px) {
+    .orders-orderDetails-title button {
+        right: 0px;
+    }
+    .orders-orderDetails-up {
+        position: relative;
+    }
+    .orders-deliveryStatus {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
     .orders-orderDetails {
         width: 95%;
         left: 49.5%;
-    }
-    .orders-circle {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
     }
     .orders-tick {
         width: 12px;
@@ -254,6 +260,7 @@
         border: none;
     }
     .orders-delivery-info-1 {
+        margin-top: 20px;
         width: 100%;
         padding-left: 20px;
         display: flex;
@@ -268,6 +275,8 @@
     }
     .orders-delivery-info-1 div p {
         margin: 0;
+        height: 40px;
+        font-size: 13px;
     }
     .orders-delivery-info-2 {
         position: initial;
@@ -276,6 +285,8 @@
     }
     .orders-delivery-info-2 div p {
         margin: 0;
+        height: 20px;
+        font-size: 13px;
     }
     .orders-delivery-info-2 div {
         width: 70%;
@@ -293,7 +304,7 @@
 //Phone
 @media only screen and (max-width: 500px) {
     .orders-orderDetails {
-        padding: 0;
+        padding: 10px;
         height: 87vh;
     }
     .orders-steps {
