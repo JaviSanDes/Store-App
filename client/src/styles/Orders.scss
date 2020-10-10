@@ -118,10 +118,11 @@
     display: flex;
 }
 .orders-delivery-info-1 div {
-    width: 50%;
+    width: 70%;
 }
 .orders-delivery-info-1 div:first-child {
     font-weight: bold;
+    width: 30%;
 }
 .orders-delivery-info-2 {
     position: absolute;
@@ -132,10 +133,13 @@
     border-left: 1px solid rgb(214, 214, 214);
 }
 .orders-delivery-info-2 div {
-    width: 50%;
+    width: 35%;
+    text-align: right;
 }
 .orders-delivery-info-2 div:first-child {
     font-weight: bold;
+    width: 65%;
+    text-align: left;
 }
 .orders-delivery-info-2 div:nth-child(2) {
     position: relative;
@@ -149,6 +153,15 @@
     right: 20px;
     width: 35px;
     display: none;
+}
+.orders-orderDetails-up {
+    height: 275px;
+    border: 1px solid red;
+}
+.orders-orderDetails-down {
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid red;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -182,7 +195,11 @@
         top: -25px;
     }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1060px) {
+    .orders-orderDetails-up {
+        height: 235px;
+        border: 1px solid red;
+    }
     .orders-delivery-info {
         font-size: 12px;
     }
@@ -204,11 +221,8 @@
     }
 }
 @media only screen and (max-width: 850px) {
-    .orders-orderDetails-up {
-        height: 40%;
-    }
     .orders-orderDetails-down {
-        height: 60%;
+        height: 70%;
     }
     .orders-orderDetails {
         position: absolute;
@@ -229,6 +243,12 @@
     }
 }
 @media only screen and (max-width: 600px) {
+    .orders-orderDetails-up {
+        height: 300px;
+    }
+    .orders-orderDetails-down {
+        height: 60%;
+    }
     .orders-orderDetails-title button {
         right: 0px;
     }
@@ -245,7 +265,7 @@
         width: 100%;
     }
     .orders-orderDetails {
-        width: 95%;
+        width: 98%;
         left: 49.5%;
     }
     .orders-tick {
