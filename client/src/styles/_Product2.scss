@@ -5,6 +5,7 @@
     position: relative;
     padding: 5px;
     display: flex;
+    overflow: hidden;
 }
 .shoppingCart-image {
     width: 60px;
@@ -74,14 +75,15 @@
 .shoppingCart-product-eliminate {
     position: absolute;
     right: 5px;
-    height: 20px;
-    width: 20px;
+    padding: 3px 6px;
     border: none;
     font-size: 10px;
     font-weight: bold;
+    background: rgb(194, 194, 194);
 }
 .shoppingCart-product-buttons {
     position: relative;
     top: -45px;
-    right: -45px;
+    right: -60px;
+    transform: scale(0.8);
 }
