@@ -5,7 +5,7 @@ import { resetNotifications } from '../../store/actions/Products';
 import Product2 from './Product2';
 
 const ShoppingCart = () => {
-    const [toggle, setToggle] = useState(400);
+    const [toggle, setToggle] = useState(350);
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
     const newProductsNotification = useSelector(
@@ -15,7 +15,7 @@ const ShoppingCart = () => {
     const totalPrice = useSelector(state => state.products.totalPrice);
 
     const clickHandler = () => {
-        toggle === 0 ? setToggle(400) : setToggle(0);
+        toggle === 0 ? setToggle(350) : setToggle(0);
         dispatch(resetNotifications());
     };
 

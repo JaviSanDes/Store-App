@@ -6,40 +6,89 @@
     right: 0;
 }
 .buttons-add-button p {
-    width: 60px;
+    width: 50px;
     height: 35px;
     text-align: center;
     color: white;
-    background: #019E7F;
+    background: #019e7f;
     font-weight: bold;
-    line-height:33px;
+    line-height: 33px;
     user-select: none;
 }
-#buttons-add-button-1, #buttons-add-button-2 {
+#buttons-add-button-1,
+#buttons-add-button-2 {
     width: 30px;
-    background: #019E7F;
+    background: #019e7f;
     border: none;
     color: white;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
 
-    display:block;
-    width:35px;
-    height:35px;
-    line-height:30px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
     border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
-    text-decoration:none;
-    font-size:20px;
-    font-weight:bold;
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
 
     user-select: none;
 }
 #buttons-add-button-1 {
-  transform: translateX(51%);
+    transform: translateX(51%);
 }
 #buttons-add-button-2 {
-  transform: translateX(-51%);
+    transform: translateX(-51%);
+}
+
+@media only screen and (max-width: 700px) {
+    .buttons-add-button p {
+        width: 40px;
+        height: 35px;
+        text-align: center;
+        color: white;
+        background: #019e7f;
+        font-weight: bold;
+        line-height: 33px;
+        user-select: none;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .buttons-add-button p {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: white;
+        background: #019e7f;
+        font-weight: bold;
+        line-height: 33px;
+        user-select: none;
+    }
+    #buttons-add-button-1,
+    #buttons-add-button-2 {
+        width: 20px;
+        background: #019e7f;
+        border: none;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        color: #f5f5f5;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+
+        user-select: none;
+    }
 }

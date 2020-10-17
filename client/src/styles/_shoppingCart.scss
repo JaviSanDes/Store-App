@@ -1,7 +1,7 @@
 .shoppingCart-container {
     position: fixed;
     height: 100vh;
-    width: 400px;
+    width: 350px;
     right: 0;
     top: 0;
     z-index: 200;
@@ -9,9 +9,9 @@
     border-right: 1px solid rgb(216, 216, 216);
     transition: all 0.3s;
 
-    -webkit-box-shadow: -2px 0px 13px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 0px 13px -4px rgba(0,0,0,0.75);
-    box-shadow: -2px 0px 13px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 0px 13px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 0px 13px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 0px 13px -4px rgba(0, 0, 0, 0.75);
 }
 .shoppingCart-header {
     width: 100%;
@@ -32,12 +32,12 @@
 .shoppingCart-header-notification {
     width: 20px;
     height: 20px;
-    background: #019E7F;
+    background: #019e7f;
     position: absolute;
     top: 30px;
     left: 30px;
     border-radius: 50%;
-    vertical-align:middle;
+    vertical-align: middle;
     text-align: center;
     font-size: 12px;
     font-weight: bold;
@@ -76,11 +76,13 @@
     width: 80%;
     height: 50px;
     border: none;
-    background: #019E7F;
+    background: #019e7f;
     border-radius: 2em;
     color: white;
     left: 50%;
     transform: translateX(-50%);
 }
 
-button:focus {outline:0;}
+button:focus {
+    outline: 0;
+}

@@ -1,11 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import {
-    addProduct,
-    removeProduct,
-    eliminateProduct,
-} from '../../store/actions/Products';
+import Buttons from '../Buttons';
+import { eliminateProduct } from '../../store/actions/Products';
 
 const Product2 = props => {
     const { id, name, price, image, quantity, measure } = props;
@@ -26,20 +23,8 @@ const Product2 = props => {
                 <p>
                     {measure}, {price}€/und.
                 </p>
-                <div className="shoppingCart-product-description-buttons">
-                    <button
-                        type="button"
-                        onClick={() => dispatch(addProduct(id))}
-                    >
-                        +
-                    </button>
-                    <div>{quantity}</div>
-                    <button
-                        type="button"
-                        onClick={() => dispatch(removeProduct(id))}
-                    >
-                        -
-                    </button>
+                <div className="shoppingCart-product-buttons">
+                    <Buttons id={id} quantity={quantity} />
                 </div>
             </div>
 
