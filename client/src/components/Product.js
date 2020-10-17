@@ -53,7 +53,7 @@ const Product = props => {
                 />
             </div>
             <h1 className="product-name">{name}</h1>
-            <p>{measure}</p>
+            <p className="product-measure">{measure}</p>
             <div className="product-price">
                 <p className="product-price-value">{price} €</p>
 

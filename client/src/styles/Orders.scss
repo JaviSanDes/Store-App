@@ -156,12 +156,10 @@
 }
 .orders-orderDetails-up {
     height: 275px;
-    border: 1px solid red;
 }
 .orders-orderDetails-down {
     height: 300px;
     overflow: hidden;
-    border: 1px solid red;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -198,7 +196,6 @@
 @media only screen and (max-width: 1060px) {
     .orders-orderDetails-up {
         height: 235px;
-        border: 1px solid red;
     }
     .orders-delivery-info {
         font-size: 12px;

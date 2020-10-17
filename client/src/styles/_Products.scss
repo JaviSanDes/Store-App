@@ -1,7 +1,5 @@
 .Products-container {
-    width: 100%;
     padding-left: 10px;
-    width: 1000px;
     width: 100%;
     margin-top: 125px;
 }
@@ -28,6 +26,12 @@
 .Products-products {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 700px) {
+    .Products-container {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
