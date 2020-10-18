@@ -1,9 +1,10 @@
-
 .modal-body {
     display: flex;
     height: 380px;
+    overflow-y: hidden;
 }
-.modal-body-image, .modal-body-info {
+.modal-body-image,
+.modal-body-info {
     flex: 1;
     height: 100%;
     position: relative;
@@ -80,19 +81,25 @@
     color: rgb(245, 245, 245);
     padding: 2px 5px 0px 8px;
     right: 0;
-  }
+}
 
 @media only screen and (max-width: 990px) {
     .modal-body {
         display: inline;
-        height: 85vh;
+        height: 70vh;
+        max-height: 70vh;
         overflow: scroll;
     }
+    .modal-body-img-1 {
+        width: 65%;
+        margin: 0 15%;
+        margin-top: 40px;
+    }
     .modal-body-image {
-        height: 400px;
+        height: 350px;
     }
     .modal-body-info {
         height: 300px;
         margin: 0;
     }
-  }
+}

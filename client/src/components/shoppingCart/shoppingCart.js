@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { resetNotifications } from '../../store/actions/Products';
 
 import Product2 from './Product2';
@@ -57,7 +58,7 @@ const ShoppingCart = () => {
                     type="button"
                 >
                     {toggle === 0 ? (
-                        <p>X</p>
+                        <p className="shoppingCart-x">X</p>
                     ) : (
                         <div>
                             <img
@@ -81,9 +82,11 @@ const ShoppingCart = () => {
                 <p className="shoppingCart-footer-totalPrice">
                     Total {totalPrice.toFixed(2)} €
                 </p>
-                <button className="shoppingCart-checkout" type="button">
-                    CHECKOUT
-                </button>
+                <NavLink extact to="/checkout">
+                    <button className="shoppingCart-checkout" type="button">
+                        CHECKOUT
+                    </button>
+                </NavLink>
             </div>
         </div>
     );
