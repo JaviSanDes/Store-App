@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 import toggleMenu from '../store/actions/menuToggle';
 
@@ -77,9 +78,13 @@ const Header = () => {
                             <p>Welcome, User!</p>
                             <p>Enjoy your shopping</p>
                         </div>
+                        <NavLink extact to="/settings">
+                            <button type="button">Settings</button>
+                        </NavLink>
+                        <NavLink extact to="/orders">
+                            <button type="button">My Purchases</button>
+                        </NavLink>
 
-                        <button type="button">Settings</button>
-                        <button type="button">My Purchases</button>
                         <button type="button" className="header-logOut-button">
                             Log Out
                         </button>

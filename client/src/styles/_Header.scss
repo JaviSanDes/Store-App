@@ -67,7 +67,7 @@ input:focus {
 }
 .header-login {
     color: black;
-    width: 80px;
+    width: 65px;
     background: rgb(238, 238, 238);
     position: relative;
     right: 60px;
@@ -76,6 +76,7 @@ input:focus {
 }
 .header-user-image {
     height: 60px;
+    z-index: 10;
 }
 .header-user-box {
     position: absolute;
@@ -113,6 +114,7 @@ input:focus {
 .header-user-box button {
     margin: 10px;
     height: 40px;
+    width: 90%;
     border: none;
     border-radius: 5px;
 }
