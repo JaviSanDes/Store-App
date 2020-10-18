@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -25,6 +25,17 @@ const Header = () => {
         });
         history.push({ pathname: `/search/${value}` });
     };
+    const handleUserKeyPress = e => {
+        if (e.target.className !== 'header-user-image') setIsVisible(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener('click', handleUserKeyPress);
+
+        return () => {
+            window.removeEventListener('click', handleUserKeyPress);
+        };
+    }, []);
 
     const clickHandler = () => {
         setIsVisible(val => !val);
