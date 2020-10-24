@@ -124,9 +124,87 @@ input:focus {
     top: 20px;
     color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+    .Header-container {
+        padding-left: 0px;
+    }
+    .Header-button {
+        display: none;
+        background: none;
+        border: none;
+        margin: 0;
+    }
+    .header-home {
+        left: -15px;
+        transform: translateY(-50%);
+    }
+    .header-home-link {
+        font-size: 16px;
+        color: black;
+        margin: 0;
+    }
+    .header-home-link-2 {
+        font-size: 16px;
+        color: #019e7f;
+        margin: 0;
+    }
+    .header-search {
+        margin: auto;
+        width: 300px;
+        display: flex;
+        position: absolute;
+        top: 55px;
+        left: 150px;
+        font-size: 14px;
+    }
+    .header-search-input {
+        height: 40px;
+        border: none;
+        width: 300px;
+        margin: auto;
+        background: rgb(238, 238, 238);
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+    .header-search-image {
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        left: 150px;
+        top: 7px;
+        background: rgb(238, 238, 238);
+        padding: 12px;
+        border-radius: 3px;
+    }
+    .header-login {
+        color: black;
+        width: 45px;
+        height: 45px;
+        background: rgb(238, 238, 238);
+        position: absolute;
+        right: 60px;
+        cursor: pointer;
+        display: flex;
+        top: 7px;
+        border-radius: 3px;
+    }
+    .header-user-image {
+        height: 45px;
+        z-index: 10;
+        padding: 3px;
+    }
+}
 @media only screen and (max-width: 1300px) {
     .Header-button {
         display: inline;
         margin-right: 20px;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .header-search {
+        width: 200px;
+    }
+}
+
