@@ -10,6 +10,7 @@ const Header = () => {
     const history = useHistory();
     const [form, setForm] = useState({ search: '' });
     const [isVisivle, setIsVisible] = useState(false);
+    const [isStyled, setIsstyled] = useState(false);
 
     const toggleMenuHandler = () => dispatch(toggleMenu());
     const redirectHandler = () => {
@@ -41,6 +42,17 @@ const Header = () => {
         setIsVisible(val => !val);
     };
 
+    const searchHadnler = () => {
+        const elem = document.getElementById('header-search-input-id');
+        if (isStyled) {
+            setIsstyled(false);
+            elem.style.width = '300px';
+        } else {
+            setIsstyled(true);
+            elem.style.width = '0px';
+        }
+    };
+
     return (
         <div className="Header-container">
             <button
@@ -65,12 +77,15 @@ const Header = () => {
                     src={process.env.PUBLIC_URL + 'images/search.png'}
                     className="header-search-image"
                     alt="img"
+                    onClick={searchHadnler}
+                    role="button"
                 />
                 <input
                     className="header-search-input"
                     placeholder="Search your product"
                     name="search"
                     value={form.search}
+                    id="header-search-input-id"
                     onChange={e => inputHandler(e)}
                 />
             </div>
