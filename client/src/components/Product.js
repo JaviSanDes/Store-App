@@ -47,7 +47,7 @@ const Product = props => {
                 )}
                 <img
                     style={!imageLoading ? {} : { display: 'none' }}
-                    src={process.env.PUBLIC_URL + `images/${image}`}
+                    src={process.env.PUBLIC_URL + `images/products/${image}`}
                     onLoad={() => setImageLoading(false)}
                     alt={name}
                 />

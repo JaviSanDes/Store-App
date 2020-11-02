@@ -45,17 +45,23 @@ const Slider = props => {
                     className="modal-body-image-slider"
                 >
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-1"
                     />
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-1"
                     />
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-1"
                     />
@@ -70,7 +76,9 @@ const Slider = props => {
                     onClick={() => sliderHandler(0)}
                 >
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-2"
                     />
@@ -82,7 +90,9 @@ const Slider = props => {
                     onClick={() => sliderHandler(-320)}
                 >
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-2"
                     />
@@ -94,7 +104,9 @@ const Slider = props => {
                     onClick={() => sliderHandler(-640)}
                 >
                     <img
-                        src={process.env.PUBLIC_URL + `images/${image}`}
+                        src={
+                            process.env.PUBLIC_URL + `images/products/${image}`
+                        }
                         alt="img"
                         className="modal-body-img-2"
                     />
