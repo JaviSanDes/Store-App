@@ -8,6 +8,7 @@ import { getProducts } from '../store/actions/Products';
 import Product from '../components/Product';
 import SideBar from '../components/SideBar';
 import ShoppingCart from '../components/shoppingCart/shoppingCart';
+import Footer from '../components/Footer';
 
 const Home = props => {
     const { group } = props;
@@ -81,6 +82,7 @@ const Home = props => {
 
                 <ShoppingCart />
             </div>
+            <Footer />
         </div>
     );
 };

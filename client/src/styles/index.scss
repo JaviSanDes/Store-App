@@ -22,19 +22,21 @@
 body {
     min-width: 100vw;
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     background: rgb(250, 250, 250);
 }
 .App-container {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 .App-body {
     width: 85vw;
     max-width: 1400px;
     padding: 5px;
     margin: auto;
-    min-height: 100vh;
+    height: 100vh;
 }
 .routes {
     flex: 1;

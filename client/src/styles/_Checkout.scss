@@ -1,18 +1,19 @@
 @media (orientation: landscape) {
     .checkout-container {
         height: 85vh;
+        max-height: 720px;
         width: 750px;
         margin: auto;
         background: white;
         border: 1.5px solid rgb(245, 245, 245);
         border-radius: 10px;
-        margin-bottom: 10vh;
         padding: 40px;
         padding-left: 120px;
         padding-right: 120px;
         margin-top: 80px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
     }
     .checkout-pahses {
         max-height: 95px;
