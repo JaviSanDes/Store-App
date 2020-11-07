@@ -12,7 +12,7 @@ const Product2 = props => {
         <div className="shoppingCart-product">
             <div className="shoppingCart-image">
                 <img
-                    src={process.env.PUBLIC_URL + `images/${image}`}
+                    src={process.env.PUBLIC_URL + `images/products/${image}`}
                     alt="img"
                 />
             </div>
