@@ -15,7 +15,7 @@ const Product2 = props => {
         <div className="order-product">
             <div className="order-image">
                 <img
-                    src={process.env.PUBLIC_URL + `images/${image}`}
+                    src={process.env.PUBLIC_URL + `images/products/${image}`}
                     alt="img"
                 />
             </div>
@@ -29,14 +29,14 @@ const Product2 = props => {
             </div>
             <div className="order-product-description-buttons">
                 <button type="button" onClick={() => dispatch(addProduct(id))}>
-                    <p>+</p>
+                    +
                 </button>
                 <div>{quantity}</div>
                 <button
                     type="button"
                     onClick={() => dispatch(removeProduct(id))}
                 >
-                    <p>-</p>
+                    -
                 </button>
             </div>
             <div className="order-product-price-total">

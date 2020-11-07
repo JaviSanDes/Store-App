@@ -19,11 +19,11 @@
     border-bottom: 2px solid rgb(197, 197, 197);
 }
 .order-products-header-description {
-    width: 240px;
+    width: 265px;
     font-weight: bold;
 }
 .order-products-header-qty {
-    width: 120px;
+    width: 100px;
     font-weight: bold;
 }
 .order-products-header-total {
@@ -93,12 +93,7 @@
     text-align: center;
     line-height: 0px;
 }
-.order-product-description-buttons button p {
-    position: relative;
-    height: 50px;
-    line-height: 19px;
-    color: white;
-}
+
 .order-product-description-buttons div {
     border: none;
     width: 20px;
@@ -116,8 +111,8 @@
     top: 50%;
     transform: translateY(-50%);
     color: #019e7f;
-    margin-left: 50px;
-    width: 65px;
+    margin-left: 125px;
+    width: 70px;
     height: 55px;
     line-height: 55px;
     font-weight: bold;
@@ -134,8 +129,7 @@
 .order-product-eliminate {
     position: absolute;
     right: 10px;
-    height: 20px;
-    width: 20px;
+    padding: 3px 6px;
     border: none;
     font-size: 10px;
     font-weight: bold;
