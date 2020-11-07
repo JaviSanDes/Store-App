@@ -18,12 +18,12 @@ const Slider = props => {
                 setStyle2({ border: 1, color: '#e6e6e6' });
                 setStyle3({ border: 1, color: '#e6e6e6' });
                 break;
-            case -320:
+            case -250:
                 setStyle1({ border: 1, color: '#e6e6e6' });
                 setStyle2({ border: 2, color: '#019E7F' });
                 setStyle3({ border: 1, color: '#e6e6e6' });
                 break;
-            case -640:
+            case -500:
                 setStyle1({ border: 1, color: '#e6e6e6' });
                 setStyle2({ border: 1, color: '#e6e6e6' });
                 setStyle3({ border: 2, color: '#019E7F' });
@@ -87,7 +87,7 @@ const Slider = props => {
                     style={{
                         border: `${style2.border}px solid ${style2.color}`,
                     }}
-                    onClick={() => sliderHandler(-320)}
+                    onClick={() => sliderHandler(-250)}
                 >
                     <img
                         src={
@@ -101,7 +101,7 @@ const Slider = props => {
                     style={{
                         border: `${style3.border}px solid ${style3.color}`,
                     }}
-                    onClick={() => sliderHandler(-640)}
+                    onClick={() => sliderHandler(-500)}
                 >
                     <img
                         src={
