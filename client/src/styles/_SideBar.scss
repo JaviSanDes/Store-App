@@ -60,12 +60,13 @@
     .sideBar-button {
         display: inline;
         position: relative;
-        top: 10px;
+        top: 5px;
         left: 230px;
         z-index: 3;
     }
     .sideBar-menu {
         position: relative;
-        top: -30px;
+        top: -40px;
+        overflow: hidden;
     }
 }

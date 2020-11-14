@@ -101,11 +101,14 @@
         border: none;
     }
     .modal-body-info {
-        height: 280px;
+        height: 100px;
         margin: 0;
     }
     .modal-body-info-text {
         height: 130px;
         margin-bottom: 10px;
+    }
+    .modal-body-info-name {
+        margin-top: 0px;
     }
 }
