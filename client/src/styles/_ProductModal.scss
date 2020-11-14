@@ -87,20 +87,25 @@
 @media only screen and (max-width: 990px) {
     .modal-body {
         display: inline;
-        height: 70vh;
-        max-height: 70vh;
+        height: 75vh;
+        max-height: 75vh;
         overflow: scroll;
     }
     .modal-body-img-1 {
         width: 65%;
         margin: 0 15%;
-        margin-top: 40px;
+        margin-top: 0px;
     }
     .modal-body-image {
-        height: 350px;
+        height: 280px;
+        border: none;
     }
     .modal-body-info {
-        height: 300px;
+        height: 280px;
         margin: 0;
+    }
+    .modal-body-info-text {
+        height: 130px;
+        margin-bottom: 10px;
     }
 }
