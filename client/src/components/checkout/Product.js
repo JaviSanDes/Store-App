@@ -28,15 +28,15 @@ const Product2 = props => {
                 </p>
             </div>
             <div className="order-product-description-buttons">
-                <button type="button" onClick={() => dispatch(addProduct(id))}>
-                    +
-                </button>
-                <div>{quantity}</div>
                 <button
                     type="button"
                     onClick={() => dispatch(removeProduct(id))}
                 >
                     -
+                </button>
+                <div>{quantity}</div>
+                <button type="button" onClick={() => dispatch(addProduct(id))}>
+                    +
                 </button>
             </div>
             <div className="order-product-price-total">
