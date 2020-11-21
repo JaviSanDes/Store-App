@@ -36,8 +36,7 @@ const Order = () => {
                         Description
                     </p>
                     <p className="order-products-header-qty">Qty</p>
-                    <p className="order-products-header-total">Total</p>
-                    <p className="order-products-header-X">#</p>
+                    <p className="order-products-header-X">Total</p>
                 </div>
 
                 <div className="order-products-list">{products}</div>
