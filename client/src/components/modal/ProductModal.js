@@ -47,7 +47,7 @@ const ProductModal = props => {
                                 <p className="modal-tag">{group}</p>
                             </div>
                         </p>
-                        <div className="product-price">
+                        <div className="modal-product-price">
                             <p className="product-price-value">{price} €</p>
                             {quantity > 0 ? (
                                 <Buttons id={id} quantity={quantity} />
