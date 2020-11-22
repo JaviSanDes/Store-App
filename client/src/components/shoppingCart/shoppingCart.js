@@ -16,7 +16,12 @@ const ShoppingCart = () => {
     const totalPrice = useSelector(state => state.products.totalPrice);
 
     const clickHandler = () => {
-        toggle === 0 ? setToggle(365) : setToggle(0);
+        if (window.innerWidth < 600) {
+            toggle === 0 ? setToggle(290) : setToggle(0);
+        } else {
+            toggle === 0 ? setToggle(365) : setToggle(0);
+        }
+
         dispatch(resetNotifications());
     };
 
