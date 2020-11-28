@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Product from './Product';
 
-const Order = () => {
+const Order = props => {
+    const { nextPhase } = props;
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
 
@@ -41,8 +43,19 @@ const Order = () => {
 
                 <div className="order-products-list">{products}</div>
             </div>
+            <button
+                className="checkout-nextButton"
+                type="button"
+                onClick={nextPhase}
+            >
+                Next
+            </button>
         </div>
     );
+};
+
+Order.propTypes = {
+    nextPhase: PropTypes.func.isRequired,
 };
 
 export default Order;

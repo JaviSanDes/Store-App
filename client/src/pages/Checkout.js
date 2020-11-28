@@ -17,10 +17,10 @@ const Checkout = () => {
     let Phase = <Order />;
     switch (phase) {
         case 1:
-            Phase = <Order />;
+            Phase = <Order nextPhase={phaseHandler} />;
             break;
         case 2:
-            Phase = <Shipping />;
+            Phase = <Shipping submit={phaseHandler} />;
             break;
         case 3:
             Phase = <Payment />;
@@ -51,15 +51,6 @@ const Checkout = () => {
                             {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
                         </h4>
                     </div>
-                </div>
-                <div className="checkout-next">
-                    <button
-                        className="checkout-nextButton"
-                        type="button"
-                        onClick={phaseHandler}
-                    >
-                        Next
-                    </button>
                 </div>
             </div>
         </div>
