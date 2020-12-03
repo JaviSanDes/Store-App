@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
-// import { confirmProducts } from '../../store/actions/OrderData';
+import { useDispatch } from 'react-redux';
+import { shippingData } from '../../store/actions/OrderData';
 
 const Shipping = props => {
     const { submit } = props;
     const [validForm, setValidForm] = useState(false);
+    const dispatch = useDispatch();
     const [form, setForm] = useState({
         name: '',
         contry: '',
@@ -16,6 +18,7 @@ const Shipping = props => {
     const submitHandler = e => {
         if (validForm) {
             e.preventDefault();
+            dispatch(shippingData(form));
             submit();
         }
     };
