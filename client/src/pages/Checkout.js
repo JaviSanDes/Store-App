@@ -23,7 +23,7 @@ const Checkout = () => {
             Phase = <Shipping submit={phaseHandler} />;
             break;
         case 3:
-            Phase = <Payment />;
+            Phase = <Payment submit={phaseHandler} />;
             break;
         case 4:
             Phase = <Summary />;
