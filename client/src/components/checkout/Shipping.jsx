@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
+// import { confirmProducts } from '../../store/actions/OrderData';
 
 const Shipping = props => {
     const { submit } = props;

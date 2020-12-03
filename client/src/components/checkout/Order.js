@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Product from './Product';
+import { confirmProducts } from '../../store/actions/OrderData';
 
 const Order = props => {
     const { nextPhase } = props;
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
+    const dispatch = useDispatch();
+
+    const submitHandler = () => {
+        dispatch(confirmProducts(productsOrdered));
+        nextPhase();
+    };
 
     const products = [];
     order.map(id => {
@@ -46,7 +53,7 @@ const Order = props => {
             <button
                 className="checkout-nextButton"
                 type="button"
-                onClick={nextPhase}
+                onClick={submitHandler}
             >
                 Next
             </button>
