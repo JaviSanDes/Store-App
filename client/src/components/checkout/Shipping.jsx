@@ -44,7 +44,7 @@ const Shipping = props => {
             <FormGroup>
                 <FormGroup>
                     <Label for="examplePassword">Full Name</Label>
-                    <input
+                    <Input
                         type="text"
                         name="name"
                         id="examplePassword"
