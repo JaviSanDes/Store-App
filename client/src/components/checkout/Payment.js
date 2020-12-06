@@ -100,7 +100,9 @@ const Payment = props => {
                     />
                 </div>
                 <div>
-                    <Label for="lastName">·</Label>
+                    <Label for="lastName" className="payment-dot">
+                        ·
+                    </Label>
                     <Input
                         type="text"
                         name="lastName"
@@ -142,7 +144,9 @@ const Payment = props => {
                     />
                 </div>
                 <div>
-                    <Label for="cvc">CVC Code</Label>
+                    <Label for="cvc" className="payment-cvc">
+                        CVC Code
+                    </Label>
                     <Input
                         type="number"
                         name="cvcCode"

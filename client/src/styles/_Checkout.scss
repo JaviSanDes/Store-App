@@ -68,14 +68,12 @@
         border: 1.5px solid rgb(245, 245, 245);
         border-radius: 10px;
         margin-bottom: 0vh;
-        margin-top: 8vh;
+        margin-top: 70px;
         padding: 40px;
         display: flex;
         flex-direction: column;
         width: 95%;
         max-width: 95%;
-        max-height: 90vh;
-        min-height: 90vh;
         padding-left: 50px;
         padding-right: 50px;
         position: relative;
@@ -91,8 +89,8 @@
         overflow-y: scroll;
     }
     .checkout2 {
-        min-height: 150px;
-        max-height: 150px;
+        min-height: 120px;
+        max-height: 120px;
     }
     .checkout-price {
         display: flex;
@@ -118,7 +116,7 @@
     }
     .checkout-nextButton {
         position: fixed;
-        right: 80px;
+        right: 11vw;
         bottom: 50px;
         border: none;
         font-size: 18px;
@@ -131,7 +129,6 @@
     }
     @media only screen and (max-width: 600px) {
         .checkout-container {
-        
             padding: 0px 10px 0px 10px;
         }
         .checkout-content {
@@ -139,8 +136,8 @@
             // overflow: hidden;
         }
         .checkout2 {
-            min-height: 125px;
-            max-height: 125px;
+            min-height: 110px;
+            max-height: 110px;
             width: 120%;
             position: relative;
             display: flex;
@@ -150,7 +147,7 @@
             display: flex;
             position: absolute;
             left: 0;
-            bottom: 15px;
+            bottom: 10px;
             width: 150px;
             height: 66px;
             background: #019e7f;
@@ -187,9 +184,7 @@
         }
         .checkout-nextButton {
             right: 40px;
-            bottom: 3%;
-            //font-size: 12px;
-            //padding: 8px 12px 8px 12px;
+            bottom: 4%;
         }
         .checkout2 p {
             margin: 0;
@@ -229,6 +224,9 @@
     margin: auto;
     z-index: 2;
     background: white;
+}
+.checkout-phase p {
+    font-weight: bold;
 }
 
 .checkout-circle {

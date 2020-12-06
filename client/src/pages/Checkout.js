@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import CheckoutPhases from '../components/checkout/CheckoutPhases';
 import Order from '../components/checkout/Order';
@@ -9,6 +9,25 @@ import Summary from '../components/checkout/Summary';
 const Checkout = () => {
     const [phase, setPhase] = useState(1);
     const totalPrice = useSelector(state => state.products.totalPrice);
+
+    const calculate = () => {
+        const heightDimension =
+            window.innerWidth < 350
+                ? window.innerHeight * 0.85
+                : window.innerHeight * 0.88;
+        // heightDimension = heightDimension > 700 && 700;
+        const element = document.getElementById('checkout-container-id');
+        element.style.height = heightDimension + 'px';
+        element.style.minHeight = heightDimension + 'px';
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', calculate);
+        calculate();
+        return () => {
+            window.removeEventListener('resize', calculate);
+        };
+    }, [calculate]);
 
     const phaseHandler = () => {
         // eslint-disable-next-line no-shadow
@@ -32,7 +51,7 @@ const Checkout = () => {
         // code block
     }
     return (
-        <div className="checkout-container">
+        <div className="checkout-container" id="checkout-container-id">
             <div className="checkout-pahses">
                 <CheckoutPhases phase={phase} />
             </div>
@@ -58,18 +77,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-/*
-<div className="checkout-container">
-<CheckoutPhases phase={phase} />
-{Phase}
-
-<button
-    className="checkout-nextButton"
-    type="button"
-    onClick={phaseHandler}
->
-    Next
-</button>
-</div>
-*/

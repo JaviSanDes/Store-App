@@ -17,7 +17,7 @@ const ShoppingCart = () => {
 
     const clickHandler = () => {
         if (window.innerWidth < 600) {
-            toggle === 0 ? setToggle(290) : setToggle(0);
+            toggle === 90 ? setToggle(365) : setToggle(90);
         } else {
             toggle === 0 ? setToggle(365) : setToggle(0);
         }

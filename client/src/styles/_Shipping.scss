@@ -9,6 +9,7 @@
     border: none;
     height: 40px;
     width: 98%;
+    margin-left: 1%;
 }
 .shipping-container input:focus {
     background: rgb(240, 240, 240);
@@ -22,6 +23,7 @@
     border: none;
     height: 40px;
     width: 98%;
+    margin-left: 1%;
 }
 .shipping-container select:focus {
     background: rgb(240, 240, 240);
@@ -41,5 +43,26 @@
         max-width: 600px;
         margin: auto;
         margin-top: 0px;
+        overflow: hidden;
+    }
+    @media only screen and (max-width: 350px) {
+        .shipping-container label {
+            font-size: 12px;
+        }
+        .shipping-container input {
+            font-size: 12px;
+            background: rgb(240, 240, 240);
+            border: none;
+            height: 35px;
+            margin-bottom: -10px;
+        }
+        .shipping-container select {
+            font-size: 12px;
+            background: rgb(240, 240, 240);
+            border: none;
+            height: 35px;
+            width: 99%;
+            margin-bottom: -10px;
+        }
     }
 }
