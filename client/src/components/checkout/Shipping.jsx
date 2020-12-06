@@ -104,10 +104,10 @@ const Shipping = props => {
             </FormGroup>
             <button
                 type="submit"
-                id="shipping-submit-button"
+                className="checkout-nextButton"
                 onClick={e => submitHandler(e)}
             >
-                NEXT
+                Next
             </button>
         </Form>
     );

@@ -157,11 +157,11 @@ const Payment = props => {
                 </div>
             </div>
             <button
-                className="payment-submitButton"
+                className="checkout-nextButton"
                 type="submit"
                 onClick={e => submitHandler(e)}
             >
-                NEXT
+                Next
             </button>
         </form>
     );

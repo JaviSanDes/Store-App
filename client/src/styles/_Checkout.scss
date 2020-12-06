@@ -1,7 +1,8 @@
 @media (orientation: landscape) {
     .checkout-container {
         height: 85vh;
-        max-height: 720px;
+        min-height: 650px;
+        max-height: 700px;
         width: 750px;
         margin: auto;
         background: white;
@@ -14,6 +15,8 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
     }
     .checkout-pahses {
         max-height: 95px;
@@ -44,9 +47,9 @@
         text-align: right;
     }
     .checkout-nextButton {
-        position: relative;
-        left: 415px;
-        top: 20px;
+        position: absolute;
+        right: 130px;
+        bottom: 30px;
         border: none;
         font-size: 18px;
         font-weight: bold;
@@ -65,16 +68,17 @@
         border: 1.5px solid rgb(245, 245, 245);
         border-radius: 10px;
         margin-bottom: 0vh;
-        margin-top: 80px;
+        margin-top: 8vh;
         padding: 40px;
         display: flex;
         flex-direction: column;
         width: 95%;
         max-width: 95%;
-        max-height: 85vh;
-        min-height: 85vh;
+        max-height: 90vh;
+        min-height: 90vh;
         padding-left: 50px;
         padding-right: 50px;
+        position: relative;
     }
     .checkout-pahses {
         max-height: 95px;
@@ -113,9 +117,9 @@
         position: relative;
     }
     .checkout-nextButton {
-        position: absolute;
-        right: 10px;
-        margin-top: 20px;
+        position: fixed;
+        right: 80px;
+        bottom: 50px;
         border: none;
         font-size: 18px;
         font-weight: bold;
@@ -127,8 +131,7 @@
     }
     @media only screen and (max-width: 600px) {
         .checkout-container {
-            max-height: 85vh;
-            min-height: 85vh;
+        
             padding: 0px 10px 0px 10px;
         }
         .checkout-content {
@@ -183,8 +186,10 @@
             bottom: 15px;
         }
         .checkout-nextButton {
-            font-size: 12px;
-            padding: 8px 12px 8px 12px;
+            right: 40px;
+            bottom: 3%;
+            //font-size: 12px;
+            //padding: 8px 12px 8px 12px;
         }
         .checkout2 p {
             margin: 0;
@@ -193,7 +198,6 @@
     }
     @media only screen and (max-width: 400px) {
         .checkout-container {
-            margin-top: 70px;
         }
         .checkout2 {
             min-height: 80px;

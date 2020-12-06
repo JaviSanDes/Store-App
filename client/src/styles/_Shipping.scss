@@ -33,18 +33,7 @@
 .shipping-container label {
     font-weight: bold;
 }
-#shipping-submit-button {
-    position: relative;
-    margin-top: 10px;
-    left: 80%;
-    width: 80px;
-    border: 2px solid red;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #c5c5c5;
-}
+
 
 @media (orientation: portrait) {
     .shipping-container {
@@ -52,16 +41,5 @@
         max-width: 600px;
         margin: auto;
         margin-top: 0px;
-    }
-    @media only screen and (max-width: 600px) {
-        .shipping-container {
-            transform: scale(0.8);
-            width: 120%;
-            position: relative;
-            left: -10%;
-            top: -8%;
-            height: 120%;
-            overflow-y: scroll;
-        }
     }
 }
