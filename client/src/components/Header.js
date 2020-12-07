@@ -49,12 +49,12 @@ const Header = () => {
             elem.style.width = '300px';
         } else {
             setIsstyled(true);
-            elem.style.width = '0px';
+            elem.style.width = '300px';
         }
     };
 
     return (
-        <div className="Header-container">
+        <div className="Header-container" id="Header-container-id">
             <button
                 className="Header-button"
                 onClick={toggleMenuHandler}

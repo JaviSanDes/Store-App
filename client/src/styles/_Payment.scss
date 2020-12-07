@@ -2,12 +2,14 @@
     margin: auto;
     max-width: 600px;
     margin-top: 0px;
+    overflow: hidden;
 }
 .payment-container input {
     background: rgb(240, 240, 240);
     border: none;
     height: 40px;
     width: 98%;
+    margin-left: 1%;
 }
 .payment-dot {
     color: transparent;
@@ -70,7 +72,7 @@
     .payment-container {
         margin-top: 15px;
         height: 100%;
-        overflow-y: scroll;
+        overflow: hidden;
     }
     .payment-card-details {
         flex-direction: column;
@@ -79,14 +81,14 @@
 @media only screen and (max-height: 850px) {
     .payment-container label {
         font-size: 15px;
-        margin-bottom: -5px;
+        margin-bottom: 0px;
     }
     .payment-container input {
         font-size: 15px;
         height: 40px;
         width: 98%;
         margin-left: 1%;
-        margin-bottom: -12px;
+        margin-bottom: -8px;
     }
     .payment-method {
         margin-bottom: 10px;
@@ -101,7 +103,7 @@
     .payment-container {
         margin: auto;
         max-width: 600px;
-        margin-top: -10pxpx;
+        margin-top: 0px;
     }
     .payment-cvc {
         margin-top: 25px;

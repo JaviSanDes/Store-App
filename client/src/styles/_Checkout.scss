@@ -1,67 +1,79 @@
-@media (orientation: landscape) {
-    .checkout-container {
-        height: 85vh;
-        min-height: 650px;
-        max-height: 700px;
-        width: 750px;
-        margin: auto;
-        background: white;
-        border: 1.5px solid rgb(245, 245, 245);
-        border-radius: 10px;
-        padding: 40px;
-        padding-left: 120px;
-        padding-right: 120px;
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        margin-bottom: 10px;
-        position: relative;
-    }
-    .checkout-pahses {
-        max-height: 95px;
-        min-height: 95px;
-    }
-    .checkout-content {
-        height: 78%;
-    }
-    .checkout2 {
+//@media (orientation: landscape) {
+    @media only screen and (min-width: 1000px) {
+        .checkout-container {
+            height: 85vh;
+            min-height: 650px;
+            max-height: 700px;
+            width: 750px;
+            margin: auto;
+            background: white;
+            border: 1.5px solid rgb(245, 245, 245);
+            border-radius: 10px;
+            padding: 40px;
+            padding-left: 120px;
+            padding-right: 120px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .checkout-pahses {
+            max-height: 95px;
+            min-height: 95px;
+        }
+        .checkout-content {
+            height: 78%;
+        }
+        .checkout-price {
+            position: absolute;
+            right: 20px;
+            top: 85px;
+            width: 230px;
+            display: flex;
+            background: white;
+            padding: 8px;
+            border: 1.5px solid rgb(245, 245, 245);
+            border-radius: 10px;
+        }
+        .checkout-price-name {
+            min-width: 60%;
+        }
+        .checkout-price div {
+            width: 50%;
+            text-align: right;
+        }
         
+        #checkout-backButton-id {
+            left: 0;
+        }
+        #checkout-nextButton-id {
+            right: 0px;
+        }
+        .checkout-nextButton {
+            position: absolute;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+                0 0 8px rgb(197, 197, 197);
+            z-index: 120;
+        }
+        .checkout-nextBack-buttons {
+            display: flex;
+            width: 100%;
+            position: relative;
+            height: 60px;
+            margin-top: 40px;
+        }
     }
-    .checkout-price {
-        position: absolute;
-        right: 20px;
-        top: 85px;
-        width: 230px;
-        display: flex;
-        background: white;
-        padding: 8px;
-        border: 1.5px solid rgb(245, 245, 245);
-        border-radius: 10px;
-    }
-    .checkout-price-name {
-        min-width: 60%;
-    }
-    .checkout-price div {
-        width: 50%;
-        text-align: right;
-    }
-    .checkout-nextButton {
-        position: absolute;
-        right: 130px;
-        bottom: 30px;
-        border: none;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px 20px 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
-            0 0 8px rgb(197, 197, 197);
-        z-index: 120;
-    }
-}
+//}
 
-@media (orientation: portrait) {
+//@media (orientation: portrait) {
+@media only screen and (max-width: 1000px) {
     .checkout-container {
         margin: auto;
         background: white;
@@ -77,6 +89,8 @@
         padding-left: 50px;
         padding-right: 50px;
         position: relative;
+        z-index: 1000;
+        height: 100%;
     }
     .checkout-pahses {
         max-height: 95px;
@@ -88,9 +102,13 @@
         flex-grow: 1;
         overflow-y: scroll;
     }
-    .checkout2 {
-        min-height: 120px;
-        max-height: 120px;
+    .checkout-nextBack-buttons {
+        display: flex;
+        height: 50px;
+        margin: auto;
+        margin-top: 30px;
+        position: relative;
+        width: 98%;
     }
     .checkout-price {
         display: flex;
@@ -114,10 +132,14 @@
         margin-top: 20px;
         position: relative;
     }
+    #checkout-backButton-id {
+        left: 0;
+    }
+    #checkout-nextButton-id {
+        right: 0px;
+    }
     .checkout-nextButton {
-        position: fixed;
-        right: 11vw;
-        bottom: 50px;
+        position: absolute;
         border: none;
         font-size: 18px;
         font-weight: bold;
@@ -133,7 +155,7 @@
         }
         .checkout-content {
             padding: 0;
-            // overflow: hidden;
+            overflow: hidden;
         }
         .checkout2 {
             min-height: 110px;
@@ -143,34 +165,7 @@
             display: flex;
             width: 100%;
         }
-        .checkout-price {
-            display: flex;
-            position: absolute;
-            left: 0;
-            bottom: 10px;
-            width: 150px;
-            height: 66px;
-            background: #019e7f;
-            padding: 5px;
-            border-radius: 5px;
-            color: white;
-        }
-        .checkout-price p{
-            font-size: 12px;
-        }
-        .checkout-price h4{
-            font-size: 14px;
-        }
-        .checkout-price-name {
-            width: 95px;
-            min-width: 95px;
-        }
-        .checkout-price div {
-            text-align: left;
-        }
-        .checkout-price div p {
-            margin: 0;
-        }
+        
         .checkout-next {
             width: 150px;
             position: absolute;
@@ -181,10 +176,6 @@
             position: absolute;
             right: 5px;
             bottom: 15px;
-        }
-        .checkout-nextButton {
-            right: 40px;
-            bottom: 4%;
         }
         .checkout2 p {
             margin: 0;

@@ -9,6 +9,7 @@ const Order = props => {
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
     const dispatch = useDispatch();
+    const totalPrice = useSelector(state => state.products.totalPrice);
 
     const submitHandler = () => {
         dispatch(confirmProducts(productsOrdered));
@@ -50,13 +51,30 @@ const Order = props => {
 
                 <div className="order-products-list">{products}</div>
             </div>
-            <button
-                className="checkout-nextButton"
-                type="button"
-                onClick={submitHandler}
-            >
-                Next
-            </button>
+            <div className="checkout-price">
+                <div className="checkout-price-name">
+                    <p>Sub-Total</p>
+                    <p>VAT</p>
+                    <h4>Total Price</h4>
+                </div>
+                <div>
+                    <p>{totalPrice.toFixed(2)}€</p>
+                    <p> {((totalPrice * 21) / 100).toFixed(2)}€</p>
+                    <h4>
+                        {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
+                    </h4>
+                </div>
+            </div>
+            <div className="order-nexButton-box">
+                <button
+                    className="checkout-nextButton"
+                    id="checkout-nextButton-id"
+                    type="button"
+                    onClick={submitHandler}
+                >
+                    Next
+                </button>
+            </div>
         </div>
     );
 };

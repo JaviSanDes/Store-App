@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import CheckoutPhases from '../components/checkout/CheckoutPhases';
 import Order from '../components/checkout/Order';
 import Shipping from '../components/checkout/Shipping';
@@ -7,18 +6,25 @@ import Payment from '../components/checkout/Payment';
 import Summary from '../components/checkout/Summary';
 
 const Checkout = () => {
-    const [phase, setPhase] = useState(1);
-    const totalPrice = useSelector(state => state.products.totalPrice);
+    const [phase, setPhase] = useState(4);
 
     const calculate = () => {
+        const header = document.getElementById('Header-container-id');
+        header.style.position = 'absolute';
         const heightDimension =
-            window.innerWidth < 350
+            window.innerWidth < 370
                 ? window.innerHeight * 0.85
                 : window.innerHeight * 0.88;
-        // heightDimension = heightDimension > 700 && 700;
         const element = document.getElementById('checkout-container-id');
-        element.style.height = heightDimension + 'px';
-        element.style.minHeight = heightDimension + 'px';
+        // element.style.height = heightDimension + 'px';
+        element.style.minHeight =
+            heightDimension > 700 ? '700px' : heightDimension + 'px';
+    };
+
+    const backHandler = () => {
+        // eslint-disable-next-line no-shadow
+        setPhase(phase => (phase -= 1));
+        window.scrollTo(0, 0);
     };
 
     useEffect(() => {
@@ -32,6 +38,7 @@ const Checkout = () => {
     const phaseHandler = () => {
         // eslint-disable-next-line no-shadow
         setPhase(phase => (phase += 1));
+        window.scrollTo(0, 0);
     };
     let Phase = <Order />;
     switch (phase) {
@@ -39,10 +46,12 @@ const Checkout = () => {
             Phase = <Order nextPhase={phaseHandler} />;
             break;
         case 2:
-            Phase = <Shipping submit={phaseHandler} />;
+            Phase = (
+                <Shipping submit={phaseHandler} backHandler={backHandler} />
+            );
             break;
         case 3:
-            Phase = <Payment submit={phaseHandler} />;
+            Phase = <Payment submit={phaseHandler} backHandler={backHandler} />;
             break;
         case 4:
             Phase = <Summary />;
@@ -56,22 +65,6 @@ const Checkout = () => {
                 <CheckoutPhases phase={phase} />
             </div>
             <div className="checkout-content">{Phase}</div>
-            <div className="checkout2">
-                <div className="checkout-price">
-                    <div className="checkout-price-name">
-                        <p>Sub-Total</p>
-                        <p>VAT</p>
-                        <h4>Total Price</h4>
-                    </div>
-                    <div>
-                        <p>{totalPrice.toFixed(2)}€</p>
-                        <p> {((totalPrice * 21) / 100).toFixed(2)}€</p>
-                        <h4>
-                            {((totalPrice * 21) / 100 + totalPrice).toFixed(2)}€
-                        </h4>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };

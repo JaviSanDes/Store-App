@@ -12,6 +12,10 @@
     height: 90%;
     overflow-y: scroll;
 }
+.order-nexButton-box {
+    height: 50px;
+    position: relative;
+}
 
 //PRODUCT-----------------------------
 .order-products-header {
@@ -151,6 +155,9 @@
 @media only screen and (max-width: 600px) {
     .order-product {
         height: 55px;
+    }
+    .order-products-list {
+        overflow: hidden;
     }
     .order-image {
         width: 40px;

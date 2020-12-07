@@ -18,6 +18,11 @@ const Home = props => {
     const params = useParams();
 
     useEffect(() => {
+        const header = document.getElementById('Header-container-id');
+        header.style.position = 'fixed';
+    }, []);
+
+    useEffect(() => {
         group === 'search'
             ? dispatch(getProducts(`search/${params.id}`))
             : dispatch(getProducts(group));

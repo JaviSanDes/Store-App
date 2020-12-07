@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { paymentData } from '../../store/actions/OrderData';
 
 const Payment = props => {
-    const { submit } = props;
+    const { submit, backHandler } = props;
     const [validForm, setValidForm] = useState(false);
     const dispatch = useDispatch();
     const [form, setForm] = useState({
@@ -160,19 +160,31 @@ const Payment = props => {
                     />
                 </div>
             </div>
-            <button
-                className="checkout-nextButton"
-                type="submit"
-                onClick={e => submitHandler(e)}
-            >
-                Next
-            </button>
+            <div className="checkout-nextBack-buttons">
+                <button
+                    type="submit"
+                    id="checkout-backButton-id"
+                    className="checkout-nextButton"
+                    onClick={e => backHandler(e)}
+                >
+                    Back
+                </button>
+                <button
+                    type="submit"
+                    id="checkout-nextButton-id"
+                    className="checkout-nextButton"
+                    onClick={e => submitHandler(e)}
+                >
+                    Next
+                </button>
+            </div>
         </form>
     );
 };
 
 Payment.propTypes = {
     submit: PropTypes.func.isRequired,
+    backHandler: PropTypes.func.isRequired,
 };
 
 export default Payment;

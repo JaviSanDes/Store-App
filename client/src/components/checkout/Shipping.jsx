@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { shippingData } from '../../store/actions/OrderData';
 
 const Shipping = props => {
-    const { submit } = props;
+    const { submit, backHandler } = props;
     const [validForm, setValidForm] = useState(false);
     const dispatch = useDispatch();
     const [form, setForm] = useState({
@@ -102,19 +102,31 @@ const Shipping = props => {
                     onChange={handlerForm}
                 />
             </FormGroup>
-            <button
-                type="submit"
-                className="checkout-nextButton"
-                onClick={e => submitHandler(e)}
-            >
-                Next
-            </button>
+            <div className="checkout-nextBack-buttons">
+                <button
+                    type="submit"
+                    id="checkout-backButton-id"
+                    className="checkout-nextButton"
+                    onClick={e => backHandler(e)}
+                >
+                    Back
+                </button>
+                <button
+                    type="submit"
+                    id="checkout-nextButton-id"
+                    className="checkout-nextButton"
+                    onClick={e => submitHandler(e)}
+                >
+                    Next
+                </button>
+            </div>
         </Form>
     );
 };
 
 Shipping.propTypes = {
     submit: PropTypes.func.isRequired,
+    backHandler: PropTypes.func.isRequired,
 };
 
 export default Shipping;
