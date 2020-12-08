@@ -71,3 +71,14 @@
     bottom: 10px;
   }
 }
+@media only screen and (max-width: 370px) {
+  .summary-price div h6{
+    font-size: 11px;
+  }
+  #summary-total-price-id {
+    font-size: 14px;
+  }
+  .summary-box {
+    font-size: 11px;
+  }
+}
