@@ -25,9 +25,10 @@
 }
 .summary-pay {
   position: absolute;
-  bottom: 10px;
+  bottom: 40px;
   width: 99%;
   min-height: 50px;
+  left: 5px;
 }
 .summary-price {
   display: flex;
@@ -63,4 +64,10 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 1000px) {
+  .summary-pay {
+    bottom: 10px;
+  }
 }
