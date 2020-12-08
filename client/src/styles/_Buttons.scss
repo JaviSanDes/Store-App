@@ -7,7 +7,7 @@
 }
 .buttons-add-button p {
     width: 52px;
-    height: 32px;
+    height: 34px;
     text-align: center;
     color: white;
     background: #019e7f;
@@ -27,7 +27,7 @@
 
     display: block;
     width: 32px;
-    height: 32px;
+    height: 34px;
     line-height: 30px;
     border-radius: 50%;
     color: #f5f5f5;
@@ -47,8 +47,8 @@
 
 @media only screen and (max-width: 700px) {
     .buttons-add-button p {
-        width: 55px;
-        height: 32px;
+        width: 48px;
+        height: 34px;
         text-align: center;
         color: white;
         background: #019e7f;
@@ -56,11 +56,24 @@
         line-height: 33px;
         user-select: none;
     }
+    
+#buttons-add-button-1,
+#buttons-add-button-2 {
+    width: 28px;
 }
-@media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 450px) {
+    .buttons-add-button {
+        display: flex;
+        position: absolute;
+        height: 30px;
+        transform: translate(17px, 3px);
+        right: 5px;
+        top: 3px;
+    }
     .buttons-add-button p {
-        width: 42px;
-        height: 28px;
+        width: 40px;
+        height: 27px;
         text-align: center;
         color: white;
         background: #019e7f;
@@ -71,7 +84,6 @@
     }
     #buttons-add-button-1,
     #buttons-add-button-2 {
-        width: 20px;
         background: #019e7f;
         border: none;
         color: white;
@@ -80,14 +92,13 @@
         font-size: 20px;
 
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 23px;
+        height: 27px;
         line-height: 26px;
         border-radius: 50%;
         color: #f5f5f5;
         text-align: center;
         text-decoration: none;
-        font-size: 20px;
         font-weight: bold;
 
         user-select: none;
