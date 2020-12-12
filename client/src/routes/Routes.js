@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Checkout from '../pages/Checkout';
 import Settings from '../pages/Settings';
 import Orders from '../pages/Orders';
+import Login from '../pages/Login';
 
 const Routes = () => {
     return (
@@ -52,6 +53,9 @@ const Routes = () => {
                     </Route>
                     <Route path="/orders">
                         <Orders />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
                     </Route>
 
                     <Route exact path="/">
