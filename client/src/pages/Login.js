@@ -38,7 +38,11 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <h3>Sign in</h3>
+            <div className="login-switch">
+                <h3>Sign in</h3>
+                <h3>Sign up</h3>
+            </div>
+
             <Form className="shipping-container">
                 <FormGroup>
                     <Label for="examplePassword">Your email</Label>

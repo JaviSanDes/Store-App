@@ -7,12 +7,33 @@
   position: relative;
   padding: 40px;
 }
+.login-switch {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
 .login-container h3 {
-  color: black;
-  width: 90px;
+  width: 100%;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 30px;
+  color: rgb(83, 83, 83);
+  height: 30px;
+  font-weight: 300px;
+  background: rgb(245, 245, 245);
+  font-size: 20px;
+
+  border-bottom: 3px solid  rgb(226, 226, 226);
+  border-top-right-radius: 5px;
+}
+.login-container h3:first-child {
+  border-bottom: 3px solid  #019e7f;
+  color: black;
+  font-weight: bold;
+  font-size: 21px;
+  background: rgb(221, 221, 221);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0px;
 }
 .login-container p {
   margin: 0;
