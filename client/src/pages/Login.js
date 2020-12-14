@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 // import { useDispatch } from 'react-redux';
@@ -36,11 +37,31 @@ const Login = () => {
         validator();
     };
 
+    const switchHanler = e => {
+        const elem1 = document.getElementById('login-switch-id-1');
+        const elem2 = document.getElementById('login-switch-id-2');
+        elem1.classList.remove('login-switch-style');
+        elem2.classList.remove('login-switch-style');
+        e.target.classList.add('login-switch-style');
+    };
+
     return (
         <div className="login-container">
             <div className="login-switch">
-                <h3>Sign in</h3>
-                <h3>Sign up</h3>
+                <h3
+                    id="login-switch-id-1"
+                    className="login-switch-title"
+                    onClick={switchHanler}
+                >
+                    Sign in
+                </h3>
+                <h3
+                    id="login-switch-id-2"
+                    className="login-switch-title"
+                    onClick={switchHanler}
+                >
+                    Sign up
+                </h3>
             </div>
 
             <Form className="shipping-container">
