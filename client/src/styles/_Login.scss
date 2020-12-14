@@ -36,16 +36,36 @@
   font-size: 21px;
   background: rgb(221, 221, 221);
 }
+.login-form {
+  padding: 5px;
+}
+.login-form label{
+  font-weight: bold;
+}
 .login-container p {
   margin: 0;
 }
-.login-container Input {
+.login-container input {
+  background: rgb(240, 240, 240);
+  border: none;
+  height: 40px;
   width: 98%;
+  margin-left: 1%;
+}
+.login-container input:focus {
+  background: rgb(240, 240, 240);
+  outline: 0 none;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+      0 0 8px rgb(197, 197, 197);
+  outline: 0 none;
+}
+.login-container Input {
+  width: 100%;
   margin-bottom: 20px;
 }
 .login-container button {
-  position: absolute;
-  bottom: 40px;
+  position: relative;
+  margin-top: 50px;
   left: 50%;
   width: 160px;
   transform: translateX(-50%);
@@ -63,8 +83,7 @@
 @media only screen and (max-width: 600px) {
   .login-container {
     margin-top: 0;
-    top: 45vh;
-    transform: translateY(-50%);
+    top: 10vh;
     width: 90vw;
     padding: 20px;
     height: 400px;

@@ -5,8 +5,9 @@ import { Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Login = () => {
     const [validForm, setValidForm] = useState(false);
+    const [form, setForm] = useState(true);
     // const dispatch = useDispatch();
-    const [form, setForm] = useState({
+    const [isSignIn, setisSignIn] = useState({
         name: '',
         contry: '',
         address: '',
@@ -43,14 +44,115 @@ const Login = () => {
         elem1.classList.remove('login-switch-style');
         elem2.classList.remove('login-switch-style');
         e.target.classList.add('login-switch-style');
+        setisSignIn(f => !f);
     };
+
+    const signUp = (
+        <Form className="login-form">
+            <FormGroup>
+                <Label for="examplePassword">First Name</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your first name"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="examplePassword">Last Name</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your last name"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="examplePassword">Your email</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your email"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="examplePassword">Your password</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your Password"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="examplePassword">Confirm password</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Confirm Password"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <button onClick={e => submitHandler(e)} type="button">
+                LOGIN
+            </button>
+        </Form>
+    );
+
+    const signIn = (
+        <Form className="login-form">
+            <FormGroup>
+                <Label for="examplePassword">Your email</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your email"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="examplePassword">Your password</Label>
+                <Input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your password"
+                    value={form.name}
+                    onChange={handlerForm}
+                    minLength="8"
+                    required
+                />
+            </FormGroup>
+            <button onClick={e => submitHandler(e)} type="button">
+                LOGIN
+            </button>
+        </Form>
+    );
 
     return (
         <div className="login-container">
             <div className="login-switch">
                 <h3
                     id="login-switch-id-1"
-                    className="login-switch-title"
+                    className="login-switch-title login-switch-style"
                     onClick={switchHanler}
                 >
                     Sign in
@@ -63,37 +165,10 @@ const Login = () => {
                     Sign up
                 </h3>
             </div>
-
-            <Form className="shipping-container">
-                <FormGroup>
-                    <Label for="examplePassword">Your email</Label>
-                    <Input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your email"
-                        value={form.name}
-                        onChange={handlerForm}
-                        minLength="8"
-                        required
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="examplePassword">Your password</Label>
-                    <Input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your password"
-                        value={form.name}
-                        onChange={handlerForm}
-                        minLength="8"
-                        required
-                    />
-                </FormGroup>
-                <button onClick={e => submitHandler(e)} type="button">
-                    LOGIN
-                </button>
-            </Form>
-            <p className="login-forgot-passowrd">Forgot Password?</p>
+            {isSignIn ? signIn : signUp}
+            {isSignIn && (
+                <p className="login-forgot-passowrd">Forgot Password?</p>
+            )}
         </div>
     );
 };
