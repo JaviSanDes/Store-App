@@ -1,44 +1,82 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 // import { useDispatch } from 'react-redux';
 
 const Login = () => {
-    const [validForm, setValidForm] = useState(false);
-    const [form, setForm] = useState(true);
     // const dispatch = useDispatch();
-    const [isSignIn, setisSignIn] = useState({
-        name: '',
-        contry: '',
-        address: '',
-        zipCode: '',
-        phone: '',
+    const [validForm, setValidForm] = useState(false);
+    const [isSignIn, setisSignIn] = useState(true);
+    const [form, setForm] = useState({
+        firstName: '',
+        lastName: '',
+        password: '',
+        confirmPassword: '',
+        email: '',
+        confirmEmail: '',
     });
+
     const submitHandler = e => {
         if (validForm) {
             e.preventDefault();
             // dispatch(shippingData(form));
-            // submit();
         }
     };
 
-    const validator = () => {
-        const isValidName = form.name.length >= 8;
-        const isValidAdress = form.address.length >= 8;
-        const isValidZipCode = form.zipCode.length === 4;
+    useEffect(() => {
+        const input = document.getElementById('login-input-password');
+        if (input !== null) {
+            input.oninvalid = event => {
+                event.target.setCustomValidity(
+                    'Must contain at least 8 characters, one number, one uppercase and one lowercase letter.'
+                );
+            };
+        }
+    }, [isSignIn]);
 
-        if (isValidName && isValidAdress && isValidZipCode) setValidForm(true);
-    };
+    useEffect(() => {
+        const validator = () => {
+            if (!isSignIn) {
+                const isValidFirstName = form.firstName.length >= 3;
+                const isValidLastName = form.lastName.lastName >= 3;
+                const isValidPass =
+                    form.password.length >= 8 &&
+                    /\d/.test(form.password) &&
+                    /[a-z]/.test(form.password) &&
+                    /[A-Z]/.test(form.password);
+                const isValidConfirPass =
+                    form.confirmPassword === form.password;
+                const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
+                    form.email
+                );
+                const isValidConfirmEmail = form.confirmEmail === form.email;
+
+                if (
+                    isValidFirstName &&
+                    isValidLastName &&
+                    isValidPass &&
+                    isValidConfirPass &&
+                    isValidConfirmEmail &&
+                    isValidEmail
+                )
+                    setValidForm(true);
+            } else {
+                const isValidEmail = false;
+                if (isValidEmail) setValidForm(true);
+            }
+        };
+
+        validator();
+    }, [form]);
 
     const handlerForm = e => {
         setForm({
             ...form,
             [e.target.name]: e.target.value,
         });
-        validator();
     };
 
-    const switchHanler = e => {
+    const switchHandler = e => {
         const elem1 = document.getElementById('login-switch-id-1');
         const elem2 = document.getElementById('login-switch-id-2');
         elem1.classList.remove('login-switch-style');
@@ -50,66 +88,84 @@ const Login = () => {
     const signUp = (
         <Form className="login-form">
             <FormGroup>
-                <Label for="examplePassword">First Name</Label>
+                <Label>First Name</Label>
                 <Input
                     type="text"
-                    name="name"
+                    name="firstName"
                     placeholder="Enter your first name"
-                    value={form.name}
+                    value={form.firstName}
                     onChange={handlerForm}
-                    minLength="8"
+                    minLength="3"
                     required
                 />
             </FormGroup>
             <FormGroup>
-                <Label for="examplePassword">Last Name</Label>
+                <Label>Last Name</Label>
                 <Input
                     type="text"
-                    name="name"
+                    name="lastName"
                     placeholder="Enter your last name"
-                    value={form.name}
+                    value={form.lastName}
                     onChange={handlerForm}
-                    minLength="8"
+                    minLength="3"
                     required
                 />
             </FormGroup>
             <FormGroup>
-                <Label for="examplePassword">Your email</Label>
+                <Label>Your email</Label>
                 <Input
-                    type="text"
-                    name="name"
+                    type="email"
+                    name="email"
                     placeholder="Enter your email"
-                    value={form.name}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="'characters@characters.domain'"
+                    value={form.email}
                     onChange={handlerForm}
-                    minLength="8"
                     required
                 />
             </FormGroup>
             <FormGroup>
-                <Label for="examplePassword">Your password</Label>
+                <Label>Confirm email</Label>
                 <Input
-                    type="text"
-                    name="name"
+                    type="email"
+                    name="confirmEmail"
+                    placeholder="Confirm your email"
+                    pattern={form.email}
+                    title="Must match the previous entry."
+                    value={form.confirmEmail}
+                    onChange={handlerForm}
+                    required
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label>Your password</Label>
+                <Input
+                    type="password"
+                    name="password"
+                    id="login-input-password"
                     placeholder="Enter your Password"
-                    value={form.name}
+                    value={form.password}
                     onChange={handlerForm}
                     minLength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     required
                 />
             </FormGroup>
             <FormGroup>
-                <Label for="examplePassword">Confirm password</Label>
+                <Label>Confirm password</Label>
                 <Input
                     type="text"
-                    name="name"
+                    name="confirmPassword"
                     placeholder="Confirm Password"
-                    value={form.name}
+                    value={form.confirmPassword}
                     onChange={handlerForm}
                     minLength="8"
+                    pattern={form.password}
+                    title="Must match the previous entry."
                     required
                 />
             </FormGroup>
-            <button onClick={e => submitHandler(e)} type="button">
+            <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
         </Form>
@@ -118,30 +174,31 @@ const Login = () => {
     const signIn = (
         <Form className="login-form">
             <FormGroup>
-                <Label for="examplePassword">Your email</Label>
+                <Label for="email">Your email</Label>
                 <Input
-                    type="text"
-                    name="name"
+                    type="email"
+                    name="email"
+                    id="login-input-email"
                     placeholder="Enter your email"
-                    value={form.name}
+                    value={form.email}
                     onChange={handlerForm}
-                    minLength="8"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="'characters@characters.domain'"
                     required
                 />
             </FormGroup>
             <FormGroup>
-                <Label for="examplePassword">Your password</Label>
+                <Label>Your password</Label>
                 <Input
-                    type="text"
-                    name="name"
+                    type="password"
+                    name="password"
                     placeholder="Enter your password"
-                    value={form.name}
+                    value={form.password}
                     onChange={handlerForm}
-                    minLength="8"
                     required
                 />
             </FormGroup>
-            <button onClick={e => submitHandler(e)} type="button">
+            <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
         </Form>
@@ -153,14 +210,14 @@ const Login = () => {
                 <h3
                     id="login-switch-id-1"
                     className="login-switch-title login-switch-style"
-                    onClick={switchHanler}
+                    onClick={switchHandler}
                 >
                     Sign in
                 </h3>
                 <h3
                     id="login-switch-id-2"
                     className="login-switch-title"
-                    onClick={switchHanler}
+                    onClick={switchHandler}
                 >
                     Sign up
                 </h3>

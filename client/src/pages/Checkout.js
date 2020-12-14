@@ -6,7 +6,7 @@ import Payment from '../components/checkout/Payment';
 import Summary from '../components/checkout/Summary';
 
 const Checkout = () => {
-    const [phase, setPhase] = useState(4);
+    const [phase, setPhase] = useState(1);
 
     const calculate = () => {
         const header = document.getElementById('Header-container-id');
