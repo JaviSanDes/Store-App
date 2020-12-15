@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 // import { useDispatch } from 'react-redux';
 
 const Login = () => {
@@ -17,13 +17,16 @@ const Login = () => {
     });
 
     const submitHandler = e => {
+        console.log(validForm);
         if (validForm) {
             e.preventDefault();
+            console.log('VAA');
             // dispatch(shippingData(form));
         }
     };
 
     useEffect(() => {
+        /*
         const input = document.getElementById('login-input-password');
         if (input !== null) {
             input.oninvalid = event => {
@@ -32,6 +35,7 @@ const Login = () => {
                 );
             };
         }
+        */
     }, [isSignIn]);
 
     useEffect(() => {
@@ -58,10 +62,13 @@ const Login = () => {
                     isValidConfirPass &&
                     isValidConfirmEmail &&
                     isValidEmail
-                )
+                ) {
+                    console.log('TODOVALIDO');
                     setValidForm(true);
+                }
             } else {
-                const isValidEmail = false;
+                console.log('ISVALIDMAIL');
+                const isValidEmail = true;
                 if (isValidEmail) setValidForm(true);
             }
         };
@@ -168,6 +175,7 @@ const Login = () => {
             <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
+            <Spinner color="primary" className="login-spinner" />
         </Form>
     );
 
@@ -201,6 +209,7 @@ const Login = () => {
             <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
+            <Spinner color="primary" className="login-spinner" />
         </Form>
     );
 
