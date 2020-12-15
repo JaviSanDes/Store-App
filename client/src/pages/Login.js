@@ -6,8 +6,13 @@ import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 const Login = () => {
     // const dispatch = useDispatch();
     const [validForm, setValidForm] = useState(false);
-    const [isSignIn, setisSignIn] = useState(true);
-    const [form, setForm] = useState({
+    const [isSignIn, setisSignIn] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [signInForm, setSignInForm] = useState({
+        password: '',
+        email: '',
+    });
+    const [signUpForm, setSignUpForm] = useState({
         firstName: '',
         lastName: '',
         password: '',
@@ -17,11 +22,10 @@ const Login = () => {
     });
 
     const submitHandler = e => {
-        console.log(validForm);
         if (validForm) {
             e.preventDefault();
-            console.log('VAA');
             // dispatch(shippingData(form));
+            setIsLoading(true);
         }
     };
 
@@ -41,19 +45,20 @@ const Login = () => {
     useEffect(() => {
         const validator = () => {
             if (!isSignIn) {
-                const isValidFirstName = form.firstName.length >= 3;
-                const isValidLastName = form.lastName.lastName >= 3;
+                const isValidFirstName = signUpForm.firstName.length >= 3;
+                const isValidLastName = signUpForm.lastName.lastName >= 3;
                 const isValidPass =
-                    form.password.length >= 8 &&
-                    /\d/.test(form.password) &&
-                    /[a-z]/.test(form.password) &&
-                    /[A-Z]/.test(form.password);
+                    signUpForm.password.length >= 8 &&
+                    /\d/.test(signUpForm.password) &&
+                    /[a-z]/.test(signUpForm.password) &&
+                    /[A-Z]/.test(signUpForm.password);
                 const isValidConfirPass =
-                    form.confirmPassword === form.password;
+                    signUpForm.confirmPassword === signUpForm.password;
                 const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
-                    form.email
+                    signUpForm.email
                 );
-                const isValidConfirmEmail = form.confirmEmail === form.email;
+                const isValidConfirmEmail =
+                    signUpForm.confirmEmail === signUpForm.email;
 
                 if (
                     isValidFirstName &&
@@ -63,22 +68,27 @@ const Login = () => {
                     isValidConfirmEmail &&
                     isValidEmail
                 ) {
-                    console.log('TODOVALIDO');
                     setValidForm(true);
                 }
             } else {
-                console.log('ISVALIDMAIL');
                 const isValidEmail = true;
                 if (isValidEmail) setValidForm(true);
             }
         };
 
         validator();
-    }, [form]);
+    }, [signInForm, signUpForm]);
 
-    const handlerForm = e => {
-        setForm({
-            ...form,
+    const signInFormHandler = e => {
+        setSignInForm({
+            ...signInForm,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const signUpFormHandler = e => {
+        setSignUpForm({
+            ...signUpForm,
             [e.target.name]: e.target.value,
         });
     };
@@ -100,8 +110,8 @@ const Login = () => {
                     type="text"
                     name="firstName"
                     placeholder="Enter your first name"
-                    value={form.firstName}
-                    onChange={handlerForm}
+                    value={signUpForm.firstName}
+                    onChange={signUpFormHandler}
                     minLength="3"
                     required
                 />
@@ -112,8 +122,8 @@ const Login = () => {
                     type="text"
                     name="lastName"
                     placeholder="Enter your last name"
-                    value={form.lastName}
-                    onChange={handlerForm}
+                    value={signUpForm.lastName}
+                    onChange={signUpFormHandler}
                     minLength="3"
                     required
                 />
@@ -126,8 +136,8 @@ const Login = () => {
                     placeholder="Enter your email"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     title="'characters@characters.domain'"
-                    value={form.email}
-                    onChange={handlerForm}
+                    value={signUpForm.email}
+                    onChange={signUpFormHandler}
                     required
                 />
             </FormGroup>
@@ -137,10 +147,10 @@ const Login = () => {
                     type="email"
                     name="confirmEmail"
                     placeholder="Confirm your email"
-                    pattern={form.email}
+                    pattern={signUpForm.email}
                     title="Must match the previous entry."
-                    value={form.confirmEmail}
-                    onChange={handlerForm}
+                    value={signUpForm.confirmEmail}
+                    onChange={signUpFormHandler}
                     required
                 />
             </FormGroup>
@@ -151,8 +161,8 @@ const Login = () => {
                     name="password"
                     id="login-input-password"
                     placeholder="Enter your Password"
-                    value={form.password}
-                    onChange={handlerForm}
+                    value={signUpForm.password}
+                    onChange={signUpFormHandler}
                     minLength="8"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     required
@@ -164,10 +174,10 @@ const Login = () => {
                     type="text"
                     name="confirmPassword"
                     placeholder="Confirm Password"
-                    value={form.confirmPassword}
-                    onChange={handlerForm}
+                    value={signUpForm.confirmPassword}
+                    onChange={signUpFormHandler}
                     minLength="8"
-                    pattern={form.password}
+                    pattern={signUpForm.password}
                     title="Must match the previous entry."
                     required
                 />
@@ -175,7 +185,7 @@ const Login = () => {
             <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
-            <Spinner color="primary" className="login-spinner" />
+            {isLoading && <Spinner color="primary" className="login-spinner" />}
         </Form>
     );
 
@@ -188,8 +198,8 @@ const Login = () => {
                     name="email"
                     id="login-input-email"
                     placeholder="Enter your email"
-                    value={form.email}
-                    onChange={handlerForm}
+                    value={signInForm.email}
+                    onChange={signInFormHandler}
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     title="'characters@characters.domain'"
                     required
@@ -201,15 +211,15 @@ const Login = () => {
                     type="password"
                     name="password"
                     placeholder="Enter your password"
-                    value={form.password}
-                    onChange={handlerForm}
+                    value={signInForm.password}
+                    onChange={signInFormHandler}
                     required
                 />
             </FormGroup>
             <button onClick={e => submitHandler(e)} type="submit">
                 LOGIN
             </button>
-            <Spinner color="primary" className="login-spinner" />
+            {isLoading && <Spinner color="primary" className="login-spinner" />}
         </Form>
     );
 
