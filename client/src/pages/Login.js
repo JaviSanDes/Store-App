@@ -6,7 +6,7 @@ import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 const Login = () => {
     // const dispatch = useDispatch();
     const [validForm, setValidForm] = useState(false);
-    const [isSignIn, setisSignIn] = useState(false);
+    const [isSignIn, setisSignIn] = useState('login-switch-id-1');
     const [isLoading, setIsLoading] = useState(false);
     const [signInForm, setSignInForm] = useState({
         password: '',
@@ -99,7 +99,7 @@ const Login = () => {
         elem1.classList.remove('login-switch-style');
         elem2.classList.remove('login-switch-style');
         e.target.classList.add('login-switch-style');
-        setisSignIn(f => !f);
+        setisSignIn(e.target.id);
     };
 
     const signUp = (
@@ -241,7 +241,7 @@ const Login = () => {
                     Sign up
                 </h3>
             </div>
-            {isSignIn ? signIn : signUp}
+            {isSignIn === 'login-switch-id-1' ? signIn : signUp}
             {isSignIn && (
                 <p className="login-forgot-passowrd">Forgot Password?</p>
             )}
