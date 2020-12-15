@@ -6,6 +6,7 @@ require('./startUp/db')();
 require('./startUp/config')();
 require('./startUp/prod')(app);
 require('./startUp/routes')(app);
+require('./startup/validation')();
 
 // statics assets if in production
 if (process.env.NODE_ENV === 'production') {
