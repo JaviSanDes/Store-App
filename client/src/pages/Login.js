@@ -8,6 +8,7 @@ const Login = () => {
     const [validForm, setValidForm] = useState(false);
     const [isSignIn, setisSignIn] = useState('login-switch-id-1');
     const [isLoading, setIsLoading] = useState(false);
+    const [displayError, setDisplayError] = useState(false);
     const [signInForm, setSignInForm] = useState({
         password: '',
         email: '',
@@ -22,6 +23,7 @@ const Login = () => {
     });
 
     const submitHandler = e => {
+        setDisplayError(true);
         if (validForm) {
             e.preventDefault();
             // dispatch(shippingData(form));
@@ -71,7 +73,9 @@ const Login = () => {
                     setValidForm(true);
                 }
             } else {
-                const isValidEmail = true;
+                const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
+                    signInForm.email
+                );
                 if (isValidEmail) setValidForm(true);
             }
         };
@@ -183,7 +187,7 @@ const Login = () => {
                 />
             </FormGroup>
             <button onClick={e => submitHandler(e)} type="submit">
-                LOGIN
+                CREATE ACCOUNT
             </button>
             {isLoading && <Spinner color="primary" className="login-spinner" />}
         </Form>
@@ -241,8 +245,17 @@ const Login = () => {
                     Sign up
                 </h3>
             </div>
+            {displayError && (
+                <div className="login-errorBox">
+                    <span>Incorrect email or password.</span>
+                    <span role="click" onClick={() => setDisplayError(false)}>
+                        X
+                    </span>
+                </div>
+            )}
+
             {isSignIn === 'login-switch-id-1' ? signIn : signUp}
-            {isSignIn && (
+            {isSignIn === 'login-switch-id-1' && (
                 <p className="login-forgot-passowrd">Forgot Password?</p>
             )}
         </div>
