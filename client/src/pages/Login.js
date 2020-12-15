@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
 import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import { authSuccess } from '../store/actions/auth';
 
 const Login = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [validForm, setValidForm] = useState(false);
     const [isSignIn, setisSignIn] = useState('login-switch-id-1');
     const [isLoading, setIsLoading] = useState(false);
@@ -22,12 +25,24 @@ const Login = () => {
         confirmEmail: '',
     });
 
-    const submitHandler = e => {
-        setDisplayError(true);
+    const submitHandler = async e => {
         if (validForm) {
             e.preventDefault();
-            // dispatch(shippingData(form));
             setIsLoading(true);
+            const data = isSignIn ? signInForm : signUpForm;
+            const url = isSignIn
+                ? 'http://localhost:3000/api/auth/signIn'
+                : 'http://localhost:3000/api/auth/signIn';
+            try {
+                const res = await axios.post(url, data);
+                const { name, _id } = res.data;
+                const token = res.headers.x_auth_token;
+                Cookies.set('token', token);
+                dispatch(authSuccess(token, _id, name));
+                setIsLoading(false);
+            } catch {
+                setDisplayError(true);
+            }
         }
     };
 
