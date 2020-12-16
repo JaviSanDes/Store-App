@@ -32,9 +32,10 @@ const Login = () => {
             const data = isSignIn ? signInForm : signUpForm;
             const url = isSignIn
                 ? 'http://localhost:3000/api/auth/signIn'
-                : 'http://localhost:3000/api/auth/signIn';
+                : 'http://localhost:3000/api/auth/signUp';
             try {
                 const res = await axios.post(url, data);
+                console.log(res);
                 const { name, _id } = res.data;
                 const token = res.headers.x_auth_token;
                 Cookies.set('token', token);
@@ -61,7 +62,7 @@ const Login = () => {
 
     useEffect(() => {
         const validator = () => {
-            if (!isSignIn) {
+            if (isSignIn === 'login-switch-id-2') {
                 const isValidFirstName = signUpForm.firstName.length >= 3;
                 const isValidLastName = signUpForm.lastName.lastName >= 3;
                 const isValidPass =
@@ -85,6 +86,7 @@ const Login = () => {
                     isValidConfirmEmail &&
                     isValidEmail
                 ) {
+                    console.log('PULSO');
                     setValidForm(true);
                 }
             } else {
