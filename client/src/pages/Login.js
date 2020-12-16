@@ -47,19 +47,6 @@ const Login = () => {
     };
 
     useEffect(() => {
-        /*
-        const input = document.getElementById('login-input-password');
-        if (input !== null) {
-            input.oninvalid = event => {
-                event.target.setCustomValidity(
-                    'Must contain at least 8 characters, one number, one uppercase and one lowercase letter.'
-                );
-            };
-        }
-        */
-    }, [isSignIn]);
-
-    useEffect(() => {
         const validator = () => {
             if (isSignIn === 'login-switch-id-2') {
                 const isValidFirstName = signUpForm.firstName.length >= 3;
