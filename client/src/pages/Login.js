@@ -35,7 +35,6 @@ const Login = () => {
                 : 'http://localhost:3000/api/auth/signUp';
             try {
                 const res = await axios.post(url, data);
-                console.log(res);
                 const { name, _id } = res.data;
                 const token = res.headers.x_auth_token;
                 Cookies.set('token', token);
@@ -86,7 +85,6 @@ const Login = () => {
                     isValidConfirmEmail &&
                     isValidEmail
                 ) {
-                    console.log('PULSO');
                     setValidForm(true);
                 }
             } else {
