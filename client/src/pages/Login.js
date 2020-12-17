@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
 import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Cookies from 'js-cookie';
@@ -8,6 +9,7 @@ import { signInSuccess } from '../store/actions/auth';
 
 const Login = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [validForm, setValidForm] = useState(false);
     const [isSignIn, setisSignIn] = useState('login-switch-id-1');
     const [isLoading, setIsLoading] = useState(false);
@@ -27,13 +29,21 @@ const Login = () => {
 
     const submitHandler = async e => {
         if (validForm) {
-            console.log('LLEGA123');
             e.preventDefault();
             setIsLoading(true);
-            const data = isSignIn ? signInForm : signUpForm;
-            const url = isSignIn
-                ? 'http://localhost:3000/api/auth/signIn'
-                : 'http://localhost:3000/api/auth/signUp';
+            const data =
+                isSignIn === 'login-switch-id-1'
+                    ? signInForm
+                    : {
+                          firstName: signUpForm.firstName,
+                          lastName: signUpForm.lastName,
+                          password: signUpForm.password,
+                          email: signUpForm.email,
+                      };
+            const url =
+                isSignIn === 'login-switch-id-1'
+                    ? 'http://localhost:3000/api/auth/signIn'
+                    : 'http://localhost:3000/api/auth/signUp';
             try {
                 const res = await axios.post(url, data);
                 const { name, _id } = res.data;
@@ -41,6 +51,7 @@ const Login = () => {
                 Cookies.set('token', token);
                 dispatch(signInSuccess(token, _id, name));
                 setIsLoading(false);
+                history.push('/');
             } catch {
                 setIsLoading(false);
                 setDisplayError(true);
