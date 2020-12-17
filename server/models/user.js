@@ -4,7 +4,13 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+    minlength: 3,
+    maxlength: 50
+  },
+  lastName: {
     type: String,
     required: true,
     minlength: 3,
@@ -26,7 +32,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.generateAuthToken = function() { 
-  const token = jwt.sign({ _id: this._id, name: this.name }, config.get('jwtPrivateKey'));
+  const token = jwt.sign({ _id: this._id, firstName: this.firstName, lastName: this.lastName }, config.get('jwtPrivateKey'));
   return token;
 }
 
@@ -34,7 +40,8 @@ const User = mongoose.model('Users', userSchema);
 
 function validateUser(user) {
   const schema = {
-    name: Joi.string().min(5).max(50).required(),
+    firstName: Joi.string().min(3).max(50).required(),
+    lastName: Joi.string().min(3).max(50).required(),
     email: Joi.string().min(5).max(255).required().email(),
     password: Joi.string().min(5).max(255).required(),
   };
