@@ -6,7 +6,7 @@ const initialState = {
     name: null,
 };
 
-const authSuccess = (state, action) => {
+const signInSuccess = (state, action) => {
     return {
         ...state,
         token: action.idToken,
@@ -17,8 +17,8 @@ const authSuccess = (state, action) => {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionType.AUTH_SUCCESS:
-            return authSuccess(state, action);
+        case actionType.SIGN_IN_SUCCESS:
+            return signInSuccess(state, action);
         default:
             return state;
     }

@@ -1,8 +1,8 @@
 import * as actionType from '../actionTypes';
 
-export const authSuccess = (token, userID, userName) => {
+export const signInSuccess = (token, userID, userName) => {
     return {
-        type: actionType.AUTH_SUCCESS,
+        type: actionType.SIGN_IN_SUCCESS,
         idToken: token,
         userID,
         userName,

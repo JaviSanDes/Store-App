@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { authSuccess } from '../store/actions/auth';
+import { signInSuccess } from '../store/actions/auth';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -38,7 +38,7 @@ const Login = () => {
                 const { name, _id } = res.data;
                 const token = res.headers.x_auth_token;
                 Cookies.set('token', token);
-                dispatch(authSuccess(token, _id, name));
+                dispatch(signInSuccess(token, _id, name));
                 setIsLoading(false);
             } catch {
                 setDisplayError(true);
