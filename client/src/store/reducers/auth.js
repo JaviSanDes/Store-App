@@ -3,7 +3,9 @@ import * as actionType from '../actionTypes';
 const initialState = {
     token: null,
     userId: null,
-    name: null,
+    firstName: null,
+    lastName: null,
+    email: null,
 };
 
 const signInSuccess = (state, action) => {
@@ -11,7 +13,9 @@ const signInSuccess = (state, action) => {
         ...state,
         token: action.idToken,
         userId: action.userID,
-        name: action.userName,
+        firstName: action.userName,
+        lastName: action.lastName,
+        email: action.email,
     };
 };
 

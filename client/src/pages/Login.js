@@ -46,10 +46,10 @@ const Login = () => {
                     : 'http://localhost:3000/api/auth/signUp';
             try {
                 const res = await axios.post(url, data);
-                const { name, _id } = res.data;
+                const { firstName, lastName, email, _id } = res.data;
                 const token = res.headers.x_auth_token;
                 Cookies.set('token', token);
-                dispatch(signInSuccess(token, _id, name));
+                dispatch(signInSuccess(token, firstName, lastName, email, _id));
                 setIsLoading(false);
                 history.push('/');
             } catch {

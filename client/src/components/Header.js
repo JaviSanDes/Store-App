@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { NavLink } from 'react-router-dom';
-
 import toggleMenu from '../store/actions/menuToggle';
 
 const Header = () => {
     const dispatch = useDispatch();
+    const firstName = useSelector(state => state.auth.firstName);
+    const lastName = useSelector(state => state.auth.lastName);
     const history = useHistory();
     const [form, setForm] = useState({ search: '' });
     const [isVisivle, setIsVisible] = useState(false);
@@ -51,6 +52,10 @@ const Header = () => {
             setIsstyled(true);
             elem.style.width = '300px';
         }
+    };
+
+    const logOutHandler = () => {
+        console.log('logOUT');
     };
 
     return (
@@ -101,7 +106,7 @@ const Header = () => {
                     <div className="header-user-box">
                         <div className="header-triangle"></div>
                         <div>
-                            <p>Welcome, User!</p>
+                            <p>Welcome, {(firstName, lastName)}!</p>
                             <p>Enjoy your shopping</p>
                         </div>
                         <NavLink extact to="/settings">
@@ -111,7 +116,11 @@ const Header = () => {
                             <button type="button">My Purchases</button>
                         </NavLink>
 
-                        <button type="button" className="header-logOut-button">
+                        <button
+                            type="button"
+                            className="header-logOut-button"
+                            onClick={logOutHandler}
+                        >
                             Log Out
                         </button>
                     </div>
