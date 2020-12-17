@@ -27,6 +27,7 @@ const Login = () => {
 
     const submitHandler = async e => {
         if (validForm) {
+            console.log('LLEGA123');
             e.preventDefault();
             setIsLoading(true);
             const data = isSignIn ? signInForm : signUpForm;
@@ -41,6 +42,7 @@ const Login = () => {
                 dispatch(signInSuccess(token, _id, name));
                 setIsLoading(false);
             } catch {
+                setIsLoading(false);
                 setDisplayError(true);
             }
         }
@@ -50,7 +52,7 @@ const Login = () => {
         const validator = () => {
             if (isSignIn === 'login-switch-id-2') {
                 const isValidFirstName = signUpForm.firstName.length >= 3;
-                const isValidLastName = signUpForm.lastName.lastName >= 3;
+                const isValidLastName = signUpForm.lastName.length >= 3;
                 const isValidPass =
                     signUpForm.password.length >= 8 &&
                     /\d/.test(signUpForm.password) &&
@@ -63,7 +65,6 @@ const Login = () => {
                 );
                 const isValidConfirmEmail =
                     signUpForm.confirmEmail === signUpForm.email;
-
                 if (
                     isValidFirstName &&
                     isValidLastName &&
