@@ -19,10 +19,23 @@ const signInSuccess = (state, action) => {
     };
 };
 
+const authLogOut = state => {
+    return {
+        ...state,
+        token: null,
+        userId: null,
+        firstName: null,
+        lastName: null,
+        email: null,
+    };
+};
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionType.SIGN_IN_SUCCESS:
             return signInSuccess(state, action);
+        case actionType.AUTH_LOGOUT:
+            return authLogOut(state, action);
         default:
             return state;
     }

@@ -13,6 +13,13 @@ export const signInSuccess = (token, firstName, lastName, email, _id) => {
     };
 };
 
+export const logOut = () => {
+    Cookies.remove('token', { path: '' });
+    return {
+        type: actionType.AUTH_LOGOUT,
+    };
+};
+
 export const authCheckState = () => {
     return async dispatch => {
         const token = Cookies.get('token');
