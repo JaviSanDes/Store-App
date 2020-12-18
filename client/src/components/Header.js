@@ -56,7 +56,6 @@ const Header = () => {
     };
 
     const logOutHandler = () => {
-        console.log('logOUT');
         dispatch(logOut());
     };
 
