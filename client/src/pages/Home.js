@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Spinner } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import { authCheckState } from '../store/actions/auth';
 
 import { getProducts } from '../store/actions/Products';
 import Product from '../components/Product';
@@ -20,6 +21,8 @@ const Home = props => {
     useEffect(() => {
         const header = document.getElementById('Header-container-id');
         header.style.position = 'fixed';
+
+        dispatch(authCheckState());
     }, []);
 
     useEffect(() => {

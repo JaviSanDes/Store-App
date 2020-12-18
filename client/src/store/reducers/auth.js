@@ -13,7 +13,7 @@ const signInSuccess = (state, action) => {
         ...state,
         token: action.idToken,
         userId: action.userID,
-        firstName: action.userName,
+        firstName: action.firstName,
         lastName: action.lastName,
         email: action.email,
     };

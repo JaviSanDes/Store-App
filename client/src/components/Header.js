@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
+
 import toggleMenu from '../store/actions/menuToggle';
 
 const Header = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const firstName = useSelector(state => state.auth.firstName);
     const lastName = useSelector(state => state.auth.lastName);
-    const history = useHistory();
+    const token = useSelector(state => state.auth.token);
     const [form, setForm] = useState({ search: '' });
     const [isVisivle, setIsVisible] = useState(false);
     const [isStyled, setIsstyled] = useState(false);
@@ -58,74 +59,87 @@ const Header = () => {
         console.log('logOUT');
     };
 
-    return (
-        <div className="Header-container" id="Header-container-id">
-            <button
-                className="Header-button"
-                onClick={toggleMenuHandler}
-                type="button"
-            >
-                <div className="Header-butto-linen" />
-                <div className="Header-butto-linen" />
-                <div className="Header-butto-linen" />
-            </button>
-            <div
-                className="header-home"
-                onClick={redirectHandler}
-                role="button"
-            >
-                <h1 className="header-home-link">E</h1>
-                <h1 className="header-home-link-2">commerce</h1>
-            </div>
-            <div className="header-search">
-                <img
-                    src={process.env.PUBLIC_URL + 'images/search.png'}
-                    className="header-search-image"
-                    alt="img"
-                    onClick={searchHadnler}
-                    role="button"
-                />
-                <input
-                    className="header-search-input"
-                    placeholder="Search your product"
-                    name="search"
-                    value={form.search}
-                    id="header-search-input-id"
-                    onChange={e => inputHandler(e)}
-                />
-            </div>
-            <div className="header-login">
-                <img
-                    src={process.env.PUBLIC_URL + 'images/user.png'}
-                    alt="img"
-                    className="header-user-image"
-                    onClick={clickHandler}
-                    role="button"
-                />
-                {isVisivle && (
-                    <div className="header-user-box">
-                        <div className="header-triangle"></div>
-                        <div>
-                            <p>Welcome, {(firstName, lastName)}!</p>
-                            <p>Enjoy your shopping</p>
-                        </div>
-                        <NavLink extact to="/settings">
-                            <button type="button">Settings</button>
-                        </NavLink>
-                        <NavLink extact to="/orders">
-                            <button type="button">My Purchases</button>
-                        </NavLink>
+    const signHandler = () => {
+        history.push('/login');
+    };
 
-                        <button
-                            type="button"
-                            className="header-logOut-button"
-                            onClick={logOutHandler}
-                        >
-                            Log Out
-                        </button>
-                    </div>
-                )}
+    return (
+        <div className="Header">
+            <div className="Header-container" id="Header-container-id">
+                <button
+                    className="Header-button"
+                    onClick={toggleMenuHandler}
+                    type="button"
+                >
+                    <div className="Header-butto-linen" />
+                    <div className="Header-butto-linen" />
+                    <div className="Header-butto-linen" />
+                </button>
+                <div
+                    className="header-home"
+                    onClick={redirectHandler}
+                    role="button"
+                >
+                    <h1 className="header-home-link">E</h1>
+                    <h1 className="header-home-link-2">commerce</h1>
+                </div>
+                <div className="header-search">
+                    <img
+                        src={process.env.PUBLIC_URL + 'images/search.png'}
+                        className="header-search-image"
+                        alt="img"
+                        onClick={searchHadnler}
+                        role="button"
+                    />
+                    <input
+                        className="header-search-input"
+                        placeholder="Search your product"
+                        name="search"
+                        value={form.search}
+                        id="header-search-input-id"
+                        onChange={e => inputHandler(e)}
+                    />
+                </div>
+                <div className="header-login">
+                    <img
+                        src={process.env.PUBLIC_URL + 'images/user.png'}
+                        alt="img"
+                        className="header-user-image"
+                        onClick={clickHandler}
+                        role="button"
+                    />
+                    {isVisivle && (
+                        <div className="header-user-box">
+                            <div className="header-triangle"></div>
+                            <div>
+                                <p>Welcome, {`${firstName} ${lastName}!`}</p>
+                                <p>Enjoy your shopping</p>
+                            </div>
+                            <NavLink extact to="/settings">
+                                <button type="button">Settings</button>
+                            </NavLink>
+                            <NavLink extact to="/orders">
+                                <button type="button">My Purchases</button>
+                            </NavLink>
+
+                            <button
+                                type="button"
+                                className="header-logOut-button"
+                                onClick={logOutHandler}
+                            >
+                                Log Out
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
+            {!token && (
+                <div className="Header-container-button">
+                    <button type="button" onClick={signHandler}>
+                        SignIn/SignUp
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

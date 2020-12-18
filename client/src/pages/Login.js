@@ -46,8 +46,7 @@ const Login = () => {
                     : 'http://localhost:3000/api/auth/signUp';
             try {
                 const res = await axios.post(url, data);
-                const { firstName, lastName, email, _id } = res.data;
-                const token = res.headers.x_auth_token;
+                const { firstName, lastName, email, _id, token } = res.data;
                 Cookies.set('token', token);
                 dispatch(signInSuccess(token, firstName, lastName, email, _id));
                 setIsLoading(false);

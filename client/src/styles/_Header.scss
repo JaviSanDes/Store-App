@@ -11,6 +11,16 @@
     z-index: 200;
     border-bottom: 1.5px solid rgb(238, 238, 238);
 }
+.Header-container-button {
+    position: fixed;
+    top: 7px;
+    right: 60px;
+    z-index: 200;
+}
+.Header-container-button button {
+    height: 45px;
+    background: #e63232;
+}
 .Header-button {
     display: none;
     background: none;
@@ -71,7 +81,7 @@ input:focus {
     height: 45px;
     background: rgb(238, 238, 238);
     position: absolute;
-    right: 60px;
+    right: 65px;
     cursor: pointer;
     display: flex;
     top: 7px;
