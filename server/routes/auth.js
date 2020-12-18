@@ -8,10 +8,8 @@ const auth = require('../middleware/auth');
 
 
 router.post('/verifyToken', auth, async (req, res) => {
-  console.log(req.user.name)
-  const user = req.user.name;
-  const userId = req.user._id;
-  res.send({ user: user, userId: userId,});
+  const { firstName, lastName, email, _id } = req.user;
+  res.send({ firstName, lastName, email, _id });
 });
 
 router.post('/signIn', async (req, res) => {
@@ -30,7 +28,8 @@ router.post('/signIn', async (req, res) => {
   //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
   //res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
   // res.header('x_auth_token', token).send(_.pick(user, ['_id', 'firstName', 'lastName', 'email']), "12345");
-  res.send({...user, token});
+  const { _id, firstName, lastName, email } = user;
+  res.send({_id, firstName, lastName, email, token});
 });
 
 
@@ -47,10 +46,13 @@ router.post('/signUp', async (req, res) => {
   await user.save();
 
   const token = user.generateAuthToken();
-  res.header('Access-Control-Expose-Headers', 'x-auth-token, Uid');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
-  res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-  res.header('x-auth-token', token).send(_.pick(user, ['_id', 'firstName', 'lastName', 'email']));
+
+  //res.header('Access-Control-Expose-Headers', 'x-auth-token, Uid');
+  //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
+  //res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+  //res.header('x-auth-token', token).send(_.pick(user, ['_id', 'firstName', 'lastName', 'email']));
+  const { _id, firstName, lastName, email } = user;
+  res.send({_id, firstName, lastName, email, token});
 });
 
 function validate(req) {
