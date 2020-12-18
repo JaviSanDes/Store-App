@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { resetNotifications } from '../../store/actions/Products';
 
 import Product2 from './Product2';
 
 const ShoppingCart = () => {
     const [toggle, setToggle] = useState(365);
+    const token = useSelector(state => state.auth.token);
+    const history = useHistory();
     const productsOrdered = useSelector(state => state.products.products);
     const order = useSelector(state => state.products.order);
     const newProductsNotification = useSelector(
@@ -23,6 +25,10 @@ const ShoppingCart = () => {
         }
 
         dispatch(resetNotifications());
+    };
+
+    const checkoutHandler = () => {
+        token ? history.push('/checkout') : history.push('/login');
     };
 
     const products = [];
@@ -87,11 +93,13 @@ const ShoppingCart = () => {
                 <p className="shoppingCart-footer-totalPrice">
                     Total {totalPrice.toFixed(2)} €
                 </p>
-                <NavLink extact to="/checkout">
-                    <button className="shoppingCart-checkout" type="button">
-                        CHECKOUT
-                    </button>
-                </NavLink>
+                <button
+                    className="shoppingCart-checkout"
+                    type="button"
+                    onClick={checkoutHandler}
+                >
+                    CHECKOUT
+                </button>
             </div>
         </div>
     );
