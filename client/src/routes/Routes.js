@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Home from '../pages/Home';
 import Checkout from '../pages/Checkout';
@@ -8,6 +9,7 @@ import Orders from '../pages/Orders';
 import Login from '../pages/Login';
 
 const Routes = () => {
+    const token = useSelector(state => state.auth.token);
     return (
         <div className="routes">
             <div>
@@ -46,13 +48,13 @@ const Routes = () => {
                         <Home group="search" />
                     </Route>
                     <Route path="/checkout">
-                        <Checkout />
+                        {token ? <Checkout /> : <Login />}
                     </Route>
                     <Route path="/settings">
-                        <Settings />
+                        {token ? <Settings /> : <Login />}
                     </Route>
                     <Route path="/orders">
-                        <Orders />
+                        {token ? <Orders /> : <Login />}
                     </Route>
                     <Route path="/login">
                         <Login />
