@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { useDispatch } from 'react-redux';
@@ -23,20 +23,24 @@ const Shipping = props => {
         }
     };
 
-    const validator = () => {
-        const isValidName = form.name.length >= 8;
-        const isValidAdress = form.address.length >= 8;
-        const isValidZipCode = form.zipCode.length === 4;
+    useEffect(() => {
+        const validator = () => {
+            const isValidName = form.name.length >= 8;
+            const isValidAdress = form.address.length >= 8;
+            const isValidZipCode = form.zipCode.length === 5;
 
-        if (isValidName && isValidAdress && isValidZipCode) setValidForm(true);
-    };
+            if (isValidName && isValidAdress && isValidZipCode)
+                setValidForm(true);
+        };
+
+        validator();
+    }, [form]);
 
     const handlerForm = e => {
         setForm({
             ...form,
             [e.target.name]: e.target.value,
         });
-        validator();
     };
 
     return (
