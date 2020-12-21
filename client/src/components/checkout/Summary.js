@@ -1,6 +1,29 @@
 import React from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import { useSelector } from 'react-redux';
 
 const Summary = () => {
+    const orderData = useSelector(state => state.orderData);
+    const payHandler = async () => {
+        const token = Cookies.get('token');
+        if (token) {
+            const headers = {
+                'Content-Type': 'application/json',
+                'x-auth-token': token,
+            };
+            try {
+                const res = await axios.post(
+                    'http://localhost:3000/api/orders/newOrder',
+                    orderData,
+                    { headers }
+                );
+                console.log(res);
+            } catch (error) {
+                console.log('ERROR!!!');
+            }
+        }
+    };
     return (
         <div className="summary-container">
             <div className="summary-box">
@@ -53,6 +76,7 @@ const Summary = () => {
                     type="submit"
                     id="checkout-pay-id"
                     className="checkout-nextButton"
+                    onClick={payHandler}
                 >
                     Pay
                 </button>
