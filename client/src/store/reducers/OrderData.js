@@ -2,6 +2,7 @@ import {
     CONFIRM_ORDER_PRODUCTS,
     CONFIRM_SHIPPING_DATA,
     CONFIRM_PAYMENT_DATA,
+    CLEAN_ORDER_DATA,
 } from '../actionTypes';
 
 const initialState = {
@@ -30,6 +31,15 @@ const orderData = (state = initialState, action) => {
             return {
                 ...state,
                 paymentData: { ...action.payload },
+            };
+        case CLEAN_ORDER_DATA:
+            return {
+                ...state,
+                shippingData: {},
+                paymentData: {},
+                price: {},
+                user: '',
+                products: [],
             };
         default:
             return state;

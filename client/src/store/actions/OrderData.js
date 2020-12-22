@@ -14,3 +14,7 @@ export const paymentData = data => ({
     type: actionType.CONFIRM_PAYMENT_DATA,
     payload: data,
 });
+
+export const cleanOrderData = () => ({
+    type: actionType.CLEAN_ORDER_DATA,
+});
