@@ -13,7 +13,9 @@ const Order = props => {
     const totalPrice = useSelector(state => state.products.totalPrice);
 
     const submitHandler = () => {
-        const productsId = productsOrdered.map(product => product._id);
+        const productsId = productsOrdered.map(product => {
+            return { product: product._id, quantity: product.quantity };
+        });
         const price = {
             pvp: totalPrice.toFixed(2),
             total: ((totalPrice * 21) / 100 + totalPrice).toFixed(2),

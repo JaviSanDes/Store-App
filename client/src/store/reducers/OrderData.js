@@ -18,8 +18,8 @@ const orderData = (state = initialState, action) => {
             return {
                 ...state,
                 price: { ...action.payload.price },
-                user: action.payload.user,
-                products: { ...action.payload.products },
+                user: action.payload.userId,
+                products: [...action.payload.products],
             };
         case CONFIRM_SHIPPING_DATA:
             return {

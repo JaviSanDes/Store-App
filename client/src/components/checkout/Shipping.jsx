@@ -10,7 +10,7 @@ const Shipping = props => {
     const dispatch = useDispatch();
     const [form, setForm] = useState({
         name: '',
-        contry: '',
+        country: 'spaaa',
         address: '',
         zipCode: '',
         phone: '',
@@ -59,8 +59,8 @@ const Shipping = props => {
                         required
                     />
                 </FormGroup>
-                <Label for="exampleSelect">Contry</Label>
-                <Input type="select" name="select">
+                <Label for="exampleSelect">country</Label>
+                <Input type="select" name="country">
                     <option>Spain</option>
                     <option>United Kingdom</option>
                     <option>France</option>
