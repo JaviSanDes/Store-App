@@ -61,7 +61,7 @@ const OrderSchema = new mongoose.Schema({
 const Order = mongoose.model('Order', OrderSchema);
 
 function validateOrder(user) {
-    const schema = {
+    const schema =  Joi.object({
         shippingData: Joi.object().keys({
             name: Joi.string().required(),
             country: Joi.string().required(),
@@ -77,15 +77,15 @@ function validateOrder(user) {
             expiration:  Joi.string().required(),
             cvcCode:  Joi.string().required(),
         }),
-        price: Joi.object.keys({
-            pvp: Joi.number.min(0).required(),
+        price: Joi.object().keys({
+            pvp: Joi.number().min(0).required(),
             total: Joi.number().min(0).required(),
         }),
         user: Joi.string().min(5).max(100).required(),
         products: Joi.array(),
-    };
+    });
   
-    return Joi.validate(user, schema);
+    return schema.validate(user);
 }
 
 exports.Order = Order;

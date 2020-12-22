@@ -9,7 +9,9 @@ router.post('/', auth, async (req, res) => {
 });
 
 router.post('/newOrder', auth, async (req, res) => {
+  console.log(req.body)
   const { error } = validate(req.body); 
+  console.log(error)
   if (error) return res.status(400).send(error.details[0].message);
 
   const userExist = await User.findById(req.body.user);
@@ -42,26 +44,3 @@ router.post('/newOrder', auth, async (req, res) => {
 });
 
 module.exports = router; 
-
-
-/*
-shippingData: {
-  name: shippingData.name,
-  country: shippingData.country,
-  address: shippingData.address,
-  phone: shippingData.phone,
-  zipCode: shippingData.zipCode,
-},
-paymentData: {
-  paymentMethod:  paymentData.paymentMethod,
-  firstName:  paymentData.firstName,
-  lastName:  paymentData.lastName,
-  cardNumber:  paymentData.cardNumber,
-  expiration:  paymentData.expiration,
-  cvcCode:  paymentData.cvcCode,
-},
-price: {
-  pvp: price.pvp,
-  total: price.total,
-},
-*/
