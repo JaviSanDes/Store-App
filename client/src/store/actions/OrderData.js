@@ -1,8 +1,8 @@
 import * as actionType from '../actionTypes';
 
-export const confirmProducts = products => ({
+export const confirmProducts = data => ({
     type: actionType.CONFIRM_ORDER_PRODUCTS,
-    payload: products,
+    payload: data,
 });
 
 export const shippingData = data => ({

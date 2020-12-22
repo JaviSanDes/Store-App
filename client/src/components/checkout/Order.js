@@ -7,12 +7,23 @@ import { confirmProducts } from '../../store/actions/OrderData';
 const Order = props => {
     const { nextPhase } = props;
     const productsOrdered = useSelector(state => state.products.products);
+    const userId = useSelector(state => state.auth.userId);
     const order = useSelector(state => state.products.order);
     const dispatch = useDispatch();
     const totalPrice = useSelector(state => state.products.totalPrice);
 
     const submitHandler = () => {
-        dispatch(confirmProducts(productsOrdered));
+        const productsId = productsOrdered.map(product => product._id);
+        const price = {
+            pvp: totalPrice.toFixed(2),
+            total: ((totalPrice * 21) / 100 + totalPrice).toFixed(2),
+        };
+        const data = {
+            products: productsId,
+            price,
+            userId,
+        };
+        dispatch(confirmProducts(data));
         nextPhase();
     };
 
