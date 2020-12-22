@@ -5,9 +5,11 @@ import {
 } from '../actionTypes';
 
 const initialState = {
-    products: {},
     shippingData: {},
     paymentData: {},
+    price: {},
+    user: '',
+    products: [],
 };
 
 const orderData = (state = initialState, action) => {
