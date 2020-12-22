@@ -30,6 +30,9 @@ export const eliminateProduct = id => ({
     type: actionType.ELIMINATE_PRODUCT,
     productId: id,
 });
+export const removeAllProducts = () => ({
+    type: actionType.REMOVE_ALL_PRODUCTS,
+});
 
 export const resetNotifications = () => ({
     type: actionType.RESET_NOTIFICATIONS,

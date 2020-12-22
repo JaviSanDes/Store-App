@@ -11,6 +11,7 @@ import {
     ModalBody,
     ModalFooter,
 } from 'reactstrap';
+import { removeAllProducts } from '../../store/actions/Products';
 import { cleanOrderData } from '../../store/actions/OrderData';
 
 const Summary = () => {
@@ -41,14 +42,14 @@ const Summary = () => {
                 toggle();
             } catch (error) {
                 // eslint-disable-next-line no-console
-                console.log('ERROR!!!');
+                console.log(error);
             }
         }
     };
 
     const modalHandler = () => {
         dispatch(cleanOrderData());
-        dispatch();
+        dispatch(removeAllProducts());
         history.push('/');
     };
 

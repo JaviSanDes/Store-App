@@ -6,6 +6,7 @@ import {
     REMOVE_PRODUCT,
     ELIMINATE_PRODUCT,
     RESET_NOTIFICATIONS,
+    REMOVE_ALL_PRODUCTS,
 } from '../actionTypes';
 
 const initialState = {
@@ -122,6 +123,11 @@ const productReducer = (state = initialState, action) => {
             return {
                 ...state,
                 newProducts: 0,
+            };
+        case REMOVE_ALL_PRODUCTS:
+            return {
+                ...state,
+                order: [],
             };
         default:
             return state;
