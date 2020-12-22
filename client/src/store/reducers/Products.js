@@ -100,6 +100,17 @@ const eliminateProduct = (state, action) => {
     };
 };
 
+const removedAllProducts = state => {
+    const products = state.products.map(product => ({ ...product }));
+    products.map(product => (product.quantity = 0));
+    return {
+        ...state,
+        order: [],
+        products,
+        newProducts: 0,
+    };
+};
+
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOADING_ERROR:
@@ -125,10 +136,7 @@ const productReducer = (state = initialState, action) => {
                 newProducts: 0,
             };
         case REMOVE_ALL_PRODUCTS:
-            return {
-                ...state,
-                order: [],
-            };
+            return removedAllProducts(state);
         default:
             return state;
     }
