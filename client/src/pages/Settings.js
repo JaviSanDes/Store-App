@@ -1,70 +1,137 @@
-import React from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { useState } from 'react';
+import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
+import axios from 'axios';
 
 const Settings = () => {
+    const [password, setPassword] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [isDataVisible, setIsDataVisible] = useState(false);
+    const [form, setForm] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+    });
+
+    const passwordHandler = e => {
+        setPassword(e.target.value);
+    };
+
+    const formHandler = e => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const nextButtonHandler = async () => {
+        setIsLoading(true);
+        try {
+            const res = await axios.post(
+                'http://localhost:3000/api/auth/userInfo',
+                password
+            );
+            setForm({
+                firstName: res.firstName,
+                lastName: res.lastName,
+                email: res.email,
+                password,
+            });
+            setIsLoading(false);
+            setIsDataVisible(true);
+        } catch {
+            console.log('error');
+        }
+    };
+
     return (
-        <div className="settings-container">
-            <h4>Peronal Information</h4>
-            <Form className="shipping-container">
-                <FormGroup>
+        <div>
+            {!isDataVisible ? (
+                <div className="settings-auth">
+                    <h4 className="settings-title">Introduce Password</h4>
                     <FormGroup>
-                        <Label for="examplePassword">Name</Label>
                         <Input
-                            type="text"
+                            type="password"
                             name="password"
                             id="examplePassword"
-                            placeholder="Jack Simon"
-                            minlength="8"
+                            value={password}
+                            onchange={passwordHandler}
                             required
                         />
                     </FormGroup>
-                    <Label for="exampleSelect">Contry</Label>
-                    <Input type="select" name="select">
-                        <option>Spain</option>
-                        <option>United Kingdom</option>
-                        <option>France</option>
-                        <option>Germany</option>
-                        <option>Italy</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="examplePassword">Email</Label>
-                    <Input
-                        type="text"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="yourmail@mail.com"
-                        minlength="8"
-                        required
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="examplePassword">Phone</Label>
-                    <Input
-                        type="number"
-                        name="password"
-                        id="examplePassword"
-                        placeholder=""
-                        minlength="8"
-                        required
-                    />
-                </FormGroup>
-                <button type="button" className="settings-changeInfo-button">
-                    Change Info
-                </button>
-                <FormGroup>
-                    <Label for="examplePassword">Password</Label>
-                    <Input
-                        type="password"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="********"
-                        minlength="8"
-                        required
-                    />
-                </FormGroup>
-                <button type="button">Change Password</button>
-            </Form>
+                    <button type="button" onClick={nextButtonHandler}>
+                        Next
+                    </button>
+                    {isLoading && <Spinner color="primary" />}
+                </div>
+            ) : (
+                <div className="settings-container">
+                    <h4 className="settings-title">Peronal Information</h4>
+                    <Form className="shipping-container">
+                        <FormGroup>
+                            <Label for="examplePassword">First Name</Label>
+                            <Input
+                                type="text"
+                                name="firstName"
+                                id="examplePassword"
+                                value={form.firstName}
+                                minlength="8"
+                                onchange={formHandler}
+                                required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="exampleSelect">Last Name</Label>
+                            <Input
+                                type="text"
+                                name="lastName"
+                                id="examplePassword"
+                                value={form.lastName}
+                                minlength="8"
+                                onchange={formHandler}
+                                required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="examplePassword">Email</Label>
+                            <Input
+                                type="text"
+                                name="email"
+                                id="examplePassword"
+                                value={form.email}
+                                minlength="8"
+                                onchange={formHandler}
+                                required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="examplePassword">Password</Label>
+                            <Input
+                                type="password"
+                                name="password"
+                                id="examplePassword"
+                                value={form.password}
+                                minlength="8"
+                                onchange={formHandler}
+                                required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="examplePassword">
+                                Confirm Password
+                            </Label>
+                            <Input
+                                type="password"
+                                name="password"
+                                id="examplePassword"
+                                minlength="8"
+                                required
+                            />
+                        </FormGroup>
+                        <button type="button">Change Info</button>
+                    </Form>
+                </div>
+            )}
         </div>
     );
 };
