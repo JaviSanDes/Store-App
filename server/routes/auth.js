@@ -24,10 +24,6 @@ router.post('/signIn', async (req, res) => {
 
   const token = user.generateAuthToken();
 
-  //res.header('Access-Control-Expose-Headers', 'x-auth-token, Uid');
-  //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
-  //res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-  // res.header('x_auth_token', token).send(_.pick(user, ['_id', 'firstName', 'lastName', 'email']), "12345");
   const { _id, firstName, lastName, email } = user;
   res.send({_id, firstName, lastName, email, token});
 });
@@ -47,10 +43,6 @@ router.post('/signUp', async (req, res) => {
 
   const token = user.generateAuthToken();
 
-  //res.header('Access-Control-Expose-Headers', 'x-auth-token, Uid');
-  //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
-  //res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-  //res.header('x-auth-token', token).send(_.pick(user, ['_id', 'firstName', 'lastName', 'email']));
   const { _id, firstName, lastName, email } = user;
   res.send({_id, firstName, lastName, email, token});
 });
@@ -68,6 +60,29 @@ router.post('/userInfo', async (req, res) => {
   const { firstName, lastName, email } = user;
   res.send({firstName, lastName, email});
 });
+
+router.put('/:id', async (req, res) => {
+  const { error } = validate(req.body); 
+  if (error) return res.status(400).send(error.details[0].message);
+
+  const salt = await bcrypt.genSalt(10);
+  const password = await bcrypt.hash(req.body.password, salt);
+
+  const user = await User.findByIdAndUpdate(req.params.id,
+    { 
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password,
+    }, { new: true });
+
+  if (!user) return res.status(404).send('The user with the given ID was not found.');
+  
+  res.send(user);
+});
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 
 function validate(req) {
   const schema = Joi.object({
