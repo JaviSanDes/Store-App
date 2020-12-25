@@ -42,8 +42,8 @@ const Login = () => {
                       };
             const url =
                 isSignIn === 'login-switch-id-1'
-                    ? 'http://localhost:3000/api/auth/signIn'
-                    : 'http://localhost:3000/api/auth/signUp';
+                    ? 'http://localhost:3000/api/auth'
+                    : 'http://localhost:3000/api/user';
             try {
                 const res = await axios.post(url, data);
                 const { firstName, lastName, email, _id, token } = res.data;

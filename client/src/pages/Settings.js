@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const Settings = () => {
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const _id = useSelector(state => state.auth.userId);
     const [isDataVisible, setIsDataVisible] = useState(false);
     const [form, setForm] = useState({
         firstName: '',
@@ -27,16 +29,31 @@ const Settings = () => {
     const nextButtonHandler = async () => {
         setIsLoading(true);
         try {
-            const res = await axios.post(
-                'http://localhost:3000/api/auth/userInfo',
-                password
-            );
+            const res = await axios.post('http://localhost:3000/api/user/me', {
+                password,
+                _id,
+            });
             setForm({
-                firstName: res.firstName,
-                lastName: res.lastName,
-                email: res.email,
+                firstName: res.data.firstName,
+                lastName: res.data.lastName,
+                email: res.data.email,
                 password,
             });
+            setIsLoading(false);
+            setIsDataVisible(true);
+        } catch {
+            console.log('error');
+        }
+    };
+
+    const changeInfoHandler = async () => {
+        setIsLoading(true);
+        try {
+            const res = await axios.put(
+                `http://localhost:3000/api/user/${_id}`,
+                form
+            );
+            console.log(res);
             setIsLoading(false);
             setIsDataVisible(true);
         } catch {
@@ -55,7 +72,7 @@ const Settings = () => {
                             name="password"
                             id="examplePassword"
                             value={password}
-                            onchange={passwordHandler}
+                            onChange={passwordHandler}
                             required
                         />
                     </FormGroup>
@@ -76,7 +93,7 @@ const Settings = () => {
                                 id="examplePassword"
                                 value={form.firstName}
                                 minlength="8"
-                                onchange={formHandler}
+                                onChange={formHandler}
                                 required
                             />
                         </FormGroup>
@@ -88,7 +105,7 @@ const Settings = () => {
                                 id="examplePassword"
                                 value={form.lastName}
                                 minlength="8"
-                                onchange={formHandler}
+                                onChange={formHandler}
                                 required
                             />
                         </FormGroup>
@@ -100,7 +117,7 @@ const Settings = () => {
                                 id="examplePassword"
                                 value={form.email}
                                 minlength="8"
-                                onchange={formHandler}
+                                onChange={formHandler}
                                 required
                             />
                         </FormGroup>
@@ -112,7 +129,7 @@ const Settings = () => {
                                 id="examplePassword"
                                 value={form.password}
                                 minlength="8"
-                                onchange={formHandler}
+                                onChange={formHandler}
                                 required
                             />
                         </FormGroup>
@@ -128,7 +145,10 @@ const Settings = () => {
                                 required
                             />
                         </FormGroup>
-                        <button type="button">Change Info</button>
+                        <button type="button" onClick={changeInfoHandler}>
+                            Change Info
+                        </button>
+                        {isLoading && <Spinner color="primary" />}
                     </Form>
                 </div>
             )}

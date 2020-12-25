@@ -36,3 +36,69 @@ button {
 .settings-title {
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 650px) {
+    .settings-auth {
+        width: 85%;
+        height: 160px;
+        margin: auto;
+        margin-top: 120px;
+        padding: 15px;
+        border-radius: 10px;
+        background: white;
+    
+        border: 2px solid rgb(245, 245, 245);
+    }
+    .settings-auth h4{
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .settings-auth input{
+       height: 30px;
+    }
+    .settings-auth button{
+        font-size: 12px;
+     }
+
+     .settings-container {
+        width: 95%;
+        height: 650px;
+        margin: auto;
+        margin-top: 90px;
+        padding: 40px;
+        border-radius: 10px;
+        background: white;
+    
+        border: 2px solid rgb(245, 245, 245);
+    }
+    .settings-container h4{
+        font-size: 20px;
+    }
+    
+}
+@media only screen and (max-width: 450px) {
+    .settings-auth {
+        width: 95%;
+        height: 160px;
+    }
+    .settings-auth h4{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .settings-auth input{
+       height: 28px;
+    }
+
+    .settings-container {
+        padding: 10px;
+        padding-top: 20px;
+        height: 600px;
+    }
+
+    .settings-container input{
+        height: 35px;
+        font-size: 14px;
+    }
+}
