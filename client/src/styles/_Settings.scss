@@ -11,7 +11,7 @@
 }
 .settings-container {
     width: 600px;
-    height: 850px;
+    height: 800px;
     margin: auto;
     margin-top: 100px;
     padding: 40px;
@@ -28,7 +28,7 @@
 }
 .settings-deleteButton {
     position: absolute;
-    top: 10px;
+    top: 35px;
     left: 100%;
     background: red;
     transform: translateX(-100%);
@@ -48,7 +48,13 @@ button {
     left: 10px;
     top: 5px;
 }
-
+.settings-modal-body {
+    height: 80px;
+    padding-top: 30px;
+}
+.settings-modal-footer {
+    border: none;
+}
 @media only screen and (max-width: 650px) {
     .settings-auth {
         width: 85%;

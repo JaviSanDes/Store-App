@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
+import React, { useState, useEffect } from 'react';
+import {
+    Form,
+    FormGroup,
+    Label,
+    Input,
+    Spinner,
+    Modal,
+    ModalBody,
+    ModalFooter,
+    Button,
+} from 'reactstrap';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Settings = () => {
     const [password, setPassword] = useState('');
+    const [validForm, setValidForm] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [modal, setModal] = useState(false);
+    const history = useHistory();
     const _id = useSelector(state => state.auth.userId);
     const [isDataVisible, setIsDataVisible] = useState(false);
     const [form, setForm] = useState({
@@ -15,16 +29,9 @@ const Settings = () => {
         password: '',
     });
 
-    const passwordHandler = e => {
-        setPassword(e.target.value);
-    };
+    const toggle = () => setModal(!modal);
 
-    const formHandler = e => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
+    const passwordHandler = e => setPassword(e.target.value);
 
     const nextButtonHandler = async () => {
         setIsLoading(true);
@@ -37,7 +44,6 @@ const Settings = () => {
                 firstName: res.data.firstName,
                 lastName: res.data.lastName,
                 email: res.data.email,
-                password,
             });
             setIsLoading(false);
             setIsDataVisible(true);
@@ -46,24 +52,74 @@ const Settings = () => {
         }
     };
 
-    const changeInfoHandler = async () => {
-        setIsLoading(true);
-        try {
-            const res = await axios.put(
-                `http://localhost:3000/api/user/${_id}`,
-                form
+    useEffect(() => {
+        const validator = () => {
+            const isValidFirstName = form.firstName.length >= 3;
+            const isValidLastName = form.lastName.length >= 3;
+            const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
+                form.email
             );
-            console.log(res);
-            setIsLoading(false);
-            setIsDataVisible(true);
-        } catch {
-            console.log('error');
+
+            if (isValidFirstName && isValidLastName && isValidEmail) {
+                setValidForm(true);
+            }
+        };
+
+        validator();
+    }, [form]);
+
+    const formHandler = e => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const changeInfoHandler = async e => {
+        if (validForm) {
+            e.preventDefault();
+            setIsLoading(true);
+            try {
+                const res = await axios.put(
+                    `http://localhost:3000/api/user/${_id}`,
+                    { ...form, password }
+                );
+                console.log(res);
+                setIsLoading(false);
+                setIsDataVisible(true);
+                toggle();
+            } catch {
+                console.log('error');
+            }
         }
     };
 
+    const changePasswordHandler = async e => {
+        if (validForm) {
+            e.preventDefault();
+            setIsLoading(true);
+            try {
+                const res = await axios.put(
+                    `http://localhost:3000/api/user/${_id}`,
+                    form
+                );
+                console.log(res);
+                setIsLoading(false);
+                setIsDataVisible(true);
+                toggle();
+            } catch {
+                console.log('error');
+            }
+        }
+    };
+
+    const modalHandler = () => history.push('/');
+
+    const closeModalHandler = () => toggle();
+
     return (
         <div>
-            {isDataVisible ? (
+            {!isDataVisible ? (
                 <div className="settings-auth">
                     <h4 className="settings-title">Introduce Password</h4>
                     <FormGroup>
@@ -83,7 +139,7 @@ const Settings = () => {
                 </div>
             ) : (
                 <div className="settings-container">
-                    <h4 className="settings-title">Peronal Information</h4>
+                    <h4 className="settings-title">Personal Information</h4>
                     <Form className="shipping-container">
                         <FormGroup>
                             <Label for="examplePassword">First Name</Label>
@@ -92,7 +148,7 @@ const Settings = () => {
                                 name="firstName"
                                 id="examplePassword"
                                 value={form.firstName}
-                                minlength="8"
+                                minlength="3"
                                 onChange={formHandler}
                                 required
                             />
@@ -104,7 +160,7 @@ const Settings = () => {
                                 name="lastName"
                                 id="examplePassword"
                                 value={form.lastName}
-                                minlength="8"
+                                minlength="3"
                                 onChange={formHandler}
                                 required
                             />
@@ -112,16 +168,16 @@ const Settings = () => {
                         <FormGroup>
                             <Label for="examplePassword">Email</Label>
                             <Input
-                                type="text"
+                                type="email"
                                 name="email"
                                 id="examplePassword"
                                 value={form.email}
-                                minlength="8"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 onChange={formHandler}
                                 required
                             />
                         </FormGroup>
-                        <button type="button" onClick={changeInfoHandler}>
+                        <button type="submit" onClick={changeInfoHandler}>
                             Change Info
                         </button>
                         {isLoading && (
@@ -130,18 +186,8 @@ const Settings = () => {
                                 className="settings-spinner"
                             />
                         )}
-                        <FormGroup>
-                            <Label for="examplePassword">Old Password</Label>
-                            <Input
-                                type="password"
-                                name="password"
-                                id="examplePassword"
-                                value={form.password}
-                                minlength="8"
-                                onChange={formHandler}
-                                required
-                            />
-                        </FormGroup>
+                    </Form>
+                    <Form className="shipping-container">
                         <FormGroup>
                             <Label for="examplePassword">New Password</Label>
                             <Input
@@ -149,7 +195,8 @@ const Settings = () => {
                                 name="password"
                                 id="examplePassword"
                                 value={form.password}
-                                minlength="8"
+                                minLength="8"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 onChange={formHandler}
                                 required
                             />
@@ -162,11 +209,13 @@ const Settings = () => {
                                 type="password"
                                 name="password"
                                 id="examplePassword"
-                                minlength="8"
+                                minLength="8"
+                                pattern={form.password}
+                                title="Must match the previous entry."
                                 required
                             />
                         </FormGroup>
-                        <button type="button" onClick={changeInfoHandler}>
+                        <button type="submit" onClick={changePasswordHandler}>
                             Change Password
                         </button>
                         {isLoading && (
@@ -185,6 +234,19 @@ const Settings = () => {
                     </button>
                 </div>
             )}
+            <Modal isOpen={modal}>
+                <ModalBody className="settings-modal-body">
+                    <h4>Your data has been updated successfully</h4>
+                </ModalBody>
+                <ModalFooter className="settings-modal-footer">
+                    <Button color="primary" onClick={closeModalHandler}>
+                        Go Back
+                    </Button>{' '}
+                    <Button color="primary" onClick={modalHandler}>
+                        Go Home
+                    </Button>{' '}
+                </ModalFooter>
+            </Modal>
         </div>
     );
 };
