@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
 import {
     Form,
@@ -17,7 +18,9 @@ import { useSelector } from 'react-redux';
 const Settings = () => {
     const [password, setPassword] = useState('');
     const [validForm, setValidForm] = useState(false);
+    const [validPassForm, setValidPassForm] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [deleteAccModal, setDeleteAccModal] = useState(false);
     const [modal, setModal] = useState(false);
     const history = useHistory();
     const _id = useSelector(state => state.auth.userId);
@@ -26,7 +29,10 @@ const Settings = () => {
         firstName: '',
         lastName: '',
         email: '',
+    });
+    const [passwordForm, setPasswordForm] = useState({
         password: '',
+        confirmPassword: '',
     });
 
     const toggle = () => setModal(!modal);
@@ -41,6 +47,7 @@ const Settings = () => {
                 _id,
             });
             setForm({
+                ...form,
                 firstName: res.data.firstName,
                 lastName: res.data.lastName,
                 email: res.data.email,
@@ -68,9 +75,32 @@ const Settings = () => {
         validator();
     }, [form]);
 
+    useEffect(() => {
+        const validator = () => {
+            const isValidPass =
+                passwordForm.password.length >= 8 &&
+                /\d/.test(passwordForm.password) &&
+                /[a-z]/.test(passwordForm.password) &&
+                /[A-Z]/.test(passwordForm.password);
+            const isValidConfirPass =
+                passwordForm.confirmPassword === passwordForm.password;
+
+            if (isValidPass && isValidConfirPass) setValidPassForm(true);
+        };
+
+        validator();
+    }, [passwordForm]);
+
     const formHandler = e => {
         setForm({
             ...form,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const passwordFormHandler = e => {
+        setPasswordForm({
+            ...passwordForm,
             [e.target.name]: e.target.value,
         });
     };
@@ -95,13 +125,13 @@ const Settings = () => {
     };
 
     const changePasswordHandler = async e => {
-        if (validForm) {
+        if (validPassForm) {
             e.preventDefault();
             setIsLoading(true);
             try {
                 const res = await axios.put(
                     `http://localhost:3000/api/user/${_id}`,
-                    form
+                    { ...form, password: passwordForm.password }
                 );
                 console.log(res);
                 setIsLoading(false);
@@ -113,9 +143,32 @@ const Settings = () => {
         }
     };
 
+    const deleteAccountHandler = async () => {
+        try {
+            const res = await axios.delete(
+                `http://localhost:3000/api/user/${_id}`
+            );
+            console.log(res);
+            setIsLoading(false);
+            setIsDataVisible(true);
+            toggle();
+            history.push('/');
+        } catch {
+            console.log('error');
+        }
+    };
+
     const modalHandler = () => history.push('/');
 
-    const closeModalHandler = () => toggle();
+    const closeModalHandler = () => {
+        setValidForm(false);
+        toggle();
+    };
+
+    const switchModal = () => {
+        toggle();
+        setDeleteAccModal(true);
+    };
 
     return (
         <div>
@@ -194,10 +247,10 @@ const Settings = () => {
                                 type="password"
                                 name="password"
                                 id="examplePassword"
-                                value={form.password}
+                                value={passwordForm.password}
                                 minLength="8"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                onChange={formHandler}
+                                onChange={passwordFormHandler}
                                 required
                             />
                         </FormGroup>
@@ -207,11 +260,13 @@ const Settings = () => {
                             </Label>
                             <Input
                                 type="password"
-                                name="password"
+                                name="confirmPassword"
                                 id="examplePassword"
                                 minLength="8"
-                                pattern={form.password}
+                                value={passwordForm.confirmPassword}
+                                pattern={passwordForm.password}
                                 title="Must match the previous entry."
+                                onChange={passwordFormHandler}
                                 required
                             />
                         </FormGroup>
@@ -228,7 +283,7 @@ const Settings = () => {
                     <button
                         type="button"
                         className="settings-deleteButton"
-                        onClick={changeInfoHandler}
+                        onClick={switchModal}
                     >
                         Delete Account
                     </button>
@@ -236,15 +291,27 @@ const Settings = () => {
             )}
             <Modal isOpen={modal}>
                 <ModalBody className="settings-modal-body">
-                    <h4>Your data has been updated successfully</h4>
+                    {deleteAccModal ? (
+                        <h4>Are your sore you want to delete the account</h4>
+                    ) : (
+                        <h4>Your data has been updated successfully</h4>
+                    )}
                 </ModalBody>
                 <ModalFooter className="settings-modal-footer">
-                    <Button color="primary" onClick={closeModalHandler}>
-                        Go Back
-                    </Button>{' '}
-                    <Button color="primary" onClick={modalHandler}>
-                        Go Home
-                    </Button>{' '}
+                    {!deleteAccModal ? (
+                        <div>
+                            <Button color="primary" onClick={closeModalHandler}>
+                                Go Back
+                            </Button>
+                            <Button color="primary" onClick={modalHandler}>
+                                Go Home
+                            </Button>
+                        </div>
+                    ) : (
+                        <Button color="primary" onClick={deleteAccountHandler}>
+                            Delete Account
+                        </Button>
+                    )}
                 </ModalFooter>
             </Modal>
         </div>
