@@ -11,20 +11,27 @@
 }
 .settings-container {
     width: 600px;
-    height: 650px;
+    height: 850px;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 40px;
     border-radius: 10px;
     background: white;
-
+    position: relative;
     border: 2px solid rgb(245, 245, 245);
+    border-bottom:  65px solid rgb(245, 245, 245);
 }
 .settings-container button {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.settings-deleteButton {
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    background: red;
+    transform: translateX(-100%);
 }
 button {
     border: none;
@@ -35,6 +42,11 @@ button {
 }
 .settings-title {
     margin-bottom: 30px;
+}
+.settings-spinner {
+    position: relative;
+    left: 10px;
+    top: 5px;
 }
 
 @media only screen and (max-width: 650px) {

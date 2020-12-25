@@ -63,7 +63,7 @@ const Settings = () => {
 
     return (
         <div>
-            {!isDataVisible ? (
+            {isDataVisible ? (
                 <div className="settings-auth">
                     <h4 className="settings-title">Introduce Password</h4>
                     <FormGroup>
@@ -121,8 +121,29 @@ const Settings = () => {
                                 required
                             />
                         </FormGroup>
+                        <button type="button" onClick={changeInfoHandler}>
+                            Change Info
+                        </button>
+                        {isLoading && (
+                            <Spinner
+                                color="primary"
+                                className="settings-spinner"
+                            />
+                        )}
                         <FormGroup>
-                            <Label for="examplePassword">Password</Label>
+                            <Label for="examplePassword">Old Password</Label>
+                            <Input
+                                type="password"
+                                name="password"
+                                id="examplePassword"
+                                value={form.password}
+                                minlength="8"
+                                onChange={formHandler}
+                                required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="examplePassword">New Password</Label>
                             <Input
                                 type="password"
                                 name="password"
@@ -146,10 +167,22 @@ const Settings = () => {
                             />
                         </FormGroup>
                         <button type="button" onClick={changeInfoHandler}>
-                            Change Info
+                            Change Password
                         </button>
-                        {isLoading && <Spinner color="primary" />}
+                        {isLoading && (
+                            <Spinner
+                                color="primary"
+                                className="settings-spinner"
+                            />
+                        )}
                     </Form>
+                    <button
+                        type="button"
+                        className="settings-deleteButton"
+                        onClick={changeInfoHandler}
+                    >
+                        Delete Account
+                    </button>
                 </div>
             )}
         </div>
