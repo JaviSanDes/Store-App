@@ -179,11 +179,6 @@ const Settings = () => {
 
     const modalHandler = () => history.push('/');
 
-    const closeModalHandler = () => {
-        setValidForm(false);
-        toggle();
-    };
-
     const switchModal = () => {
         toggle();
         setDeleteAccModal(true);
@@ -223,6 +218,17 @@ const Settings = () => {
             ) : (
                 <div className="settings-container">
                     <h4 className="settings-title">Personal Information</h4>
+                    {displayError && (
+                        <div className="login-errorBox">
+                            <span>{errorMsg}</span>
+                            <span
+                                role="click"
+                                onClick={() => setDisplayError(false)}
+                            >
+                                X
+                            </span>
+                        </div>
+                    )}
                     <Form className="shipping-container">
                         <FormGroup>
                             <Label for="examplePassword">First Name</Label>
@@ -330,9 +336,6 @@ const Settings = () => {
                 <ModalFooter className="settings-modal-footer">
                     {!deleteAccModal ? (
                         <div>
-                            <Button color="primary" onClick={closeModalHandler}>
-                                Go Back
-                            </Button>
                             <Button color="primary" onClick={modalHandler}>
                                 Go Home
                             </Button>

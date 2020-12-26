@@ -86,12 +86,14 @@ const Login = () => {
                     isValidEmail
                 ) {
                     setValidForm(true);
+                } else {
+                    setValidForm(false);
                 }
             } else {
                 const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
                     signInForm.email
                 );
-                if (isValidEmail) setValidForm(true);
+                isValidEmail ? setValidForm(true) : setValidForm(false);
             }
         };
 
@@ -119,6 +121,18 @@ const Login = () => {
         elem2.classList.remove('login-switch-style');
         e.target.classList.add('login-switch-style');
         setisSignIn(e.target.id);
+        setSignInForm({
+            password: '',
+            email: '',
+        });
+        setSignUpForm({
+            firstName: '',
+            lastName: '',
+            password: '',
+            confirmPassword: '',
+            email: '',
+            confirmEmail: '',
+        });
     };
 
     const signUp = (
