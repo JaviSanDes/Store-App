@@ -22,6 +22,7 @@ const Settings = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [deleteAccModal, setDeleteAccModal] = useState(false);
     const [modal, setModal] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
     const [displayError, setDisplayError] = useState(false);
     const history = useHistory();
     const _id = useSelector(state => state.auth.userId);
@@ -55,10 +56,10 @@ const Settings = () => {
             });
             setIsLoading(false);
             setIsDataVisible(true);
-        } catch {
+        } catch (error) {
             setIsLoading(false);
-            console.log('error');
             setDisplayError(true);
+            setErrorMsg(error.response.data);
         }
     };
 
@@ -130,9 +131,10 @@ const Settings = () => {
                 setIsLoading(false);
                 setIsDataVisible(true);
                 toggle();
-            } catch {
-                console.log('error');
+            } catch (error) {
                 setIsLoading(false);
+                setDisplayError(true);
+                setErrorMsg(error.response.data);
             }
         }
     };
@@ -150,9 +152,10 @@ const Settings = () => {
                 setIsLoading(false);
                 setIsDataVisible(true);
                 toggle();
-            } catch {
-                console.log('error');
+            } catch (error) {
+                setDisplayError(true);
                 setIsLoading(false);
+                setErrorMsg(error.response.data);
             }
         }
     };
@@ -167,8 +170,10 @@ const Settings = () => {
             setIsDataVisible(true);
             toggle();
             history.push('/');
-        } catch {
-            console.log('error');
+        } catch (error) {
+            setDisplayError(true);
+            setIsLoading(false);
+            setErrorMsg(error.response.data);
         }
     };
 
@@ -191,7 +196,7 @@ const Settings = () => {
                     <h4 className="settings-title">Introduce Password</h4>
                     {displayError && (
                         <div className="login-errorBox">
-                            <span>Incorrect password.</span>
+                            <span>{errorMsg}</span>
                             <span
                                 role="click"
                                 onClick={() => setDisplayError(false)}

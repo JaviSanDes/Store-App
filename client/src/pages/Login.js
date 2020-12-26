@@ -14,6 +14,7 @@ const Login = () => {
     const [isSignIn, setisSignIn] = useState('login-switch-id-1');
     const [isLoading, setIsLoading] = useState(false);
     const [displayError, setDisplayError] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
     const [signInForm, setSignInForm] = useState({
         password: '',
         email: '',
@@ -51,9 +52,10 @@ const Login = () => {
                 dispatch(signInSuccess(token, firstName, lastName, email, _id));
                 setIsLoading(false);
                 history.push('/');
-            } catch {
+            } catch (error) {
                 setIsLoading(false);
                 setDisplayError(true);
+                setErrorMsg(error.response.data);
             }
         }
     };
@@ -188,7 +190,7 @@ const Login = () => {
             <FormGroup>
                 <Label>Confirm password</Label>
                 <Input
-                    type="text"
+                    type="password"
                     name="confirmPassword"
                     placeholder="Confirm Password"
                     value={signUpForm.confirmPassword}
@@ -260,7 +262,7 @@ const Login = () => {
             </div>
             {displayError && (
                 <div className="login-errorBox">
-                    <span>Incorrect email or password.</span>
+                    <span>{errorMsg}</span>
                     <span role="click" onClick={() => setDisplayError(false)}>
                         X
                     </span>

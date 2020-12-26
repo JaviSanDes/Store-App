@@ -71,14 +71,21 @@
   transform: translateX(-50%);
 }
 .login-forgot-passowrd {
-  position: absolute;
-  right: 45px;
-  top: 290px;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  top: -110px;
+  width: 130px;
   color: #007bff;
   cursor: pointer;
 }
 .login-forgot-passowrd:hover {
   color: rgb(0, 95, 197)
+}
+.login-spinner {
+  position: relative;
+  left: 130px;
+  top: 6px;
 }
 @media only screen and (max-width: 600px) {
   .login-container {
@@ -91,22 +98,15 @@
     box-shadow: none;
   }
   .login-container button {
-    bottom: 30px;
-    width: 50%;
+    margin-top: 50px;
   }
-  .login-forgot-passowrd {
-    position: absolute;
-    right: 20px;
-    top: 265px;
-    color: #007bff;
-    cursor: pointer;
+  .login-spinner {
+    position: relative;
+    left: 90px;
+    top: 6px;
   }
 }
-.login-spinner {
-  position: relative;
-  left: 150px;
-  top: 6px;
-}
+
 .login-errorBox {
   width: 100%;
   background: rgb(255, 203, 203);
