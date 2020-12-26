@@ -1,6 +1,6 @@
 .settings-auth {
     width: 600px;
-    height: 240px;
+    height: 100%;
     margin: auto;
     margin-top: 120px;
     padding: 40px;
@@ -8,6 +8,9 @@
     background: white;
 
     border: 2px solid rgb(245, 245, 245);
+}
+.settings-auth input{
+    margin-top: 20px;
 }
 .settings-container {
     width: 600px;
@@ -82,14 +85,14 @@ button {
 
      .settings-container {
         width: 95%;
-        height: 650px;
+        height: 750px;
         margin: auto;
-        margin-top: 90px;
+        margin-top: 60px;
         padding: 40px;
         border-radius: 10px;
-        background: white;
-    
-        border: 2px solid rgb(245, 245, 245);
+    }
+    .settings-container button {
+        font-size: 13px;
     }
     .settings-container h4{
         font-size: 20px;
@@ -112,8 +115,9 @@ button {
     .settings-container {
         padding: 10px;
         padding-top: 20px;
-        height: 600px;
+        height: 700px;
     }
+
 
     .settings-container input{
         height: 35px;

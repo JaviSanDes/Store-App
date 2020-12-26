@@ -22,6 +22,7 @@ const Settings = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [deleteAccModal, setDeleteAccModal] = useState(false);
     const [modal, setModal] = useState(false);
+    const [displayError, setDisplayError] = useState(false);
     const history = useHistory();
     const _id = useSelector(state => state.auth.userId);
     const [isDataVisible, setIsDataVisible] = useState(false);
@@ -55,7 +56,9 @@ const Settings = () => {
             setIsLoading(false);
             setIsDataVisible(true);
         } catch {
+            setIsLoading(false);
             console.log('error');
+            setDisplayError(true);
         }
     };
 
@@ -66,9 +69,16 @@ const Settings = () => {
             const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
                 form.email
             );
-
+            console.log(
+                isValidFirstName,
+                isValidLastName,
+                isValidEmail,
+                validForm
+            );
             if (isValidFirstName && isValidLastName && isValidEmail) {
                 setValidForm(true);
+            } else {
+                setValidForm(false);
             }
         };
 
@@ -85,7 +95,9 @@ const Settings = () => {
             const isValidConfirPass =
                 passwordForm.confirmPassword === passwordForm.password;
 
-            if (isValidPass && isValidConfirPass) setValidPassForm(true);
+            isValidPass && isValidConfirPass
+                ? setValidPassForm(true)
+                : setValidPassForm(false);
         };
 
         validator();
@@ -120,6 +132,7 @@ const Settings = () => {
                 toggle();
             } catch {
                 console.log('error');
+                setIsLoading(false);
             }
         }
     };
@@ -139,6 +152,7 @@ const Settings = () => {
                 toggle();
             } catch {
                 console.log('error');
+                setIsLoading(false);
             }
         }
     };
@@ -175,6 +189,17 @@ const Settings = () => {
             {!isDataVisible ? (
                 <div className="settings-auth">
                     <h4 className="settings-title">Introduce Password</h4>
+                    {displayError && (
+                        <div className="login-errorBox">
+                            <span>Incorrect password.</span>
+                            <span
+                                role="click"
+                                onClick={() => setDisplayError(false)}
+                            >
+                                X
+                            </span>
+                        </div>
+                    )}
                     <FormGroup>
                         <Input
                             type="password"
