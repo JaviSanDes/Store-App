@@ -14,10 +14,11 @@
 }
 .settings-container {
     width: 600px;
-    height: 800px;
+    height: 100%;
     margin: auto;
     margin-top: 100px;
     padding: 40px;
+    padding-bottom: 0;
     border-radius: 10px;
     background: white;
     position: relative;
@@ -27,11 +28,11 @@
 .settings-container button {
     position: relative;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 .settings-deleteButton {
     position: absolute;
-    top: 35px;
+    top: 50px;
     left: 100%;
     background: red;
     transform: translateX(-100%);
@@ -61,7 +62,7 @@ button {
 @media only screen and (max-width: 650px) {
     .settings-auth {
         width: 85%;
-        height: 160px;
+        height: 100%;
         margin: auto;
         margin-top: 120px;
         padding: 15px;
@@ -82,6 +83,9 @@ button {
     .settings-auth button{
         font-size: 12px;
      }
+     .settings-deleteButton {
+        top: 95px;
+    }
 
      .settings-container {
         width: 95%;
@@ -102,7 +106,6 @@ button {
 @media only screen and (max-width: 450px) {
     .settings-auth {
         width: 95%;
-        height: 160px;
     }
     .settings-auth h4{
         font-size: 16px;
@@ -110,6 +113,9 @@ button {
     }
     .settings-auth input{
        height: 28px;
+    }
+    .settings-deleteButton {
+        top: 90px;
     }
 
     .settings-container {
