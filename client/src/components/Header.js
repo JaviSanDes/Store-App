@@ -12,7 +12,6 @@ const Header = () => {
     const token = useSelector(state => state.auth.token);
     const [form, setForm] = useState({ search: '' });
     const [isVisivle, setIsVisible] = useState(false);
-    const [isStyled, setIsstyled] = useState(false);
 
     const toggleMenuHandler = () => dispatch(toggleMenu());
     const redirectHandler = () => {
@@ -42,17 +41,6 @@ const Header = () => {
 
     const clickHandler = () => {
         setIsVisible(val => !val);
-    };
-
-    const searchHadnler = () => {
-        const elem = document.getElementById('header-search-input-id');
-        if (isStyled) {
-            setIsstyled(false);
-            elem.style.width = '300px';
-        } else {
-            setIsstyled(true);
-            elem.style.width = '300px';
-        }
     };
 
     const logOutHandler = () => {
@@ -88,7 +76,6 @@ const Header = () => {
                         src={process.env.PUBLIC_URL + 'images/search.png'}
                         className="header-search-image"
                         alt="img"
-                        onClick={searchHadnler}
                         role="button"
                     />
                     <input
