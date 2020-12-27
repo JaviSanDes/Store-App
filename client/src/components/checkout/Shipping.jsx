@@ -10,11 +10,12 @@ const Shipping = props => {
     const dispatch = useDispatch();
     const [form, setForm] = useState({
         name: '',
-        country: 'spaaa',
+        country: 'Spain',
         address: '',
         zipCode: '',
         phone: '',
     });
+
     const submitHandler = e => {
         if (validForm) {
             e.preventDefault();
@@ -25,11 +26,12 @@ const Shipping = props => {
 
     useEffect(() => {
         const validator = () => {
-            const isValidName = form.name.length >= 8;
-            const isValidAdress = form.address.length >= 8;
-            const isValidZipCode = form.zipCode.length === 5;
+            const isValidName = form.name.length >= 3;
+            const isValidAdress = form.address.length >= 1;
+            const isValidZipCode = form.zipCode.length >= 5;
+            const isValidPhone = form.phone > 0;
 
-            if (isValidName && isValidAdress && isValidZipCode)
+            if (isValidName && isValidAdress && isValidZipCode && isValidPhone)
                 setValidForm(true);
         };
 
@@ -55,7 +57,7 @@ const Shipping = props => {
                         placeholder="Enter full name"
                         value={form.name}
                         onChange={handlerForm}
-                        minLength="8"
+                        minLength="3"
                         required
                     />
                 </FormGroup>
@@ -77,7 +79,7 @@ const Shipping = props => {
                     placeholder="Current address..."
                     value={form.address}
                     onChange={handlerForm}
-                    minlength="8"
+                    minlength="1"
                     required
                 />
             </FormGroup>
@@ -91,7 +93,7 @@ const Shipping = props => {
                     value={form.zipCode}
                     onChange={handlerForm}
                     minLength="5"
-                    maxLength="5"
+                    maxLength="8"
                     required
                 />
             </FormGroup>
@@ -104,6 +106,8 @@ const Shipping = props => {
                     placeholder="Current address..."
                     value={form.phone}
                     onChange={handlerForm}
+                    min="1"
+                    required
                 />
             </FormGroup>
             <div className="checkout-nextBack-buttons">

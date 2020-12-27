@@ -34,7 +34,7 @@ const Payment = props => {
             const isValidLastName = form.lastName.length >= 3;
             const isValidCardNumber = form.cardNumber.length === 12;
             const isValidExpiration = isValidDate(form.expiration);
-            const isValidCvcCode = form.cvcCode.length === 3;
+            const isValidCvcCode = form.cvcCode > 0;
             if (
                 isValidFirstName &&
                 isValidLastName &&
@@ -154,8 +154,7 @@ const Payment = props => {
                         placeholder="Enter CVC Code"
                         value={form.cvcCode}
                         onChange={handlerForm}
-                        maxLength="3"
-                        minLength="3"
+                        min="1"
                         required
                     />
                 </div>
