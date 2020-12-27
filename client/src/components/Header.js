@@ -21,7 +21,11 @@ const Header = () => {
     };
 
     useEffect(() => {
-        const other = location.pathname === '/checkout';
+        const other =
+            location.pathname === '/checkout' ||
+            location.pathname === '/settings' ||
+            location.pathname === '/orders' ||
+            location.pathname === '/login';
         other ? setIsHidden(true) : setIsHidden(false);
     }, [location]);
 
