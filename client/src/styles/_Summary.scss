@@ -76,6 +76,11 @@
     bottom: 10px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .summary-box {
+    background: rgb(238, 238, 238);
+  }
+}
 @media only screen and (max-width: 370px) {
   .summary-price div h6{
     font-size: 11px;

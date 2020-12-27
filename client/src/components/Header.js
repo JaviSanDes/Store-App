@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, NavLink } from 'react-router-dom';
+import { useHistory, NavLink, useLocation } from 'react-router-dom';
 import { logOut } from '../store/actions/auth';
 import toggleMenu from '../store/actions/menuToggle';
 
@@ -10,13 +10,21 @@ const Header = () => {
     const firstName = useSelector(state => state.auth.firstName);
     const lastName = useSelector(state => state.auth.lastName);
     const token = useSelector(state => state.auth.token);
+    const location = useLocation();
     const [form, setForm] = useState({ search: '' });
     const [isVisivle, setIsVisible] = useState(false);
+    const [isHidden, setIsHidden] = useState(false);
 
     const toggleMenuHandler = () => dispatch(toggleMenu());
     const redirectHandler = () => {
         history.push('/');
     };
+
+    useEffect(() => {
+        const other = location.pathname === '/checkout';
+        other ? setIsHidden(true) : setIsHidden(false);
+    }, [location]);
+
     const inputHandler = e => {
         const { name, value } = e.target;
         setForm(oldForm => {
@@ -71,22 +79,25 @@ const Header = () => {
                     <h1 className="header-home-link">E</h1>
                     <h1 className="header-home-link-2">commerce</h1>
                 </div>
-                <div className="header-search">
-                    <img
-                        src={process.env.PUBLIC_URL + 'images/search.png'}
-                        className="header-search-image"
-                        alt="img"
-                        role="button"
-                    />
-                    <input
-                        className="header-search-input"
-                        placeholder="Search your product"
-                        name="search"
-                        value={form.search}
-                        id="header-search-input-id"
-                        onChange={e => inputHandler(e)}
-                    />
-                </div>
+                {!isHidden && (
+                    <div className="header-search">
+                        <img
+                            src={process.env.PUBLIC_URL + 'images/search.png'}
+                            className="header-search-image"
+                            alt="img"
+                            role="button"
+                        />
+                        <input
+                            className="header-search-input"
+                            placeholder="Search your product"
+                            name="search"
+                            value={form.search}
+                            id="header-search-input-id"
+                            onChange={e => inputHandler(e)}
+                        />
+                    </div>
+                )}
+
                 <div className="header-login">
                     <img
                         src={process.env.PUBLIC_URL + 'images/user.png'}
