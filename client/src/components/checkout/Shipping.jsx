@@ -92,8 +92,8 @@ const Shipping = props => {
                     placeholder="Enter full name"
                     value={form.zipCode}
                     onChange={handlerForm}
-                    minLength="5"
-                    maxLength="8"
+                    // minLength="5"
+                    // maxLength="8"
                     required
                 />
             </FormGroup>
@@ -106,7 +106,7 @@ const Shipping = props => {
                     placeholder="Current address..."
                     value={form.phone}
                     onChange={handlerForm}
-                    min="1"
+                    pattern="/^[0-9]+$/"
                     required
                 />
             </FormGroup>

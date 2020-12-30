@@ -19,6 +19,7 @@ const Summary = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [modal, setModal] = useState(false);
     const history = useHistory();
+    const [responseText, setResponseText] = useState('');
     const dispatch = useDispatch();
     const toggle = () => setModal(!modal);
 
@@ -38,11 +39,13 @@ const Summary = () => {
                 );
                 // eslint-disable-next-line no-console
                 console.log(res);
+                setResponseText(res.data);
                 setIsLoading(false);
                 toggle();
             } catch (error) {
                 // eslint-disable-next-line no-console
                 console.log(error);
+                setIsLoading(false);
             }
         }
     };
@@ -114,17 +117,8 @@ const Summary = () => {
                 )}
             </div>
             <Modal isOpen={modal}>
-                <ModalHeader>Modal title</ModalHeader>
-                <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                </ModalBody>
+                <ModalHeader>Thank You!</ModalHeader>
+                <ModalBody>{responseText}</ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={modalHandler}>
                         Go Home
