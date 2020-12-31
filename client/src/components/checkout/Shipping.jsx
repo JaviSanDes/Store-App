@@ -92,7 +92,7 @@ const Shipping = props => {
                     placeholder="Enter full name"
                     value={form.zipCode}
                     onChange={handlerForm}
-                    // minLength="5"
+                    minLength="5"
                     // maxLength="8"
                     required
                 />
