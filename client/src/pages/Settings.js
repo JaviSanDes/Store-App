@@ -9,7 +9,6 @@ import {
     Modal,
     ModalBody,
     ModalFooter,
-    Button,
 } from 'reactstrap';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -325,25 +324,48 @@ const Settings = () => {
                     </button>
                 </div>
             )}
+
             <Modal isOpen={modal}>
-                <ModalBody className="settings-modal-body">
-                    {deleteAccModal ? (
-                        <h4>Are your sore you want to delete the account</h4>
-                    ) : (
-                        <h4>Your data has been updated successfully</h4>
-                    )}
+                <ModalBody className="summary-modal-body">
+                    <div>
+                        {deleteAccModal ? (
+                            <p>Are your sore you want to delete the account</p>
+                        ) : (
+                            <p>Your data has been updated successfully</p>
+                        )}
+                    </div>
+                    <div>
+                        <svg
+                            className="checkmark"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 52 52"
+                        >
+                            <circle
+                                className="checkmark__circle"
+                                cx="26"
+                                cy="26"
+                                r="25"
+                                fill="none"
+                            />
+                            <path
+                                className="checkmark__check"
+                                fill="none"
+                                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                            />
+                        </svg>
+                    </div>
                 </ModalBody>
-                <ModalFooter className="settings-modal-footer">
+                <ModalFooter className="summary-modal-footer">
                     {!deleteAccModal ? (
                         <div>
-                            <Button color="primary" onClick={modalHandler}>
+                            <button type="button" onClick={modalHandler}>
                                 Go Home
-                            </Button>
+                            </button>
                         </div>
                     ) : (
-                        <Button color="primary" onClick={deleteAccountHandler}>
+                        <button type="button" onClick={deleteAccountHandler}>
                             Delete Account
-                        </Button>
+                        </button>
                     )}
                 </ModalFooter>
             </Modal>
