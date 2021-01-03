@@ -1,11 +1,15 @@
+import Axios from 'axios';
 import React, { useEffect, useState, useCallback } from 'react';
 import { Progress } from 'reactstrap';
+import { useSelector } from 'react-redux';
+import Cookies from 'js-cookie';
 import Box from '../components/orders/box';
 import OrderItems from '../components/orders/OrderItems';
 
 const Orders = () => {
     const [isVisible, setIsVisible] = useState(true);
     const boxToggle = () => setIsVisible(Visible => !Visible);
+    const userId = useSelector(state => state.auth.userId);
 
     const handleUserKeyPress = useCallback(() => {
         const box = document.getElementById('prueba');
@@ -13,6 +17,26 @@ const Orders = () => {
         const down = document.getElementById('prueba3');
         const result = box.offsetHeight - up.offsetHeight;
         down.style.height = `${result - 40}px`;
+    }, []);
+
+    useEffect(async () => {
+        try {
+            const token = Cookies.get('token');
+            const headers = {
+                'Content-Type': 'application/json',
+                'x-auth-token': token,
+            };
+            const req = await Axios.post(
+                'http://localhost:3000/api/orders',
+                {
+                    userId,
+                },
+                { headers }
+            );
+            console.log('ORDERS!!!', req);
+        } catch (error) {
+            console.log(error);
+        }
     }, []);
 
     useEffect(() => {
