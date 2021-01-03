@@ -7,14 +7,6 @@ const Orders = () => {
     const [isVisible, setIsVisible] = useState(true);
     const boxToggle = () => setIsVisible(Visible => !Visible);
 
-    /* useEffect(() => {
-        const box = document.getElementById("prueba");
-        const up = document.getElementById("prueba2");
-        const down = document.getElementById("prueba3");
-        const result = box.offsetHeight - up.offsetHeight;
-        down.style.height = `${result - 40}px`;
-    }, []); */
-
     const handleUserKeyPress = useCallback(() => {
         const box = document.getElementById('prueba');
         const up = document.getElementById('prueba2');
