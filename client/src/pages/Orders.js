@@ -10,6 +10,7 @@ const Orders = () => {
     const [isVisible, setIsVisible] = useState(true);
     const boxToggle = () => setIsVisible(Visible => !Visible);
     const userId = useSelector(state => state.auth.userId);
+    const [orders, setOrders] = useState([]);
 
     const handleUserKeyPress = useCallback(() => {
         const box = document.getElementById('prueba');
@@ -33,8 +34,11 @@ const Orders = () => {
                 },
                 { headers }
             );
+            // eslint-disable-next-line no-console
             console.log('ORDERS!!!', req);
+            setOrders([...req.data]);
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.log(error);
         }
     }, []);
@@ -51,12 +55,11 @@ const Orders = () => {
         <div className="orders-container">
             <div className="orders-ordersList">
                 <h4>My Orders</h4>
+                {orders.map((order, i) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <Box key={i} />
+                ))}
                 <Box viewOrder={boxToggle} />
-                <Box />
-                <Box />
-                <Box />
-                <Box />
-                <Box />
             </div>
             {isVisible && (
                 <div className="orders-orderDetails" id="prueba">
