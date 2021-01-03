@@ -56,10 +56,14 @@ const Orders = () => {
             <div className="orders-ordersList">
                 <h4>My Orders</h4>
                 {orders.map((order, i) => (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <Box key={i} />
+                    <Box
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={i}
+                        price={order.price.total}
+                        date={order.dateOrder}
+                        viewOrder={boxToggle}
+                    />
                 ))}
-                <Box viewOrder={boxToggle} />
             </div>
             {isVisible && (
                 <div className="orders-orderDetails" id="prueba">

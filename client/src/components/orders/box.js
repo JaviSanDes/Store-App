@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Box = props => {
-    const { viewOrder } = props;
+    const { viewOrder, date, price } = props;
     return (
         <div className="orders-orderBox">
             <div className="orders-orderBox-header">
@@ -18,9 +18,9 @@ const Box = props => {
                     <p className="orders-orderInfo-prcie">Total Price:</p>
                 </div>
                 <div className="orders-orderInfo-values">
-                    <p>7th April 2019</p>
+                    <p>{date}</p>
                     <p>13th April</p>
-                    <p className="orders-orderInfo-values-price">$249.7</p>
+                    <p className="orders-orderInfo-values-price">${price}</p>
                 </div>
             </div>
             <button
@@ -36,6 +36,8 @@ const Box = props => {
 
 Box.propTypes = {
     viewOrder: PropTypes.func.isRequired,
+    price: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
 };
 
 export default Box;
