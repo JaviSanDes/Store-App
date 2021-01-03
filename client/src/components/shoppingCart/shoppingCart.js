@@ -28,7 +28,7 @@ const ShoppingCart = () => {
     };
 
     const checkoutHandler = () => {
-        token ? history.push('/checkout') : history.push('/login');
+        token ? history.push('/checkout') : history.push('/Auth');
     };
 
     const products = [];

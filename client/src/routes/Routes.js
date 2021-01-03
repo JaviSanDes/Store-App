@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import Checkout from '../pages/Checkout';
 import Settings from '../pages/Settings';
 import Orders from '../pages/Orders';
-import Login from '../pages/Login';
+import Auth from '../pages/Auth';
 
 const Routes = () => {
     const token = useSelector(state => state.auth.token);
@@ -48,16 +48,16 @@ const Routes = () => {
                         <Home group="search" />
                     </Route>
                     <Route path="/checkout">
-                        {token ? <Checkout /> : <Login />}
+                        {token ? <Checkout /> : <Auth />}
                     </Route>
                     <Route path="/settings">
-                        {token ? <Settings /> : <Login />}
+                        {token ? <Settings /> : <Auth />}
                     </Route>
                     <Route path="/orders">
-                        {token ? <Orders /> : <Login />}
+                        {token ? <Orders /> : <Auth />}
                     </Route>
-                    <Route path="/login">
-                        <Login />
+                    <Route path="/Auth">
+                        <Auth />
                     </Route>
 
                     <Route exact path="/">

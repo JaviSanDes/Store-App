@@ -25,7 +25,7 @@ const Header = () => {
             location.pathname === '/checkout' ||
             location.pathname === '/settings' ||
             location.pathname === '/orders' ||
-            location.pathname === '/login';
+            location.pathname === '/Auth';
         other ? setIsHidden(true) : setIsHidden(false);
     }, [location]);
 
@@ -60,7 +60,7 @@ const Header = () => {
     };
 
     const signHandler = () => {
-        history.push('/login');
+        history.push('/Auth');
     };
 
     return (
