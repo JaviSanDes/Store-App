@@ -34,8 +34,6 @@ const Orders = () => {
                 },
                 { headers }
             );
-            // eslint-disable-next-line no-console
-            console.log('ORDERS!!!', req);
             setOrders([...req.data]);
         } catch (error) {
             // eslint-disable-next-line no-console
