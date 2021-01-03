@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
-import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { signInSuccess } from '../store/actions/auth';
+import SignIn from '../components/auth/SignIn';
+import SignUp from '../components/auth/SignUp';
 
-const Login = () => {
+const Auth = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const [validForm, setValidForm] = useState(false);
@@ -135,127 +136,6 @@ const Login = () => {
         });
     };
 
-    const signUp = (
-        <Form className="login-form">
-            <FormGroup>
-                <Label>First Name</Label>
-                <Input
-                    type="text"
-                    name="firstName"
-                    placeholder="Enter your first name"
-                    value={signUpForm.firstName}
-                    onChange={signUpFormHandler}
-                    minLength="3"
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Last Name</Label>
-                <Input
-                    type="text"
-                    name="lastName"
-                    placeholder="Enter your last name"
-                    value={signUpForm.lastName}
-                    onChange={signUpFormHandler}
-                    minLength="3"
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Your email</Label>
-                <Input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="'characters@characters.domain'"
-                    value={signUpForm.email}
-                    onChange={signUpFormHandler}
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Confirm email</Label>
-                <Input
-                    type="email"
-                    name="confirmEmail"
-                    placeholder="Confirm your email"
-                    pattern={signUpForm.email}
-                    title="Must match the previous entry."
-                    value={signUpForm.confirmEmail}
-                    onChange={signUpFormHandler}
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Your password</Label>
-                <Input
-                    type="password"
-                    name="password"
-                    id="login-input-password"
-                    placeholder="Enter your Password"
-                    value={signUpForm.password}
-                    onChange={signUpFormHandler}
-                    minLength="8"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Confirm password</Label>
-                <Input
-                    type="password"
-                    name="confirmPassword"
-                    placeholder="Confirm Password"
-                    value={signUpForm.confirmPassword}
-                    onChange={signUpFormHandler}
-                    minLength="8"
-                    pattern={signUpForm.password}
-                    title="Must match the previous entry."
-                    required
-                />
-            </FormGroup>
-            <button onClick={e => submitHandler(e)} type="submit">
-                CREATE ACCOUNT
-            </button>
-            {isLoading && <Spinner color="primary" className="login-spinner" />}
-        </Form>
-    );
-
-    const signIn = (
-        <Form className="login-form">
-            <FormGroup>
-                <Label for="email">Your email</Label>
-                <Input
-                    type="email"
-                    name="email"
-                    id="login-input-email"
-                    placeholder="Enter your email"
-                    value={signInForm.email}
-                    onChange={signInFormHandler}
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="'characters@characters.domain'"
-                    required
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label>Your password</Label>
-                <Input
-                    type="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    value={signInForm.password}
-                    onChange={signInFormHandler}
-                    required
-                />
-            </FormGroup>
-            <button onClick={e => submitHandler(e)} type="submit">
-                LOGIN
-            </button>
-            {isLoading && <Spinner color="primary" className="login-spinner" />}
-        </Form>
-    );
-
     return (
         <div className="login-container">
             <div className="login-switch">
@@ -283,7 +163,21 @@ const Login = () => {
                 </div>
             )}
 
-            {isSignIn === 'login-switch-id-1' ? signIn : signUp}
+            {isSignIn === 'login-switch-id-1' ? (
+                <SignIn
+                    signInForm={signInForm}
+                    signInFormHandler={() => signInFormHandler()}
+                    submitHandler={() => submitHandler()}
+                    isLoading={isLoading}
+                />
+            ) : (
+                <SignUp
+                    signUpForm={signUpForm}
+                    signUpFormHandler={() => signUpFormHandler()}
+                    submitHandler={() => submitHandler()}
+                    isLoading={isLoading}
+                />
+            )}
             {isSignIn === 'login-switch-id-1' && (
                 <p className="login-forgot-passowrd">Forgot Password?</p>
             )}
@@ -291,4 +185,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Auth;
