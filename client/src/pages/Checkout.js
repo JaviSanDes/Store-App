@@ -40,6 +40,7 @@ const Checkout = () => {
         setPhase(phase => (phase += 1));
         window.scrollTo(0, 0);
     };
+
     let Phase = <Order />;
     switch (phase) {
         case 1:
@@ -57,7 +58,6 @@ const Checkout = () => {
             Phase = <Summary />;
             break;
         default:
-        // code block
     }
     return (
         <div className="checkout-container" id="checkout-container-id">
