@@ -3,9 +3,10 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { Spinner, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Spinner } from 'reactstrap';
 import { removeAllProducts } from '../../store/actions/Products';
 import { cleanOrderData } from '../../store/actions/OrderData';
+import SummaryModal from './SummaryModal';
 
 const Summary = () => {
     const orderData = useSelector(state => state.orderData);
@@ -109,36 +110,11 @@ const Summary = () => {
                     <Spinner color="primary" className="summary-spinner" />
                 )}
             </div>
-            <Modal isOpen={modal}>
-                <ModalBody className="summary-modal-body">
-                    <div>{responseText}</div>
-                    <div>
-                        <svg
-                            className="checkmark"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 52 52"
-                        >
-                            <circle
-                                className="checkmark__circle"
-                                cx="26"
-                                cy="26"
-                                r="25"
-                                fill="none"
-                            />
-                            <path
-                                className="checkmark__check"
-                                fill="none"
-                                d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                            />
-                        </svg>
-                    </div>
-                </ModalBody>
-                <ModalFooter className="summary-modal-footer">
-                    <button onClick={modalHandler} type="button">
-                        Go Home
-                    </button>{' '}
-                </ModalFooter>
-            </Modal>
+            <SummaryModal
+                modal={modal}
+                responseText={responseText}
+                modalHandler={modalHandler}
+            />
         </div>
     );
 };
