@@ -1,18 +1,11 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
-import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Spinner,
-    Modal,
-    ModalBody,
-    ModalFooter,
-} from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Auth from '../components/settings/Auth';
+import SettingsForm from '../components/settings/SettingsForm';
 
 const Settings = () => {
     const [password, setPassword] = useState('');
@@ -186,145 +179,30 @@ const Settings = () => {
     return (
         <div>
             {!isDataVisible ? (
-                <div className="settings-auth">
-                    <h4 className="settings-title">Introduce Password</h4>
-                    {displayError && (
-                        <div className="login-errorBox">
-                            <span>{errorMsg}</span>
-                            <span
-                                role="click"
-                                onClick={() => setDisplayError(false)}
-                            >
-                                X
-                            </span>
-                        </div>
-                    )}
-                    <FormGroup>
-                        <Input
-                            type="password"
-                            name="password"
-                            id="examplePassword"
-                            value={password}
-                            onChange={passwordHandler}
-                            required
-                        />
-                    </FormGroup>
-                    <button type="button" onClick={nextButtonHandler}>
-                        Next
-                    </button>
-                    {isLoading && <Spinner color="primary" />}
-                </div>
+                <Auth
+                    displayError={displayError}
+                    errorMsg={errorMsg}
+                    setDisplayError={setDisplayError}
+                    password={password}
+                    passwordHandler={passwordHandler}
+                    nextButtonHandler={nextButtonHandler}
+                    isLoading={isLoading}
+                />
             ) : (
-                <div className="settings-container">
-                    <h4 className="settings-title">Personal Information</h4>
-                    {displayError && (
-                        <div className="login-errorBox">
-                            <span>{errorMsg}</span>
-                            <span
-                                role="click"
-                                onClick={() => setDisplayError(false)}
-                            >
-                                X
-                            </span>
-                        </div>
-                    )}
-                    <Form className="shipping-container">
-                        <FormGroup>
-                            <Label for="examplePassword">First Name</Label>
-                            <Input
-                                type="text"
-                                name="firstName"
-                                id="examplePassword"
-                                value={form.firstName}
-                                minlength="3"
-                                onChange={formHandler}
-                                required
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="exampleSelect">Last Name</Label>
-                            <Input
-                                type="text"
-                                name="lastName"
-                                id="examplePassword"
-                                value={form.lastName}
-                                minlength="3"
-                                onChange={formHandler}
-                                required
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="examplePassword">Email</Label>
-                            <Input
-                                type="email"
-                                name="email"
-                                id="examplePassword"
-                                value={form.email}
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                onChange={formHandler}
-                                required
-                            />
-                        </FormGroup>
-                        <button type="submit" onClick={changeInfoHandler}>
-                            Change Info
-                        </button>
-                        {isLoading && (
-                            <Spinner
-                                color="primary"
-                                className="settings-spinner"
-                            />
-                        )}
-                    </Form>
-                    <Form className="shipping-container">
-                        <FormGroup>
-                            <Label for="examplePassword">New Password</Label>
-                            <Input
-                                type="password"
-                                name="password"
-                                id="examplePassword"
-                                value={passwordForm.password}
-                                minLength="8"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                onChange={passwordFormHandler}
-                                required
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="examplePassword">
-                                Confirm Password
-                            </Label>
-                            <Input
-                                type="password"
-                                name="confirmPassword"
-                                id="examplePassword"
-                                minLength="8"
-                                value={passwordForm.confirmPassword}
-                                pattern={passwordForm.password}
-                                title="Must match the previous entry."
-                                onChange={passwordFormHandler}
-                                required
-                            />
-                        </FormGroup>
-                        <button type="submit" onClick={changePasswordHandler}>
-                            Change Password
-                        </button>
-                        {isLoading && (
-                            <Spinner
-                                color="primary"
-                                className="settings-spinner"
-                            />
-                        )}
-                    </Form>
-                    <button
-                        type="button"
-                        className="settings-deleteButton"
-                        onClick={switchModal}
-                    >
-                        Delete Account
-                    </button>
-                </div>
+                <SettingsForm
+                    displayError={displayError}
+                    errorMsg={errorMsg}
+                    setDisplayError={setDisplayError}
+                    form={form}
+                    formHandler={formHandler}
+                    changeInfoHandler={changeInfoHandler}
+                    isLoading={isLoading}
+                    passwordForm={passwordForm}
+                    passwordFormHandler={passwordFormHandler}
+                    changePasswordHandler={changePasswordHandler}
+                    switchModal={switchModal}
+                />
             )}
-
             <Modal isOpen={modal}>
                 <ModalBody className="summary-modal-body">
                     <div>

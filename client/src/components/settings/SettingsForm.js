@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
 
-const Settings = props => {
+const SettingsForm = props => {
     const {
         displayError,
         errorMsg,
@@ -118,7 +118,7 @@ const Settings = props => {
     );
 };
 
-Settings.propTypes = {
+SettingsForm.propTypes = {
     displayError: PropTypes.bool.isRequired,
     errorMsg: PropTypes.string.isRequired,
     setDisplayError: PropTypes.func.isRequired,
@@ -134,4 +134,4 @@ Settings.propTypes = {
     switchModal: PropTypes.func.isRequired,
 };
 
-export default Settings;
+export default SettingsForm;
