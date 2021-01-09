@@ -14,7 +14,7 @@ const SignIn = props => {
                     id="login-input-email"
                     placeholder="Enter your email"
                     value={signInForm.email}
-                    onChange={signInFormHandler}
+                    onChange={e => signInFormHandler(e)}
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     title="'characters@characters.domain'"
                     required
@@ -27,7 +27,7 @@ const SignIn = props => {
                     name="password"
                     placeholder="Enter your password"
                     value={signInForm.password}
-                    onChange={signInFormHandler}
+                    onChange={e => signInFormHandler(e)}
                     required
                 />
             </FormGroup>

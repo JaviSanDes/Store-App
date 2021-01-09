@@ -166,8 +166,8 @@ const Auth = () => {
             {isSignIn === 'login-switch-id-1' ? (
                 <SignIn
                     signInForm={signInForm}
-                    signInFormHandler={() => signInFormHandler()}
-                    submitHandler={() => submitHandler()}
+                    signInFormHandler={e => signInFormHandler(e)}
+                    submitHandler={e => submitHandler(e)}
                     isLoading={isLoading}
                 />
             ) : (
