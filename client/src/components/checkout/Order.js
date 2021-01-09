@@ -17,7 +17,7 @@ const Order = props => {
             .filter(product => product.quantity > 0)
             .map(product => {
                 return {
-                    product: product._id,
+                    productID: product._id,
                     quantity: product.quantity,
                 };
             });

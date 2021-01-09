@@ -1,10 +1,20 @@
 import React from 'react';
-import { Progress } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { Progress } from 'reactstrap';
 import OrderItems from './OrderItems';
 
 const OrderDetails = props => {
-    const { boxToggle } = props;
+    const { boxToggle, orderInfo } = props;
+    const {
+        DeliveryAddress,
+        OrderDate,
+        DeliveryTime,
+        SubTotal,
+        DeliveryFee,
+        Total,
+        products,
+    } = orderInfo;
+    console.log(products);
     return (
         <div className="orders-orderDetails" id="prueba">
             <div className="orders-orderDetails-up" id="prueba2">
@@ -22,9 +32,9 @@ const OrderDetails = props => {
                             <p>Delivery Time: </p>
                         </div>
                         <div>
-                            <p>1865 Chenoweth Drive, Nashville, Tennessee</p>
-                            <p>7th April 2019</p>
-                            <p>13th April</p>
+                            <p>{DeliveryAddress}</p>
+                            <p>{OrderDate}</p>
+                            <p>{DeliveryTime}</p>
                         </div>
                     </div>
                     <div className="orders-delivery-info-2">
@@ -34,9 +44,9 @@ const OrderDetails = props => {
                             <p>Total</p>
                         </div>
                         <div>
-                            <p>$279</p>
-                            <p>$39</p>
-                            <p>$318</p>
+                            <p>{SubTotal}</p>
+                            <p>{DeliveryFee}</p>
+                            <p>{Total}</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +82,7 @@ const OrderDetails = props => {
             </div>
 
             <div className="orders-orderDetails-down" id="prueba3">
-                <OrderItems />
+                <OrderItems products={products} />
             </div>
         </div>
     );
@@ -80,6 +90,8 @@ const OrderDetails = props => {
 
 OrderDetails.propTypes = {
     boxToggle: PropTypes.func.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
+    orderInfo: PropTypes.object.isRequired,
 };
 
 export default OrderDetails;

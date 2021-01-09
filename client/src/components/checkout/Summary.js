@@ -17,6 +17,8 @@ const Summary = () => {
     const dispatch = useDispatch();
     const toggle = () => setModal(!modal);
 
+    console.log(orderData);
+
     const payHandler = async () => {
         setIsLoading(true);
         const token = Cookies.get('token');

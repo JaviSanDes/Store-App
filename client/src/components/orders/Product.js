@@ -8,7 +8,7 @@ const Product2 = props => {
         <div className="orderItems-product">
             <div className="orderItems-image">
                 <img
-                    src={process.env.PUBLIC_URL + `images/${image}`}
+                    src={process.env.PUBLIC_URL + `images/products/${image}`}
                     alt="img"
                 />
             </div>

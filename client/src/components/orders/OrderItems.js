@@ -1,11 +1,10 @@
-import React, { useEffect, useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Product from './Product';
 
-const OrderItems = () => {
-    const productsOrderItemsed = useSelector(state => state.products.products);
-    const orderItems = useSelector(state => state.products.order);
-
+const OrderItems = props => {
+    const { products } = props;
+    /*
     const handleUserKeyPress = useCallback(() => {
         setTimeout(() => {
             const down = document.getElementById('prueba3');
@@ -27,12 +26,19 @@ const OrderItems = () => {
             window.removeEventListener('resize', handleUserKeyPress);
         };
     }, []);
+    */
 
-    const products = [];
-    orderItems.map(id => {
-        productsOrderItemsed.map(product => {
-            if (product._id === id && product.quantity > 0) {
-                products.push(
+    return (
+        <div className="orderItems-container">
+            <div className="orderItems-products-header" id="prueba4">
+                <p className="orderItems-products-header-description">
+                    Description
+                </p>
+                <p className="orderItems-products-header-qty">Qty</p>
+                <p className="orderItems-products-header-total">Price</p>
+            </div>
+            <div className="orderItems-products-list" id="prueba5">
+                {products.map(product => (
                     <Product
                         key={product._id}
                         id={product._id}
@@ -44,26 +50,15 @@ const OrderItems = () => {
                         quantity={product.quantity}
                         measure={product.measure}
                     />
-                );
-            }
-            return null;
-        });
-        return null;
-    });
-    return (
-        <div className="orderItems-container">
-            <div className="orderItems-products-header" id="prueba4">
-                <p className="orderItems-products-header-description">
-                    Description
-                </p>
-                <p className="orderItems-products-header-qty">Qty</p>
-                <p className="orderItems-products-header-total">Price</p>
-            </div>
-            <div className="orderItems-products-list" id="prueba5">
-                {products}
+                ))}
             </div>
         </div>
     );
+};
+
+OrderItems.propTypes = {
+    // eslint-disable-next-line react/forbid-prop-types
+    products: PropTypes.array.isRequired,
 };
 
 export default OrderItems;

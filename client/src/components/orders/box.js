@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Box = props => {
-    const { viewOrder, date, price } = props;
+    const { viewOrder, date, price, id } = props;
+    console.log(id);
     return (
         <div className="orders-orderBox">
             <div className="orders-orderBox-header">
@@ -26,7 +27,7 @@ const Box = props => {
             <button
                 className="orders-orderBox-button"
                 type="button"
-                onClick={viewOrder}
+                onClick={() => viewOrder(id)}
             >
                 View order
             </button>
@@ -35,8 +36,9 @@ const Box = props => {
 };
 
 Box.propTypes = {
+    id: PropTypes.number.isRequired,
     viewOrder: PropTypes.func.isRequired,
-    price: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
 };
 

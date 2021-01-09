@@ -7,10 +7,20 @@ import OrderDetails from '../components/orders/OrderDetails';
 
 const Orders = () => {
     const [isVisible, setIsVisible] = useState(true);
+    const [orderInfo, setOrderInfo] = useState({
+        DeliveryAddress: false,
+        OrderDate: false,
+        DeliveryTime: false,
+        SubTotal: false,
+        DeliveryFee: false,
+        Total: false,
+        products: [],
+    });
     const boxClose = () => setIsVisible(false);
-    const boxOpen = () => setIsVisible(true);
     const userId = useSelector(state => state.auth.userId);
     const [orders, setOrders] = useState([]);
+
+    console.log(orders, orderInfo);
 
     const handleUserKeyPress = useCallback(() => {
         const box = document.getElementById('prueba');
@@ -49,6 +59,21 @@ const Orders = () => {
         };
     }, [handleUserKeyPress]);
 
+    const boxOpen = id => {
+        setIsVisible(true);
+        const orderData = orders[id];
+        setOrderInfo({
+            ...orderInfo,
+            DeliveryAddress: orderData.shippingData.address,
+            OrderDate: orderData.dateOrder,
+            DeliveryTime: false,
+            SubTotal: orderData.price.pvp,
+            DeliveryFee: false,
+            Total: orderData.price.total,
+            products: orderData.products.map(product => ({ ...product })),
+        });
+    };
+
     return (
         <div className="orders-container">
             <div className="orders-ordersList">
@@ -57,13 +82,16 @@ const Orders = () => {
                     <Box
                         // eslint-disable-next-line react/no-array-index-key
                         key={i}
+                        id={i}
                         price={order.price.total}
                         date={order.dateOrder}
-                        viewOrder={boxOpen}
+                        viewOrder={id => boxOpen(id)}
                     />
                 ))}
             </div>
-            {isVisible && <OrderDetails boxToggle={boxClose} />}
+            {isVisible && (
+                <OrderDetails boxToggle={boxClose} orderInfo={orderInfo} />
+            )}
         </div>
     );
 };
