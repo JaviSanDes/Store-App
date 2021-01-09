@@ -7,7 +7,8 @@ import OrderDetails from '../components/orders/OrderDetails';
 
 const Orders = () => {
     const [isVisible, setIsVisible] = useState(true);
-    const boxToggle = () => setIsVisible(Visible => !Visible);
+    const boxClose = () => setIsVisible(false);
+    const boxOpen = () => setIsVisible(true);
     const userId = useSelector(state => state.auth.userId);
     const [orders, setOrders] = useState([]);
 
@@ -58,11 +59,11 @@ const Orders = () => {
                         key={i}
                         price={order.price.total}
                         date={order.dateOrder}
-                        viewOrder={boxToggle}
+                        viewOrder={boxOpen}
                     />
                 ))}
             </div>
-            {isVisible && <OrderDetails boxToggle={boxToggle} />}
+            {isVisible && <OrderDetails boxToggle={boxClose} />}
         </div>
     );
 };
