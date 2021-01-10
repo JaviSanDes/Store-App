@@ -81,7 +81,7 @@ const Product = props => {
                 description={description}
                 price={price}
                 image={image}
-                isVisible={visible}
+                isvisible={visible}
                 quantity={quantity}
                 group={group}
                 setVisible={() => setVisible(!visible)}

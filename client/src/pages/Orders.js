@@ -6,7 +6,7 @@ import Box from '../components/orders/box';
 import OrderDetails from '../components/orders/OrderDetails';
 
 const Orders = () => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isvisible, setIsVisible] = useState(true);
     const [orderInfo, setOrderInfo] = useState({
         DeliveryAddress: false,
         OrderDate: false,
@@ -89,7 +89,7 @@ const Orders = () => {
                     />
                 ))}
             </div>
-            {isVisible && (
+            {isvisible && (
                 <OrderDetails boxToggle={boxClose} orderInfo={orderInfo} />
             )}
         </div>

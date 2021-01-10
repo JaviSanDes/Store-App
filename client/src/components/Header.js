@@ -12,7 +12,7 @@ const Header = () => {
     const token = useSelector(state => state.auth.token);
     const location = useLocation();
     const [form, setForm] = useState({ search: '' });
-    const [isVisivle, setIsVisible] = useState(false);
+    const [isvisivle, setIsVisible] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
 
     const toggleMenuHandler = () => dispatch(toggleMenu());
@@ -110,7 +110,7 @@ const Header = () => {
                         onClick={clickHandler}
                         role="button"
                     />
-                    {isVisivle && (
+                    {isvisivle && (
                         <div className="header-user-box">
                             <div className="header-triangle"></div>
                             <div>

@@ -15,7 +15,7 @@ const ProductModal = props => {
         description,
         price,
         image,
-        isVisible,
+        isvisible,
         setVisible,
         quantity,
         group,
@@ -25,7 +25,7 @@ const ProductModal = props => {
     const dispatch = useDispatch();
 
     return (
-        <Modal isOpen={isVisible} toggle={toggle} size="lg">
+        <Modal isOpen={isvisible} toggle={toggle} size="lg">
             <ModalHeader toggle={toggle} />
             <ModalBody>
                 <div className="modal-body">
@@ -76,7 +76,7 @@ ProductModal.propTypes = {
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    isVisible: PropTypes.bool.isRequired,
+    isvisible: PropTypes.bool.isRequired,
     setVisible: PropTypes.func.isRequired,
     quantity: PropTypes.number.isRequired,
     group: PropTypes.string.isRequired,
