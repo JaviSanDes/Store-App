@@ -1,78 +1,73 @@
-//@media (orientation: landscape) {
-    @media only screen and (min-width: 1000px) {
-        .checkout-container {
-            height: 85vh;
-            min-height: 650px;
-            max-height: 700px;
-            width: 750px;
-            margin: auto;
-            background: white;
-            border: 1.5px solid rgb(245, 245, 245);
-            border-radius: 10px;
-            padding: 40px;
-            padding-left: 120px;
-            padding-right: 120px;
-            margin-top: 80px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        .checkout-pahses {
-            max-height: 95px;
-            min-height: 95px;
-        }
-        .checkout-content {
-            height: 78%;
-        }
-        .checkout-price {
-            position: absolute;
-            right: 20px;
-            top: 85px;
-            width: 230px;
-            display: flex;
-            background: white;
-            padding: 8px;
-            border: 1.5px solid rgb(245, 245, 245);
-            border-radius: 10px;
-        }
-        .checkout-price-name {
-            min-width: 60%;
-        }
-        .checkout-price div {
-            width: 50%;
-            text-align: right;
-        }
-        
-        #checkout-backButton-id {
-            left: 0;
-        }
-        #checkout-nextButton-id {
-            right: 0px;
-        }
-        .checkout-nextButton {
-            position: absolute;
-            border: none;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 20px 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
-                0 0 8px rgb(197, 197, 197);
-            z-index: 120;
-        }
-        .checkout-nextBack-buttons {
-            display: flex;
-            width: 100%;
-            position: relative;
-            height: 60px;
-            margin-top: 40px;
-        }
+@media only screen and (min-width: 1000px) {
+    .checkout-container {
+        height: 85vh;
+        min-height: 650px;
+        max-height: 700px;
+        width: 750px;
+        margin: auto;
+        background: white;
+        border: 1.5px solid rgb(245, 245, 245);
+        border-radius: 10px;
+        padding: 40px;
+        padding-left: 120px;
+        padding-right: 120px;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
     }
-//}
-
-//@media (orientation: portrait) {
+    .checkout-pahses {
+        max-height: 95px;
+        min-height: 95px;
+    }
+    .checkout-content {
+        height: 78%;
+    }
+    .checkout-price {
+        position: absolute;
+        right: 20px;
+        top: 85px;
+        width: 230px;
+        display: flex;
+        background: white;
+        padding: 8px;
+        border: 1.5px solid rgb(245, 245, 245);
+        border-radius: 10px;
+    }
+    .checkout-price-name {
+        min-width: 60%;
+    }
+    .checkout-price div {
+        width: 50%;
+        text-align: right;
+    }
+    #checkout-backButton-id {
+        left: 0;
+    }
+    #checkout-nextButton-id {
+        right: 0px;
+    }
+    .checkout-nextButton {
+        position: absolute;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+            0 0 8px rgb(197, 197, 197);
+        z-index: 120;
+    }
+    .checkout-nextBack-buttons {
+        display: flex;
+        width: 100%;
+        position: relative;
+        height: 60px;
+        margin-top: 40px;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .checkout-container {
         margin: auto;
@@ -194,8 +189,6 @@
         }
     }
     @media only screen and (max-width: 400px) {
-        .checkout-container {
-        }
         .checkout2 {
             min-height: 80px;
             max-height: 80px;
@@ -221,7 +214,6 @@
     display: flex;
     width: 100%;
 }
-
 .checkout-phase {
     margin: auto;
     z-index: 2;
@@ -230,7 +222,6 @@
 .checkout-phase p {
     font-weight: bold;
 }
-
 .checkout-circle {
     width: 30px;
     height: 30px;
