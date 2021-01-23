@@ -46,7 +46,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/legume">
+                        <NavLink to="/legume">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -67,7 +67,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/meat">
+                        <NavLink to="/meat">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -88,7 +88,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/vegetables">
+                        <NavLink to="/vegetables">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -109,7 +109,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/fruits">
+                        <NavLink to="/fruits">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -130,7 +130,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/fish">
+                        <NavLink to="/fish">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -151,7 +151,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/drinks">
+                        <NavLink to="/drinks">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -172,7 +172,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/frozen">
+                        <NavLink to="/frozen">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -193,7 +193,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/pasta">
+                        <NavLink to="/pasta">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -214,7 +214,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/sweets">
+                        <NavLink to="/sweets">
                             <div className="sideBar-link">
                                 <img
                                     src={
@@ -235,7 +235,7 @@ const SideBar = () => {
                         action
                         className="sideBar-menu-group"
                     >
-                        <NavLink extact to="/sauces">
+                        <NavLink to="/sauces">
                             <div className="sideBar-link">
                                 <img
                                     src={
