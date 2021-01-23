@@ -8,19 +8,6 @@ import Summary from '../components/checkout/Summary';
 const Checkout = () => {
     const [phase, setPhase] = useState(1);
 
-    const calculate = () => {
-        const header = document.getElementById('Header-container-id');
-        header.style.position = 'absolute';
-        const heightDimension =
-            window.innerWidth < 370
-                ? window.innerHeight * 0.85
-                : window.innerHeight * 0.88;
-        const element = document.getElementById('checkout-container-id');
-        // element.style.height = heightDimension + 'px';
-        element.style.minHeight =
-            heightDimension > 700 ? '700px' : heightDimension + 'px';
-    };
-
     const backHandler = () => {
         // eslint-disable-next-line no-shadow
         setPhase(phase => (phase -= 1));
@@ -28,12 +15,24 @@ const Checkout = () => {
     };
 
     useEffect(() => {
+        const calculate = () => {
+            const header = document.getElementById('Header-container-id');
+            header.style.position = 'absolute';
+            const heightDimension =
+                window.innerWidth < 370
+                    ? window.innerHeight * 0.85
+                    : window.innerHeight * 0.88;
+            const element = document.getElementById('checkout-container-id');
+            // element.style.height = heightDimension + 'px';
+            element.style.minHeight =
+                heightDimension > 700 ? '700px' : heightDimension + 'px';
+        };
         window.addEventListener('resize', calculate);
         calculate();
         return () => {
             window.removeEventListener('resize', calculate);
         };
-    }, [calculate]);
+    }, []);
 
     const phaseHandler = () => {
         // eslint-disable-next-line no-shadow

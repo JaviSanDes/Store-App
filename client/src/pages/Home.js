@@ -26,7 +26,7 @@ const Home = props => {
         group === 'search'
             ? dispatch(getProducts(`search/${params.id}`))
             : dispatch(getProducts(group));
-    }, [group]);
+    }, [group, params.id]);
 
     if (group === 'offer') {
         storeProducts = storeProducts.filter(product => product.offer === 50);

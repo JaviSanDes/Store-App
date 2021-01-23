@@ -23,7 +23,7 @@ const SettingsForm = props => {
             {displayError && (
                 <div className="login-errorBox">
                     <span>{errorMsg}</span>
-                    <span role="click" onClick={() => setDisplayError(false)}>
+                    <span role="button" onClick={() => setDisplayError(false)}>
                         X
                     </span>
                 </div>

@@ -62,12 +62,6 @@ const Settings = () => {
             const isValidEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(
                 form.email
             );
-            console.log(
-                isValidFirstName,
-                isValidLastName,
-                isValidEmail,
-                validForm
-            );
             if (isValidFirstName && isValidLastName && isValidEmail) {
                 setValidForm(true);
             } else {

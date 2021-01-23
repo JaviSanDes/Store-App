@@ -28,26 +28,29 @@ const Orders = () => {
         down.style.height = `${result - 40}px`;
     }, []);
 
-    useEffect(async () => {
-        try {
-            const token = Cookies.get('token');
-            const headers = {
-                'Content-Type': 'application/json',
-                'x-auth-token': token,
-            };
-            const req = await Axios.post(
-                'http://localhost:3000/api/orders',
-                {
-                    userId,
-                },
-                { headers }
-            );
-            setOrders([...req.data]);
-        } catch (error) {
-            // eslint-disable-next-line no-console
-            console.log(error);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const token = Cookies.get('token');
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': token,
+                };
+                const req = await Axios.post(
+                    'http://localhost:3000/api/orders',
+                    {
+                        userId,
+                    },
+                    { headers }
+                );
+                setOrders([...req.data]);
+            } catch (error) {
+                // eslint-disable-next-line no-console
+                console.log(error);
+            }
         }
-    }, []);
+        fetchData();
+    }, [userId]);
 
     useEffect(() => {
         window.addEventListener('resize', handleUserKeyPress);
