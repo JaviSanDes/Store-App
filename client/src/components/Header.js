@@ -117,10 +117,10 @@ const Header = () => {
                                 <p>Welcome, {`${firstName} ${lastName}!`}</p>
                                 <p>Enjoy your shopping</p>
                             </div>
-                            <NavLink extact to="/settings">
+                            <NavLink to="/settings">
                                 <button type="button">Settings</button>
                             </NavLink>
-                            <NavLink extact to="/orders">
+                            <NavLink to="/orders">
                                 <button type="button">My Purchases</button>
                             </NavLink>
 

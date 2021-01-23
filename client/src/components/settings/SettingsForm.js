@@ -36,7 +36,7 @@ const SettingsForm = props => {
                         name="firstName"
                         id="examplePassword"
                         value={form.firstName}
-                        minlength="3"
+                        minLength="3"
                         onChange={formHandler}
                         required
                     />
@@ -48,7 +48,7 @@ const SettingsForm = props => {
                         name="lastName"
                         id="examplePassword"
                         value={form.lastName}
-                        minlength="3"
+                        minLength="3"
                         onChange={formHandler}
                         required
                     />
