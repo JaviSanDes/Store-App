@@ -39,14 +39,12 @@ const ProductModal = props => {
                         </div>
 
                         <p>{measure}</p>
-                        <p className="modal-body-info-text">
+                        <div className="modal-body-info-text">
                             {description}
                             <br />
                             <br />
-                            <div>
-                                <p className="modal-tag">{group}</p>
-                            </div>
-                        </p>
+                            <p className="modal-tag">{group}</p>
+                        </div>
                         <div className="modal-product-price">
                             <p className="product-price-value">{price} €</p>
                             {quantity > 0 ? (

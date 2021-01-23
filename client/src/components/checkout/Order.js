@@ -99,7 +99,7 @@ const Order = props => {
 };
 
 Order.propTypes = {
-    nextPhase: PropTypes.func.isRequired,
+    nextPhase: PropTypes.func,
 };
 
 export default Order;

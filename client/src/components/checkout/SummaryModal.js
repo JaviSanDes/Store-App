@@ -39,7 +39,7 @@ const SummaryModal = props => {
 };
 
 SummaryModal.propTypes = {
-    modal: PropTypes.func.isRequired,
+    modal: PropTypes.bool.isRequired,
     responseText: PropTypes.string.isRequired,
     modalHandler: PropTypes.func.isRequired,
 };

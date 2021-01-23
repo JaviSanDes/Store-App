@@ -79,7 +79,7 @@ const Shipping = props => {
                     placeholder="Current address..."
                     value={form.address}
                     onChange={handlerForm}
-                    minlength="1"
+                    minLength="1"
                     required
                 />
             </FormGroup>
