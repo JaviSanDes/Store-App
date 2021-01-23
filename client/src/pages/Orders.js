@@ -20,8 +20,6 @@ const Orders = () => {
     const userId = useSelector(state => state.auth.userId);
     const [orders, setOrders] = useState([]);
 
-    console.log(orders, orderInfo);
-
     const handleUserKeyPress = useCallback(() => {
         const box = document.getElementById('prueba');
         const up = document.getElementById('prueba2');
