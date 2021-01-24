@@ -54,9 +54,9 @@ const ModalSettings = props => {
 
 ModalSettings.propTypes = {
     modal: PropTypes.bool.isRequired,
-    deleteAccModal: PropTypes.string.isRequired,
-    modalHandler: PropTypes.string.isRequired,
-    deleteAccountHandler: PropTypes.string.isRequired,
+    deleteAccModal: PropTypes.bool.isRequired,
+    modalHandler: PropTypes.func.isRequired,
+    deleteAccountHandler: PropTypes.func.isRequired,
 };
 
 export default ModalSettings;
