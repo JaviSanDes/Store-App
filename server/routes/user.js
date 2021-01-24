@@ -48,6 +48,10 @@ router.put('/:id', async (req, res) => {
   const salt = await bcrypt.genSalt(10);
   const password = await bcrypt.hash(req.body.password, salt);
 
+  const isEmailExist2 = await User.findById(req.params.id);
+  const isEmailExist = await User.findOne({ email: req.body.email });
+  if (isEmailExist.email && isEmailExist.email !== isEmailExist2.email) return res.status(400).send('Email already registered.');
+
   const user = await User.findByIdAndUpdate(req.params.id,
     { 
       firstName: req.body.firstName,
@@ -64,7 +68,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   const user = await User.findByIdAndRemove(req.params.id);
 
-  if (!user) return res.status(404).send('The customer with the given ID was not found.');
+  if (!user) return res.status(404).send('The user with the given ID was not found.');
 
   res.send(user);
 });

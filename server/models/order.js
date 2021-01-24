@@ -22,8 +22,6 @@ const OrderSchema = new mongoose.Schema({
         phone: {
             type: String,
             required: true,
-            minlength: 6,
-            maxlength: 9
         },
         zipCode: {
             type: String,
@@ -63,17 +61,17 @@ const Order = mongoose.model('Order', OrderSchema);
 function validateOrder(user) {
     const schema =  Joi.object({
         shippingData: Joi.object().keys({
-            name: Joi.string().required(),
+            name: Joi.string().min(3).required(),
             country: Joi.string().required(),
-            address: Joi.string().min(5).required(),
-            phone: Joi.string().min(6).max(9).required(),
-            zipCode: Joi.string().min(5).max(8).required(),
+            address: Joi.string().required(),
+            phone: Joi.string().required(),
+            zipCode: Joi.string().min(4).max(8).required(),
         }),
         paymentData: Joi.object().keys({
             paymentMethod:  Joi.string().required(),
             firstName:  Joi.string().required(),
             lastName:  Joi.string().required(),
-            cardNumber:  Joi.string().required(),
+            cardNumber:  Joi.string().min(12).max(12).required(),
             expiration:  Joi.string().required(),
             cvcCode:  Joi.string().required(),
         }),

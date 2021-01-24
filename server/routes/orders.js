@@ -3,10 +3,8 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const {Order, validate} = require('../models/order');
 const { User } = require('../models/user'); 
+const { Product } = require('../models/products');
 
-router.post('/', auth, async (req, res) => {
-  console.log(req.body);
-});
 
 router.post('/newOrder', auth, async (req, res) => {
   console.log(req.body)
@@ -29,6 +27,7 @@ router.post('/newOrder', auth, async (req, res) => {
 
   const { shippingData, paymentData, price, user, products } = req.body;
   
+
   let order = new Order({
     dateOrder,
     shippingData,
@@ -37,10 +36,28 @@ router.post('/newOrder', auth, async (req, res) => {
     user,
     products,
   });
-
   await order.save();
-  var prueba = 'string de prueba'
-  res.send(prueba);
+  res.send('You order has been complited sucseffully');
+  
 });
+
+router.post('/', auth, async (req, res) => {
+  const orders = await Order.find({user: req.body.userId});
+  if(!orders) return res.status(400).send("not orders...");
+
+  const end = orders.map(async order => {
+    const product = order.products.map(async product => {
+      const p = await Product.findById(product.productID);
+      p.quantity = product.quantity;
+      return p;
+    });
+    const products = await Promise.all(product);
+    const orderData = {...order};
+    orderData._doc.products = [...products];
+    return orderData._doc
+  })
+  const s = await Promise.all(end);
+  res.send(s);
+})
 
 module.exports = router; 
