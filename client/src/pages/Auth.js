@@ -173,8 +173,8 @@ const Auth = () => {
             ) : (
                 <SignUp
                     signUpForm={signUpForm}
-                    signUpFormHandler={() => signUpFormHandler()}
-                    submitHandler={() => submitHandler()}
+                    signUpFormHandler={e => signUpFormHandler(e)}
+                    submitHandler={e => submitHandler(e)}
                     isLoading={isLoading}
                 />
             )}
