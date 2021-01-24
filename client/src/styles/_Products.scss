@@ -28,6 +28,12 @@
     flex-wrap: wrap;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .Products-container {
+        margin-top: 60px;
+    }
+}
 @media only screen and (max-width: 700px) {
     .Products-container {
         padding: 0;
