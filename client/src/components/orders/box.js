@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Box = props => {
     const { viewOrder, date, price, id } = props;
-    console.log(id);
+
     return (
         <div className="orders-orderBox">
             <div className="orders-orderBox-header">

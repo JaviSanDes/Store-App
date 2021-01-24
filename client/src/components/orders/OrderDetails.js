@@ -14,7 +14,7 @@ const OrderDetails = props => {
         Total,
         products,
     } = orderInfo;
-    console.log(products);
+
     return (
         <div className="orders-orderDetails" id="prueba">
             <div className="orders-orderDetails-up" id="prueba2">
