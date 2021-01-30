@@ -59,6 +59,9 @@ button {
 .settings-modal-footer {
     border: none;
 }
+#settings-changePassword-id {
+    margin-top: 20px;
+}
 @media only screen and (max-width: 650px) {
     .settings-auth {
         width: 85%;
@@ -115,7 +118,7 @@ button {
        height: 28px;
     }
     .settings-deleteButton {
-        top: 90px;
+        top: 70px;
     }
 
     .settings-container {

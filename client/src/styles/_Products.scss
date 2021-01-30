@@ -33,6 +33,9 @@
     .Products-container {
         margin-top: 60px;
     }
+    .Products-container h1:first-child {
+        margin-top: 120px;
+    }
 }
 @media only screen and (max-width: 700px) {
     .Products-container {

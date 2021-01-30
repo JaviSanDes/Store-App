@@ -72,7 +72,10 @@ const SettingsForm = props => {
                     <Spinner color="primary" className="settings-spinner" />
                 )}
             </Form>
-            <Form className="shipping-container">
+            <Form
+                className="shipping-container"
+                id="settings-changePassword-id"
+            >
                 <FormGroup>
                     <Label for="examplePassword">New Password</Label>
                     <Input
