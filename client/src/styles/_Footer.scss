@@ -82,7 +82,7 @@ h3{
         font-size: 16px;
     }
     .Footer-aboutCompany p{
-        font-size: 14px;
+        font-size: 10px;
     }
     .Footer-Connecteddiv p{
         font-size: 14px;
@@ -100,24 +100,30 @@ h3{
     .Footer-copyrhigt {
         font-size: 12px;
     }
+    .Footer-aboutCompany {
+        margin: 0;
+    }
+    .Footer-Contact{
+        margin: 0;
+    }
     .Footer-Contact p{
-        font-size: 14px;
+        font-size: 10px;
     }
     .Footer-Connected img {
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
     }
     .Footer-information h3 {
         font-size: 15px;
     }
-    .Footer-Connecteddiv p{
+    .Footer-Connected div p{
         font-size: 12px;
     }
     .Footer-box{
         margin-top: 0px;
     }
     .Footer-Connected, .Contact {
-        width: 60%;
+        width: 30%;
         margin-right: 20px;
      }
 }
@@ -130,9 +136,9 @@ h3{
     .Footer-Connected {
         position: absolute;
         top: 280px;
-        left: 50px;
+        left: 0px;
         display: flex;
-        width: 300px;
+        width: 90%;
     }
     .Footer-Connected h3{
         position: absolute;
