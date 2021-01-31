@@ -87,25 +87,6 @@
   left: 130px;
   top: 6px;
 }
-@media only screen and (max-width: 600px) {
-  .login-container {
-    margin-top: 0;
-    top: 10vh;
-    width: 95vw;
-    padding: 20px;
-    height: 400px;
-    background: none;
-    box-shadow: none;
-  }
-  .login-container button {
-    margin-top: 50px;
-  }
-  .login-spinner {
-    position: relative;
-    left: 90px;
-    top: 6px;
-  }
-}
 
 .login-errorBox {
   width: 100%;
@@ -129,4 +110,33 @@
   width: 25px;
   text-align: center;
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .login-container {
+    margin-top: 0;
+    top: 10vh;
+    width: 95vw;
+    padding: 20px;
+    height: 400px;
+    background: none;
+    box-shadow: none;
+  }
+  .login-container button {
+    margin-top: 50px;
+  }
+  .login-spinner {
+    position: relative;
+    left: 90px;
+    top: 6px;
+  }
+  .login-errorBox {
+    font-size: 11px;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .login-errorBox {
+    font-size: 9px;
+    padding: 0 5px;
+  }
 }

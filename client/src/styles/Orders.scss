@@ -98,12 +98,11 @@
 }
 .orders-orderBox-button {
     position: relative;
-    top: -55px;
-    left: 70%;
     text-align: center;
     font-size: 14px;
+    left: 100%;
+    transform: translateX(-110%);
 }
-
 .orders-delivery-info {
     display: flex;
     width: 100%;

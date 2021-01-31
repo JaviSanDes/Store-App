@@ -24,8 +24,8 @@ const Orders = () => {
         const box = document.getElementById('prueba');
         const up = document.getElementById('prueba2');
         const down = document.getElementById('prueba3');
-        const result = box.offsetHeight - up.offsetHeight;
-        down.style.height = `${result - 40}px`;
+        const result = box && up && box.offsetHeight - up.offsetHeight;
+        if (down) down.style.height = `${result - 40}px`;
     }, []);
 
     useEffect(() => {
