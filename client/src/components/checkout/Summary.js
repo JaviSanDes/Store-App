@@ -16,7 +16,11 @@ const Summary = () => {
     const [responseText, setResponseText] = useState('');
     const dispatch = useDispatch();
     const toggle = () => setModal(!modal);
-
+    const cardNUmber = orderData.paymentData.cardNumber;
+    const lasChars = cardNUmber.substr(
+        cardNUmber.length - 3,
+        cardNUmber.length
+    );
     const payHandler = async () => {
         setIsLoading(true);
         const token = Cookies.get('token');
@@ -59,15 +63,17 @@ const Summary = () => {
                 <div className="summary-price">
                     <div>
                         <p>Price</p>
-                        <h6>103.45 €</h6>
+                        <h6>{orderData.price.pvp} €</h6>
                     </div>
                     <div>
                         <p>VAT</p>
-                        <h6>103.45 €</h6>
+                        <h6>{orderData.price.total - orderData.price.pvp} €</h6>
                     </div>
                     <div>
                         <p>Total Price</p>
-                        <h6 id="summary-total-price-id">103.45 €</h6>
+                        <h6 id="summary-total-price-id">
+                            {orderData.price.total} €
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -81,7 +87,7 @@ const Summary = () => {
                 </div>
                 <div>
                     <p>Delivery Address:</p>
-                    <p>Paseo santxiki 19 bajo a mutilva</p>
+                    <p>{orderData.shippingData.address}</p>
                 </div>
             </div>
             <div className="summary-box">
@@ -94,7 +100,7 @@ const Summary = () => {
                 </div>
                 <div>
                     <p>Card Number ends in:</p>
-                    <h6>**** **** **** *234</h6>
+                    <h6>**** **** **** *{lasChars}</h6>
                 </div>
             </div>
             <div className="summary-pay">
