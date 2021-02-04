@@ -25,7 +25,6 @@ const SideBar = () => {
             data-test="component-sideBar"
             data-testid="component-sideBar-id"
             id="menuId"
-            // isvisible={MenuVisible}
         >
             <button
                 className="sideBar-button"
