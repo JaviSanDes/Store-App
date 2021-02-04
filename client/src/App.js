@@ -9,7 +9,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(authCheckState());
-    }, []);
+    });
     return (
         <div className="App-container" data-test="component-app">
             <Header />
