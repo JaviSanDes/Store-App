@@ -100,6 +100,7 @@
     position: relative;
     text-align: center;
     font-size: 14px;
+    top: -50px;
     left: 100%;
     transform: translateX(-110%);
 }
@@ -224,15 +225,23 @@
         position: absolute;
         background-color: white;
         width: 90%;
-        height: 85vh;
+        height: 87vh;
         left: 50%;
-        top: 10vh;
+        top: 60px;
         transform: translateX(-50%);
     }
     .orders-ordersList {
         width: 90%;
         margin: auto;
         height: 80vh;
+
+        position: absolute;
+        background-color: white;
+        width: 90%;
+        height: 87vh;
+        left: 50%;
+        top: 60px;
+        transform: translateX(-50%);
     }
     .orders-orderDetails-title button {
         display: inline;
@@ -240,10 +249,13 @@
 }
 @media only screen and (max-width: 600px) {
     .orders-orderDetails-up {
-        height: 300px;
+        height: 100px;
     }
     .orders-orderDetails-down {
-        height: 60%;
+        height: 85%;
+        position: relative;
+        top: 0%;
+        overflow: scroll;
     }
     .orders-orderDetails-title button {
         right: 0px;
@@ -253,7 +265,6 @@
     }
     .orders-delivery-info {
         height: 80%;
-        border: 1px solid red;
     }
     .orders-deliveryStatus {
         position: absolute;
@@ -280,11 +291,7 @@
         border: none;
     }
     .orders-delivery-info-1 {
-        margin-top: 20px;
-        width: 100%;
-        padding-left: 20px;
-        display: flex;
-        border: 1px solid rgb(228, 228, 228);
+        display: none;
     }
     .orders-delivery-info-1 div {
         width: 70%;
@@ -299,9 +306,7 @@
         font-size: 13px;
     }
     .orders-delivery-info-2 {
-        position: initial;
-        width: 100%;
-        border: 1px solid rgb(228, 228, 228);
+        display: none;
     }
     .orders-delivery-info-2 div p {
         margin: 0;

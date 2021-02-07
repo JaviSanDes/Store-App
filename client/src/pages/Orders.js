@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Cookies from 'js-cookie';
 import Box from '../components/orders/box';
@@ -20,13 +20,13 @@ const Orders = () => {
     const userId = useSelector(state => state.auth.userId);
     const [orders, setOrders] = useState([]);
 
-    const handleUserKeyPress = useCallback(() => {
+    const handleUserKeyPress = () => {
         const box = document.getElementById('prueba');
         const up = document.getElementById('prueba2');
         const down = document.getElementById('prueba3');
         const result = box && up && box.offsetHeight - up.offsetHeight;
-        if (down) down.style.height = `${result - 40}px`;
-    }, []);
+        if (down) down.style.height = `${result - 20}px`;
+    };
 
     useEffect(() => {
         async function fetchData() {
