@@ -105,7 +105,6 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div id="id-footer"></div>
         </div>
     );
 };
