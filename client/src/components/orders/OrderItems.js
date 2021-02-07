@@ -4,29 +4,6 @@ import Product from './Product';
 
 const OrderItems = props => {
     const { products } = props;
-    /*
-    const handleUserKeyPress = useCallback(() => {
-        setTimeout(() => {
-            const down = document.getElementById('prueba3');
-            const header = document.getElementById('prueba4');
-            const productList = document.getElementById('prueba5');
-            const result = down.offsetHeight - header.offsetHeight;
-            productList.style.height = `${result}px`;
-            if (window.innerWidth <= 500) {
-                const porcent = (down.offsetHeight * 80) / 100;
-                productList.style.height = `${result + porcent}px`;
-            }
-        }, 500);
-    }, []);
-
-    useEffect(() => {
-        window.addEventListener('resize', handleUserKeyPress);
-        handleUserKeyPress();
-        return () => {
-            window.removeEventListener('resize', handleUserKeyPress);
-        };
-    }, []);
-    */
 
     return (
         <div className="orderItems-container">
