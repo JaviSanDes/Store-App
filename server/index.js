@@ -5,6 +5,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.options('*', cors());
+app.use(express.static(path.join(__dirname, 'build')));
 
 require('./startUp/db')();
 require('./startUp/config')();
@@ -19,6 +20,10 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () =>
