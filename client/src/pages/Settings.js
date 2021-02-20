@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Auth from '../components/settings/Auth';
+import Auth from '../components/settings/Auth2';
 import SettingsForm from '../components/settings/SettingsForm';
 import ModalSettings from '../components/settings/ModalSettings';
 

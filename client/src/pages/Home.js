@@ -11,7 +11,6 @@ import ShoppingCart from '../components/shoppingCart/shoppingCart';
 import Footer from '../components/Footer';
 
 const Home = props => {
-    alert('ENTRAAA123');
     const { group } = props;
     let storeProducts = useSelector(state => state.products.products);
     const isLoading = useSelector(state => state.products.isLoading);
