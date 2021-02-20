@@ -7,6 +7,7 @@ import Cookies from 'js-cookie';
 import { signInSuccess } from '../store/actions/auth';
 import SignIn from '../components/auth/SignIn';
 import SignUp from '../components/auth/SignUp';
+import { api } from '../../helpers/constants';
 
 const Auth = () => {
     const dispatch = useDispatch();
@@ -44,8 +45,8 @@ const Auth = () => {
                       };
             const url =
                 isSignIn === 'login-switch-id-1'
-                    ? 'http://localhost:3000/api/auth'
-                    : 'http://localhost:3000/api/user';
+                    ? `${api}/auth`
+                    : `${api}/user`;
             try {
                 const res = await axios.post(url, data);
                 const { firstName, lastName, email, _id, token } = res.data;

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import Auth from '../components/settings/Auth2';
 import SettingsForm from '../components/settings/SettingsForm';
 import ModalSettings from '../components/settings/ModalSettings';
+import { api } from '../helpers/constants';
 
 const Settings = () => {
     const [password, setPassword] = useState('');
@@ -36,7 +37,7 @@ const Settings = () => {
     const nextButtonHandler = async () => {
         setIsLoading(true);
         try {
-            const res = await axios.post('http://localhost:3000/api/user/me', {
+            const res = await axios.post(`${api}/user/me`, {
                 password,
                 _id,
             });
@@ -109,10 +110,10 @@ const Settings = () => {
             e.preventDefault();
             setIsLoading(true);
             try {
-                const res = await axios.put(
-                    `http://localhost:3000/api/user/${_id}`,
-                    { ...form, password }
-                );
+                const res = await axios.put(`${api}/user/${_id}`, {
+                    ...form,
+                    password,
+                });
                 console.log(res);
                 setIsLoading(false);
                 setIsDataVisible(true);
@@ -130,10 +131,10 @@ const Settings = () => {
             e.preventDefault();
             setIsLoading(true);
             try {
-                const res = await axios.put(
-                    `http://localhost:3000/api/user/${_id}`,
-                    { ...form, password: passwordForm.password }
-                );
+                const res = await axios.put(`${api}/user/${_id}`, {
+                    ...form,
+                    password: passwordForm.password,
+                });
                 console.log(res);
                 setIsLoading(false);
                 setIsDataVisible(true);
@@ -148,9 +149,7 @@ const Settings = () => {
 
     const deleteAccountHandler = async () => {
         try {
-            const res = await axios.delete(
-                `http://localhost:3000/api/user/${_id}`
-            );
+            const res = await axios.delete(`${api}/user/${_id}`);
             console.log(res);
             setIsLoading(false);
             setIsDataVisible(true);

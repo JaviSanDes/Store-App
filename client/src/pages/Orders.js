@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Cookies from 'js-cookie';
 import Box from '../components/orders/box';
 import OrderDetails from '../components/orders/OrderDetails';
+import { api } from '../helpers/constants';
 
 const Orders = () => {
     const [isvisible, setIsVisible] = useState(true);
@@ -37,7 +38,7 @@ const Orders = () => {
                     'x-auth-token': token,
                 };
                 const req = await Axios.post(
-                    'http://localhost:3000/api/orders',
+                    `${api}/orders`,
                     {
                         userId,
                     },

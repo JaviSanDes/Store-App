@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as actionType from '../actionTypes';
+import { api } from '../../helpers/constants';
 
 export const loadingError = bool => ({
     type: actionType.LOADING_ERROR,
@@ -42,9 +43,7 @@ export function getProducts(group) {
     return async dispatch => {
         dispatch(loadingError(false));
         dispatch(loadingInProgress(true));
-        const result = await axios.get(
-            `http://localhost:3000/api/products/${group}`
-        );
+        const result = await axios.get(`${api}/products/${group}`);
         dispatch(setProducts({ ...result.data }));
     };
 }

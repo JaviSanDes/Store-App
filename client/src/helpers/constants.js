@@ -1,1 +1,1 @@
-export const api = 'https://e-commerce-mernapp.herokuapp.com/';
+export const api = 'https://e-commerce-mernapp.herokuapp.com/api';

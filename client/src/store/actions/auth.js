@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import * as actionType from '../actionTypes';
+import { api } from '../../helpers/constants';
 
 export const signInSuccess = (token, firstName, lastName, email, _id) => {
     return {
@@ -29,11 +30,9 @@ export const authCheckState = () => {
                 'x-auth-token': token,
             };
             try {
-                const res = await axios.post(
-                    'http://localhost:3000/api/auth/verifyToken',
-                    null,
-                    { headers }
-                );
+                const res = await axios.post(`${api}/auth/verifyToken`, null, {
+                    headers,
+                });
                 const { firstName, lastName, email, _id } = res.data;
                 dispatch(signInSuccess(token, firstName, lastName, email, _id));
             } catch (error) {

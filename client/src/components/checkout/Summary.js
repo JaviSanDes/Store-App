@@ -7,6 +7,7 @@ import { Spinner } from 'reactstrap';
 import { removeAllProducts } from '../../store/actions/Products';
 import { cleanOrderData } from '../../store/actions/OrderData';
 import SummaryModal from './SummaryModal';
+import { api } from '../../helpers/constants';
 
 const Summary = () => {
     const orderData = useSelector(state => state.orderData);
@@ -31,7 +32,7 @@ const Summary = () => {
             };
             try {
                 const res = await axios.post(
-                    'http://localhost:3000/api/orders/newOrder',
+                    `${api}/orders/newOrder`,
                     orderData,
                     { headers }
                 );
