@@ -6,11 +6,11 @@ const cors = require('cors');
 app.use(cors());
 app.options('*', cors());
 
+require('./server/startUp/validator')();
 require('./server/startUp/db')();
 require('./server/startUp/config')();
 require('./server/startUp/prod')(app);
 require('./server/startUp/routes')(app);
-require('./server/startup/joiValidator')();
 
 // statics assets if in production
 if (process.env.NODE_ENV === 'production') {
