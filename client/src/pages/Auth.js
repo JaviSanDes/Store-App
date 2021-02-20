@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 import { signInSuccess } from '../store/actions/auth';
 import SignIn from '../components/auth/SignIn';
 import SignUp from '../components/auth/SignUp';
-import { api } from '../../helpers/constants';
+import { api } from '../helpers/constants';
 
 const Auth = () => {
     const dispatch = useDispatch();
