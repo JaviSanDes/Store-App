@@ -48,7 +48,7 @@ Start express API, under main directory:
 
 Environment variables  
 ------------  
-The following environment variables mast be set in order to lunch the server:
+The following environment variables must be set in order to launch the server:
 - db: url pointing to the mongoDB server.
 - store_jwtPrivateKey: private key to decode passwords.
 - NODE_ENV: if it set in 'production' it will serve the server in porduction mode.
