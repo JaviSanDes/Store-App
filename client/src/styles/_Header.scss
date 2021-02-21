@@ -59,7 +59,6 @@
     height: 40px;
     border: none;
     width: 250px;
-    margin: left;
     margin-top: 8px;
     background: rgb(238, 238, 238);
     border-radius: 5px;
@@ -69,7 +68,7 @@
     width: 15px;
     height: 14px;
     position: relative;
-    left: 30px;
+    left: 40px;
     top: 23px;
 }
 input:focus {
@@ -197,10 +196,11 @@ input:focus {
         width: 12px;
         height: 13px;
         position: relative;
-        left: 20px;
-        top: 19px;
+        left: 30px;
+        top: 18px;
     }
-    .header-home-link, .header-home-link-2 {
+    .header-home-link,
+    .header-home-link-2 {
         font-size: 16px;
         margin-top: 5px;
     }
@@ -222,7 +222,7 @@ input:focus {
         background: white;
         //border: 1.5px solid rgb(245, 245, 245);
         padding: 10px;
-    
+
         -webkit-box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
         -moz-box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
         box-shadow: 0px 0px 15px 0px rgba(171, 171, 171, 1);
@@ -244,15 +244,15 @@ input:focus {
         margin-top: 10px;
         background: rgb(238, 238, 238);
         border-radius: 5px;
-        padding-left: 25px;
+        padding-left: 30px;
         font-size: 12px;
     }
     .header-search-image {
         width: 12px;
         height: 13px;
         position: absolute;
-        left: 20px;
-        top: 64px;
+        left: 30px;
+        top: 65px;
         z-index: 1000;
     }
 }
