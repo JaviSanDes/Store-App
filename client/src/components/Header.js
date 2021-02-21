@@ -37,7 +37,7 @@ const Header = () => {
                 [name]: value,
             };
         });
-        history.push({ pathname: `/search/${value}` });
+        history.push({ pathname: `/search/${value.toLowerCase()}` });
     };
     const handleUserKeyPress = e => {
         if (e.target.className !== 'header-user-image') setIsVisible(false);

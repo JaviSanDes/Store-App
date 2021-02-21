@@ -68,7 +68,7 @@
     width: 15px;
     height: 14px;
     position: relative;
-    left: 40px;
+    left: 35px;
     top: 23px;
 }
 input:focus {
@@ -184,20 +184,20 @@ input:focus {
     .header-search-input {
         height: 30px;
         border: none;
-        width: 200px;
+        width: 190px;
         margin: left;
         margin-top: 10px;
         background: rgb(238, 238, 238);
         border-radius: 5px;
         padding-left: 25px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .header-search-image {
         width: 12px;
         height: 13px;
         position: relative;
-        left: 30px;
-        top: 18px;
+        left: 22px;
+        top: 20px;
     }
     .header-home-link,
     .header-home-link-2 {
@@ -235,24 +235,24 @@ input:focus {
     }
     .header-search-input {
         position: absolute;
-        top: 45px;
+        top: 55px;
         left: 10px;
         height: 30px;
         border: none;
-        width: 200px;
+        width: 190px;
         margin: left;
         margin-top: 10px;
         background: rgb(238, 238, 238);
         border-radius: 5px;
         padding-left: 30px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .header-search-image {
         width: 12px;
         height: 13px;
         position: absolute;
-        left: 30px;
-        top: 65px;
+        left: 22px;
+        top: 75px;
         z-index: 1000;
     }
 }
