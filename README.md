@@ -5,7 +5,7 @@ DEMO
 ----  
 [E-commerce Live-Demo](https://e-commerce-mernapp.herokuapp.com/).
 
-![Texto alternativo](/Capture.png)
+![Texto alternativo](/capture.png)
 
 Tools
 -----
