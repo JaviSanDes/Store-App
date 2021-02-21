@@ -5,7 +5,7 @@ DEMO
 ----  
 [E-commerce Live-Demo](https://e-commerce-mernapp.herokuapp.com/).
 
-![Texto alternativo](/capture.png)
+![Texto alternativo](/Capture.png)
 
 Tools
 -----
@@ -29,15 +29,33 @@ Installation
 Execute the following command on your terminal to install all the needed packages:  
 
     npm install  
-Start the React App:  
+    cd client
+    npm install
+
+Start the React App on development, under client directory:  
 
     npm run start
-The application will start automatically in your browser on http://localhost:8080/
 
-To Build the project to a production mode execute:  
+The application will start automatically in your browser on http://localhost:3000/
+
+To Build the react app to a production mode execute:  
 
     npm run build
 
+Start express API, under main directory:
+
+    npm start
+
+Environment variables  
+------------  
+The following environment variables mast be set in order to lunch the server:
+- db: url pointing to the mongoDB server.
+- store_jwtPrivateKey: private key to decode passwords.
+- NODE_ENV: if it set in 'production' it will serve the server in porduction mode.
+
+DB DATA
+------------
+- Upload ./data/products.json on your mongoDB
 
 Copyright and license  
 ---------------------  
